@@ -1,0 +1,14 @@
+C:\Users\Esneyder\Desktop\punto Net compensar\Prueba\Prueba\bin\Debug\netcoreapp3.1\Prueba.exe
+C:\Users\Esneyder\Desktop\punto Net compensar\Prueba\Prueba\bin\Debug\netcoreapp3.1\Prueba.deps.json
+C:\Users\Esneyder\Desktop\punto Net compensar\Prueba\Prueba\bin\Debug\netcoreapp3.1\Prueba.runtimeconfig.json
+C:\Users\Esneyder\Desktop\punto Net compensar\Prueba\Prueba\bin\Debug\netcoreapp3.1\Prueba.runtimeconfig.dev.json
+C:\Users\Esneyder\Desktop\punto Net compensar\Prueba\Prueba\bin\Debug\netcoreapp3.1\Prueba.dll
+C:\Users\Esneyder\Desktop\punto Net compensar\Prueba\Prueba\bin\Debug\netcoreapp3.1\Prueba.pdb
+C:\Users\Esneyder\Desktop\punto Net compensar\Prueba\Prueba\obj\Debug\netcoreapp3.1\Prueba.csproj.AssemblyReference.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\Prueba\Prueba\obj\Debug\netcoreapp3.1\Prueba.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Esneyder\Desktop\punto Net compensar\Prueba\Prueba\obj\Debug\netcoreapp3.1\Prueba.AssemblyInfoInputs.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\Prueba\Prueba\obj\Debug\netcoreapp3.1\Prueba.AssemblyInfo.cs
+C:\Users\Esneyder\Desktop\punto Net compensar\Prueba\Prueba\obj\Debug\netcoreapp3.1\Prueba.csproj.CoreCompileInputs.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\Prueba\Prueba\obj\Debug\netcoreapp3.1\Prueba.dll
+C:\Users\Esneyder\Desktop\punto Net compensar\Prueba\Prueba\obj\Debug\netcoreapp3.1\Prueba.pdb
+C:\Users\Esneyder\Desktop\punto Net compensar\Prueba\Prueba\obj\Debug\netcoreapp3.1\Prueba.genruntimeconfig.cache

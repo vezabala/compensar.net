@@ -1,0 +1,13 @@
+C:\Users\Esneyder\Desktop\punto Net compensar\Clase2\Clase2\bin\Debug\netcoreapp3.1\Clase2.exe
+C:\Users\Esneyder\Desktop\punto Net compensar\Clase2\Clase2\bin\Debug\netcoreapp3.1\Clase2.deps.json
+C:\Users\Esneyder\Desktop\punto Net compensar\Clase2\Clase2\bin\Debug\netcoreapp3.1\Clase2.runtimeconfig.json
+C:\Users\Esneyder\Desktop\punto Net compensar\Clase2\Clase2\bin\Debug\netcoreapp3.1\Clase2.runtimeconfig.dev.json
+C:\Users\Esneyder\Desktop\punto Net compensar\Clase2\Clase2\bin\Debug\netcoreapp3.1\Clase2.dll
+C:\Users\Esneyder\Desktop\punto Net compensar\Clase2\Clase2\bin\Debug\netcoreapp3.1\Clase2.pdb
+C:\Users\Esneyder\Desktop\punto Net compensar\Clase2\Clase2\obj\Debug\netcoreapp3.1\Clase2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Esneyder\Desktop\punto Net compensar\Clase2\Clase2\obj\Debug\netcoreapp3.1\Clase2.AssemblyInfoInputs.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\Clase2\Clase2\obj\Debug\netcoreapp3.1\Clase2.AssemblyInfo.cs
+C:\Users\Esneyder\Desktop\punto Net compensar\Clase2\Clase2\obj\Debug\netcoreapp3.1\Clase2.csproj.CoreCompileInputs.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\Clase2\Clase2\obj\Debug\netcoreapp3.1\Clase2.dll
+C:\Users\Esneyder\Desktop\punto Net compensar\Clase2\Clase2\obj\Debug\netcoreapp3.1\Clase2.pdb
+C:\Users\Esneyder\Desktop\punto Net compensar\Clase2\Clase2\obj\Debug\netcoreapp3.1\Clase2.genruntimeconfig.cache
