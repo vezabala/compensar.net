@@ -1,0 +1,14 @@
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioMultiplicacion\EjercicioMultiplicacion\bin\Debug\netcoreapp3.1\EjercicioMultiplicacion.exe
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioMultiplicacion\EjercicioMultiplicacion\bin\Debug\netcoreapp3.1\EjercicioMultiplicacion.deps.json
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioMultiplicacion\EjercicioMultiplicacion\bin\Debug\netcoreapp3.1\EjercicioMultiplicacion.runtimeconfig.json
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioMultiplicacion\EjercicioMultiplicacion\bin\Debug\netcoreapp3.1\EjercicioMultiplicacion.runtimeconfig.dev.json
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioMultiplicacion\EjercicioMultiplicacion\bin\Debug\netcoreapp3.1\EjercicioMultiplicacion.dll
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioMultiplicacion\EjercicioMultiplicacion\bin\Debug\netcoreapp3.1\EjercicioMultiplicacion.pdb
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioMultiplicacion\EjercicioMultiplicacion\obj\Debug\netcoreapp3.1\EjercicioMultiplicacion.csproj.AssemblyReference.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioMultiplicacion\EjercicioMultiplicacion\obj\Debug\netcoreapp3.1\EjercicioMultiplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioMultiplicacion\EjercicioMultiplicacion\obj\Debug\netcoreapp3.1\EjercicioMultiplicacion.AssemblyInfoInputs.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioMultiplicacion\EjercicioMultiplicacion\obj\Debug\netcoreapp3.1\EjercicioMultiplicacion.AssemblyInfo.cs
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioMultiplicacion\EjercicioMultiplicacion\obj\Debug\netcoreapp3.1\EjercicioMultiplicacion.csproj.CoreCompileInputs.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioMultiplicacion\EjercicioMultiplicacion\obj\Debug\netcoreapp3.1\EjercicioMultiplicacion.dll
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioMultiplicacion\EjercicioMultiplicacion\obj\Debug\netcoreapp3.1\EjercicioMultiplicacion.pdb
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioMultiplicacion\EjercicioMultiplicacion\obj\Debug\netcoreapp3.1\EjercicioMultiplicacion.genruntimeconfig.cache

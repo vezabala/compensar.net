@@ -1,0 +1,14 @@
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioFor\EjercicioFor\bin\Debug\netcoreapp3.1\EjercicioFor.exe
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioFor\EjercicioFor\bin\Debug\netcoreapp3.1\EjercicioFor.deps.json
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioFor\EjercicioFor\bin\Debug\netcoreapp3.1\EjercicioFor.runtimeconfig.json
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioFor\EjercicioFor\bin\Debug\netcoreapp3.1\EjercicioFor.runtimeconfig.dev.json
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioFor\EjercicioFor\bin\Debug\netcoreapp3.1\EjercicioFor.dll
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioFor\EjercicioFor\bin\Debug\netcoreapp3.1\EjercicioFor.pdb
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioFor\EjercicioFor\obj\Debug\netcoreapp3.1\EjercicioFor.csproj.AssemblyReference.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioFor\EjercicioFor\obj\Debug\netcoreapp3.1\EjercicioFor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioFor\EjercicioFor\obj\Debug\netcoreapp3.1\EjercicioFor.AssemblyInfoInputs.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioFor\EjercicioFor\obj\Debug\netcoreapp3.1\EjercicioFor.AssemblyInfo.cs
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioFor\EjercicioFor\obj\Debug\netcoreapp3.1\EjercicioFor.csproj.CoreCompileInputs.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioFor\EjercicioFor\obj\Debug\netcoreapp3.1\EjercicioFor.dll
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioFor\EjercicioFor\obj\Debug\netcoreapp3.1\EjercicioFor.pdb
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioFor\EjercicioFor\obj\Debug\netcoreapp3.1\EjercicioFor.genruntimeconfig.cache

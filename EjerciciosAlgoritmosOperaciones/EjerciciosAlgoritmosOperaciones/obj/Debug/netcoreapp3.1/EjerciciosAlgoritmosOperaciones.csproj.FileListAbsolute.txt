@@ -1,0 +1,14 @@
+C:\Users\Esneyder\Desktop\punto Net compensar\EjerciciosAlgoritmosOperaciones\EjerciciosAlgoritmosOperaciones\bin\Debug\netcoreapp3.1\EjerciciosAlgoritmosOperaciones.exe
+C:\Users\Esneyder\Desktop\punto Net compensar\EjerciciosAlgoritmosOperaciones\EjerciciosAlgoritmosOperaciones\bin\Debug\netcoreapp3.1\EjerciciosAlgoritmosOperaciones.deps.json
+C:\Users\Esneyder\Desktop\punto Net compensar\EjerciciosAlgoritmosOperaciones\EjerciciosAlgoritmosOperaciones\bin\Debug\netcoreapp3.1\EjerciciosAlgoritmosOperaciones.runtimeconfig.json
+C:\Users\Esneyder\Desktop\punto Net compensar\EjerciciosAlgoritmosOperaciones\EjerciciosAlgoritmosOperaciones\bin\Debug\netcoreapp3.1\EjerciciosAlgoritmosOperaciones.runtimeconfig.dev.json
+C:\Users\Esneyder\Desktop\punto Net compensar\EjerciciosAlgoritmosOperaciones\EjerciciosAlgoritmosOperaciones\bin\Debug\netcoreapp3.1\EjerciciosAlgoritmosOperaciones.dll
+C:\Users\Esneyder\Desktop\punto Net compensar\EjerciciosAlgoritmosOperaciones\EjerciciosAlgoritmosOperaciones\bin\Debug\netcoreapp3.1\EjerciciosAlgoritmosOperaciones.pdb
+C:\Users\Esneyder\Desktop\punto Net compensar\EjerciciosAlgoritmosOperaciones\EjerciciosAlgoritmosOperaciones\obj\Debug\netcoreapp3.1\EjerciciosAlgoritmosOperaciones.csproj.AssemblyReference.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\EjerciciosAlgoritmosOperaciones\EjerciciosAlgoritmosOperaciones\obj\Debug\netcoreapp3.1\EjerciciosAlgoritmosOperaciones.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Esneyder\Desktop\punto Net compensar\EjerciciosAlgoritmosOperaciones\EjerciciosAlgoritmosOperaciones\obj\Debug\netcoreapp3.1\EjerciciosAlgoritmosOperaciones.AssemblyInfoInputs.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\EjerciciosAlgoritmosOperaciones\EjerciciosAlgoritmosOperaciones\obj\Debug\netcoreapp3.1\EjerciciosAlgoritmosOperaciones.AssemblyInfo.cs
+C:\Users\Esneyder\Desktop\punto Net compensar\EjerciciosAlgoritmosOperaciones\EjerciciosAlgoritmosOperaciones\obj\Debug\netcoreapp3.1\EjerciciosAlgoritmosOperaciones.csproj.CoreCompileInputs.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\EjerciciosAlgoritmosOperaciones\EjerciciosAlgoritmosOperaciones\obj\Debug\netcoreapp3.1\EjerciciosAlgoritmosOperaciones.dll
+C:\Users\Esneyder\Desktop\punto Net compensar\EjerciciosAlgoritmosOperaciones\EjerciciosAlgoritmosOperaciones\obj\Debug\netcoreapp3.1\EjerciciosAlgoritmosOperaciones.pdb
+C:\Users\Esneyder\Desktop\punto Net compensar\EjerciciosAlgoritmosOperaciones\EjerciciosAlgoritmosOperaciones\obj\Debug\netcoreapp3.1\EjerciciosAlgoritmosOperaciones.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiloPorProfesor\EjercicioCiloPorProfesor\bin\Debug\netcoreapp3.1\EjercicioCiloPorProfesor.exe
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiloPorProfesor\EjercicioCiloPorProfesor\bin\Debug\netcoreapp3.1\EjercicioCiloPorProfesor.deps.json
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiloPorProfesor\EjercicioCiloPorProfesor\bin\Debug\netcoreapp3.1\EjercicioCiloPorProfesor.runtimeconfig.json
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiloPorProfesor\EjercicioCiloPorProfesor\bin\Debug\netcoreapp3.1\EjercicioCiloPorProfesor.runtimeconfig.dev.json
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiloPorProfesor\EjercicioCiloPorProfesor\bin\Debug\netcoreapp3.1\EjercicioCiloPorProfesor.dll
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiloPorProfesor\EjercicioCiloPorProfesor\bin\Debug\netcoreapp3.1\EjercicioCiloPorProfesor.pdb
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiloPorProfesor\EjercicioCiloPorProfesor\obj\Debug\netcoreapp3.1\EjercicioCiloPorProfesor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiloPorProfesor\EjercicioCiloPorProfesor\obj\Debug\netcoreapp3.1\EjercicioCiloPorProfesor.AssemblyInfoInputs.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiloPorProfesor\EjercicioCiloPorProfesor\obj\Debug\netcoreapp3.1\EjercicioCiloPorProfesor.AssemblyInfo.cs
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiloPorProfesor\EjercicioCiloPorProfesor\obj\Debug\netcoreapp3.1\EjercicioCiloPorProfesor.csproj.CoreCompileInputs.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiloPorProfesor\EjercicioCiloPorProfesor\obj\Debug\netcoreapp3.1\EjercicioCiloPorProfesor.dll
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiloPorProfesor\EjercicioCiloPorProfesor\obj\Debug\netcoreapp3.1\EjercicioCiloPorProfesor.pdb
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiloPorProfesor\EjercicioCiloPorProfesor\obj\Debug\netcoreapp3.1\EjercicioCiloPorProfesor.genruntimeconfig.cache

@@ -1,0 +1,14 @@
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiclo\EjercicioCiclo\bin\Debug\netcoreapp3.1\EjercicioCiclo.exe
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiclo\EjercicioCiclo\bin\Debug\netcoreapp3.1\EjercicioCiclo.deps.json
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiclo\EjercicioCiclo\bin\Debug\netcoreapp3.1\EjercicioCiclo.runtimeconfig.json
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiclo\EjercicioCiclo\bin\Debug\netcoreapp3.1\EjercicioCiclo.runtimeconfig.dev.json
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiclo\EjercicioCiclo\bin\Debug\netcoreapp3.1\EjercicioCiclo.dll
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiclo\EjercicioCiclo\bin\Debug\netcoreapp3.1\EjercicioCiclo.pdb
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiclo\EjercicioCiclo\obj\Debug\netcoreapp3.1\EjercicioCiclo.csproj.AssemblyReference.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiclo\EjercicioCiclo\obj\Debug\netcoreapp3.1\EjercicioCiclo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiclo\EjercicioCiclo\obj\Debug\netcoreapp3.1\EjercicioCiclo.AssemblyInfoInputs.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiclo\EjercicioCiclo\obj\Debug\netcoreapp3.1\EjercicioCiclo.AssemblyInfo.cs
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiclo\EjercicioCiclo\obj\Debug\netcoreapp3.1\EjercicioCiclo.csproj.CoreCompileInputs.cache
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiclo\EjercicioCiclo\obj\Debug\netcoreapp3.1\EjercicioCiclo.dll
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiclo\EjercicioCiclo\obj\Debug\netcoreapp3.1\EjercicioCiclo.pdb
+C:\Users\Esneyder\Desktop\punto Net compensar\EjercicioCiclo\EjercicioCiclo\obj\Debug\netcoreapp3.1\EjercicioCiclo.genruntimeconfig.cache

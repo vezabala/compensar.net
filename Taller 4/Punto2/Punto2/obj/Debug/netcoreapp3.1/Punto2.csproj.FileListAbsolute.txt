@@ -1,0 +1,14 @@
+C:\Users\Esneyder\source\repos\Punto2\Punto2\obj\Debug\netcoreapp3.1\Punto2.csproj.AssemblyReference.cache
+C:\Users\Esneyder\source\repos\Punto2\Punto2\obj\Debug\netcoreapp3.1\Punto2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Esneyder\source\repos\Punto2\Punto2\obj\Debug\netcoreapp3.1\Punto2.AssemblyInfoInputs.cache
+C:\Users\Esneyder\source\repos\Punto2\Punto2\obj\Debug\netcoreapp3.1\Punto2.AssemblyInfo.cs
+C:\Users\Esneyder\source\repos\Punto2\Punto2\obj\Debug\netcoreapp3.1\Punto2.csproj.CoreCompileInputs.cache
+C:\Users\Esneyder\source\repos\Punto2\Punto2\bin\Debug\netcoreapp3.1\Punto2.exe
+C:\Users\Esneyder\source\repos\Punto2\Punto2\bin\Debug\netcoreapp3.1\Punto2.deps.json
+C:\Users\Esneyder\source\repos\Punto2\Punto2\bin\Debug\netcoreapp3.1\Punto2.runtimeconfig.json
+C:\Users\Esneyder\source\repos\Punto2\Punto2\bin\Debug\netcoreapp3.1\Punto2.runtimeconfig.dev.json
+C:\Users\Esneyder\source\repos\Punto2\Punto2\bin\Debug\netcoreapp3.1\Punto2.dll
+C:\Users\Esneyder\source\repos\Punto2\Punto2\bin\Debug\netcoreapp3.1\Punto2.pdb
+C:\Users\Esneyder\source\repos\Punto2\Punto2\obj\Debug\netcoreapp3.1\Punto2.dll
+C:\Users\Esneyder\source\repos\Punto2\Punto2\obj\Debug\netcoreapp3.1\Punto2.pdb
+C:\Users\Esneyder\source\repos\Punto2\Punto2\obj\Debug\netcoreapp3.1\Punto2.genruntimeconfig.cache
