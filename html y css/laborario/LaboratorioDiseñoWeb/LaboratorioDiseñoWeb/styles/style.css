@@ -1,0 +1,479 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrp {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.portada {
+    width: 100%;
+    height: 100%;
+    background: url("portada.png");
+    background-attachment: fixed;
+}
+
+.contenido {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    background: rgba(0,0,11,0.6);
+}
+
+    .contenido .info {
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+    }
+
+        .contenido .info h1 {
+            color: #fff;
+            font-size: 70px;
+            text-shadow: 10px 10px 5px rgb(0, 0, 0);
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .contenido .info a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 19px;
+            padding: 10px 25px;
+            color: #fff;
+            background: #4897C3;
+            border-radius: 50px;
+            margin-bottom: 40px;
+            border: 2px solid transparent;
+            transition: all 300ms ease;
+            letter-spacing: 0.5px;
+        }
+
+            .contenido .info a:hover {
+                background: #1fa7f0;
+            }
+
+    .contenido .logo {
+        width: 100%;
+        max-width: 600px;
+        text-align: right;
+    }
+
+        .contenido .logo img {
+            width: 40%;
+            height: 50%;
+        }
+
+.curveado {
+    position: absolute;
+    width: 100%;
+    bottom: -50px;
+}
+
+    .curveado img {
+        width: 100%;
+    }
+
+@media(max-width:768px) {
+    .contenido .info h1 {
+        font-size: 35px;
+    }
+}
+
+
+/* Navbar */
+p {
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: rgb(252, 190, 21);
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+nav {
+    float: left;
+}
+
+    nav ul {
+        list-style: none;
+        overflow: hidden;
+    }
+
+        nav ul li {
+            float: left;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 35px;
+        }
+
+            nav ul li a {
+                display: block;
+                padding: 20px;
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+            }
+
+            nav ul li b {
+                display: block;
+                padding: 20px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+
+            nav ul li a:hover {
+                margin-top: 2px;
+                opacity: 5;
+                color: #4897C3;
+                /*Reflection*/
+                -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.4)));
+                /*Glow*/
+                -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+                -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+                box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+            }
+
+.contenido {
+    padding-top: 0px;
+}
+
+/*articulos*/
+html {
+    font-family: sans-serif;
+}
+
+.columns {
+    display: flex;
+}
+
+.column {
+    background: url("fondo.png");
+    border: 5px solid #ccc;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 10px;
+    height: 727px;
+}
+
+.main-column {
+    flex: 0.8;
+}
+
+.article {
+    background: rgba(143, 141, 141, 0.705);
+    border: 5px solid rgb(0, 0, 0);
+    flex: 1;
+    margin: 10px;
+    padding: 0px;
+    border-radius: 50px;
+}
+
+.articlesub {
+    background: rgb(0, 0, 0);
+    border: 5px solid rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    flex: 1;
+    padding: 10px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+
+.article .cuenta .lacuen {
+    color: black;
+    font-weight: 800;
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    padding: 15px;
+    position: relative;
+    top: 2em;
+}
+
+.article .cuenta .incuen {
+    padding: 1px;
+    border: 3px solid rgb(126, 120, 120);
+    position: relative;
+    top: 2.5em;
+}
+
+.article .tipo .latipo {
+    color: black;
+    font-weight: 800;
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    padding: 15px;
+    position: relative;
+    top: 2.5em;
+}
+
+.article .tipo .intipo {
+    padding: 1px;
+    border: 3px solid rgb(126, 120, 120);
+    position: relative;
+    top: 3.5em;
+    left: 2.2em;
+}
+
+.article .clave .laclave {
+    color: black;
+    font-weight: 800;
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    padding: 15px;
+    position: relative;
+    top: 3.3em;
+}
+
+.article .clave .inclave {
+    padding: 1px;
+    border: 3px solid rgb(126, 120, 120);
+    position: relative;
+    top: 4.5em;
+    left: 1.3em;
+}
+
+.article .ingresar a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 900;
+    padding: 5px 15px;
+    color: rgb(0, 0, 0);
+    background: rgb(252, 190, 21);
+    border-radius: 50px;
+    margin-bottom: 40px;
+    border: 3.5px solid rgb(0, 0, 0);
+    transition: all 300ms ease;
+    letter-spacing: 0.5px;
+    position: relative;
+    top: 4.5em;
+    left: 4.5em;
+}
+
+    .article .ingresar a:hover {
+        background: rgba(241, 117, 16, 0.884);
+    }
+
+.article2 {
+    background: rgba(0, 0, 0, 0.938);
+    border: 5px solid rgb(0, 0, 0);
+    flex: 1;
+    margin: 10px;
+    padding: 0px;
+}
+
+.articlesub2 {
+    background: rgb(0, 0, 0);
+    border: 1px solid rgb(58, 57, 57);
+    text-align: center;
+    flex: 1;
+    padding: 10px;
+}
+
+.articlesub3 {
+    background: rgb(0, 0, 0);
+    border: 1px solid rgb(58, 57, 57);
+    text-align: center;
+    flex: 1;
+    padding: 10px;
+}
+
+.articlesub2 a {
+    color: rgb(189, 184, 184);
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 65px;
+}
+
+.articlesub2:hover {
+    opacity: 1;
+    /*Reflection*/
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.4)));
+    /*Glow*/
+    -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+}
+
+.principales {
+    color: rgb(252, 190, 21);
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+}
+
+.article1 {
+    background: rgba(143, 141, 141, 0.705);
+    border: 5px solid rgb(0, 0, 0);
+    color: white;
+    flex: 1;
+    margin: 10px;
+    padding: 0px;
+    border-radius: 50px;
+}
+
+.tarjeta img {
+    width: 60%;
+    height: 90%;
+    position: relative;
+    top: 1.5em;
+    left: 4.5em;
+    opacity: 1;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.4)));
+    -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+}
+
+    .tarjeta img:hover {
+        -webkit-transform: rotate(-7deg);
+        -moz-transform: rotate(-7deg);
+        -o-transform: rotate(-7deg);
+    }
+
+.article1 .parrafotarjeta p {
+    color: rgb(0, 0, 0);
+    font-family: "Times New Roman", Times, serif;
+    padding: 13px;
+    position: relative;
+    top: 1em;
+    left: 0.5em;
+}
+
+.article1 .parrafovehiculo p {
+    color: rgb(0, 0, 0);
+    font-family: "Times New Roman", Times, serif;
+    padding: 13px;
+    position: relative;
+    top: 1em;
+    left: 0.5em;
+}
+
+.article1 .parrafoestudiantil p {
+    color: rgb(0, 0, 0);
+    font-family: "Times New Roman", Times, serif;
+    padding: 13px;
+    position: relative;
+    top: 2.5em;
+    left: 0.5em;
+}
+
+.article1 .parrafohipotecario p {
+    color: rgb(0, 0, 0);
+    font-family: "Times New Roman", Times, serif;
+    padding: 13px;
+    position: relative;
+    top: 2.5em;
+    left: 0.5em;
+}
+
+.footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 0px;
+    position: relative;
+}
+
+p.f2 {
+    text-align: center;
+    color: #cfcccc;
+    background-color: black;
+    height: 50px;
+}
+
+    p.f2 span {
+        display: block;
+    }
+
+body {
+    background-color: black;
+}
+
+/*articulos responsivos*/
+@media (max-width:980px) {
+    .column {
+        height: 760px;
+    }
+
+    nav ul li {
+        font-size: 24px;
+    }
+
+    .article .cuenta .lacuen {
+        position: relative;
+        top: 0em;
+    }
+
+    .article .cuenta .incuen {
+        position: relative;
+        top: 0.6em;
+    }
+
+    .article .tipo .latipo {
+        position: relative;
+        top: 1em;
+    }
+
+    .article .tipo .intipo {
+        position: relative;
+        top: 2em;
+        left: 0em;
+    }
+
+    .article .clave .laclave {
+        position: relative;
+        top: 2em;
+    }
+
+    .article .clave .inclave {
+        position: relative;
+        top: 3.4em;
+        left: 0em;
+    }
+
+    .article .ingresar a {
+        position: relative;
+        top: 2.5em;
+        left: 2.5em;
+    }
+
+    .articlesub2 a {
+        padding: 10px 27px;
+    }
+
+    .tarjeta img {
+        top: 2em;
+        left: 3.5em;
+    }
+
+    .article1 .parrafotarjeta p {
+        top: 2em;
+        left: 0.5em;
+    }
+
+    .article1 .parrafovehiculo p {
+        top: 3em;
+        left: 0.5em;
+    }
+
+    .article1 .parrafoestudiantil p {
+        top: 3em;
+        left: 0.5em;
+    }
+}
