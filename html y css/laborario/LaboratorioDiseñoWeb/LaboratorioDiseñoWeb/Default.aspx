@@ -13,7 +13,7 @@
         <div class="contenido">
             <div class="info">
                 <h1>BANCOOP</h1>
-                <a href="#">Contactar</a>
+                <a href="#miModal">Contactar</a>
             </div>
             <div class="logo">
                 <img src="img/logo.png">
@@ -155,6 +155,13 @@
             <span >Banco entidad financiera - Todos los derechos reservados.</span>
         </p>
     </footer>
+    <div id="miModal" class="modal">
+      <div class="modal-contenido">
+        <a href="#">X</a>
+        <h2>Nuestra l&#237;nea</h2>
+        <p>L&#237;nea gratuita 018000-00001</p>
+      </div>  
+    </div>
     </form>
 </body>
 </html>
