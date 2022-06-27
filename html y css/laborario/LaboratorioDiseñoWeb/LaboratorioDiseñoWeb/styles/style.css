@@ -102,7 +102,7 @@ p {
 }
 
 header {
-    background: rgb(252, 190, 21);
+    background: linear-gradient(90deg, rgb(28, 16, 193), rgb(98, 87, 255) 92%, rgb(131, 129, 253) 100%);
     width: 100%;
     position: relative;
     z-index: 10;
@@ -120,13 +120,13 @@ nav {
         nav ul li {
             float: left;
             font-family: "Times New Roman", Times, serif;
-            font-size: 35px;
+            font-size: 29.6px;
         }
 
             nav ul li a {
                 display: block;
                 padding: 20px;
-                color: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
                 text-decoration: none;
             }
 
@@ -255,11 +255,11 @@ html {
     font-size: 19px;
     font-weight: 900;
     padding: 5px 15px;
-    color: rgb(0, 0, 0);
-    background: rgb(252, 190, 21);
+    color: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgb(28, 16, 193), rgb(98, 87, 255) 92%, rgb(131, 129, 253) 100%);
     border-radius: 50px;
     margin-bottom: 40px;
-    border: 3.5px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
     transition: all 300ms ease;
     letter-spacing: 0.5px;
     position: relative;
@@ -268,7 +268,7 @@ html {
 }
 
     .article .ingresar a:hover {
-        background: rgba(241, 117, 16, 0.884);
+        background: linear-gradient(90deg, rgb(131, 129, 253), rgb(28, 16, 193) 92%, rgb(28, 16, 193) 100%);
     }
 
 .article2 {
@@ -405,6 +405,85 @@ body {
     background-color: black;
 }
 
+.columncred {
+    background: url("fondocred.png");
+    border: 5px solid rgb(0, 0, 0);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 10px;
+    height: 727px;
+}
+
+.creditocred img {
+    position: relative;
+    top: 100;
+    left: 0.5em;
+    width: 100%;
+    height: 180%;
+}
+
+.columncred h1 {
+    position: relative;
+    font-family: "Times New Roman", Times, serif;
+    top: 1em;
+    left: 2.5em;
+    font-weight: 900;
+    font-size: 45px;
+}
+
+.credpar {
+    position: relative;
+    font-family: "Times New Roman", Times, serif;
+    top: 3em;
+    font-weight: 600;
+    font-size: 20px;
+    color: #cfcccc;
+}
+
+.creditocred img:hover {
+    -webkit-transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
+.leasingles img {
+    position: relative;
+    top: 6em;
+    left: 4.5em;
+    width: 80%;
+    height: 140%;
+    opacity: 1;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.4)));
+    -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+}
+    
+.leasingles img:hover {
+        filter: sepia(60%);
+}
+
+.ahorro img {
+    position: relative;
+    top: 6em;
+    left: 4.5em;
+    width: 70%;
+    height: 100%;
+    opacity: 1;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.4)));
+    -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+}
+
+.ahorro img:hover {
+    -webkit-transform: rotate(-14deg);
+    -moz-transform: rotate(-14deg);
+    -o-transform: rotate(-14deg);
+}
+
 /*articulos responsivos*/
 @media (max-width:980px) {
     .column {
@@ -412,7 +491,7 @@ body {
     }
 
     nav ul li {
-        font-size: 24px;
+        font-size: 19.93px;
     }
 
     .article .cuenta .lacuen {
@@ -474,6 +553,15 @@ body {
 
     .article1 .parrafoestudiantil p {
         top: 3em;
+        left: 0.5em;
+    }
+
+    .creditocred img {
+        width: 100%;
+        height: 220%;
+    }
+
+    .columncred h1 {
         left: 0.5em;
     }
 }

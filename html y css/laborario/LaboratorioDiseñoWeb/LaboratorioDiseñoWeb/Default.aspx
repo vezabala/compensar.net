@@ -28,13 +28,13 @@
         <section class="wrapper">
             <nav>
                 <ul>
-                    <li><a href="#">Creditos</a></li>
+                    <li><a href="creditos.aspx">Creditos</a></li>
                     <li><b href="#">|</b></li>
-                    <li><a href="#">Leasing</a></li>
+                    <li><a href="leasing.aspx">Leasing</a></li>
                     <li><b href="#">|</b></li>
-                    <li><a href="#">Ahorros</a></li>
+                    <li><a href="ahorros.aspx">Ahorros</a></li>
                     <li><b href="#">|</b></li>
-                    <li><a href="#">Servicio al cliente</a></li>
+                    <li><a href="servicio.aspx">Servicio al cliente</a></li>
                 </ul>
             </nav>
         </section>

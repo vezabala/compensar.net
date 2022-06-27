@@ -67,11 +67,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ahorros.aspx" />
+    <Content Include="creditos.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="leasing.aspx" />
+    <Content Include="servicio.aspx" />
     <Content Include="styles\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ahorros.aspx.cs">
+      <DependentUpon>ahorros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ahorros.aspx.designer.cs">
+      <DependentUpon>ahorros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="creditos.aspx.cs">
+      <DependentUpon>creditos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="creditos.aspx.designer.cs">
+      <DependentUpon>creditos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -79,7 +97,21 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="leasing.aspx.cs">
+      <DependentUpon>leasing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="leasing.aspx.designer.cs">
+      <DependentUpon>leasing.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="servicio.aspx.cs">
+      <DependentUpon>servicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="servicio.aspx.designer.cs">
+      <DependentUpon>servicio.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
