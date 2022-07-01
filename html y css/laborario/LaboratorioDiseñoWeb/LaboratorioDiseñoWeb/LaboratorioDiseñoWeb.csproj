@@ -69,7 +69,7 @@
   <ItemGroup>
     <Content Include="ahorros.aspx" />
     <Content Include="creditos.aspx" />
-    <Content Include="Default.aspx" />
+    <Content Include="Startup.aspx" />
     <Content Include="leasing.aspx" />
     <Content Include="servicio.aspx" />
     <Content Include="styles\style.css" />
@@ -90,12 +90,12 @@
     <Compile Include="creditos.aspx.designer.cs">
       <DependentUpon>creditos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Startup.aspx.cs">
+      <DependentUpon>Startup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Startup.aspx.designer.cs">
+      <DependentUpon>Startup.aspx</DependentUpon>
     </Compile>
     <Compile Include="leasing.aspx.cs">
       <DependentUpon>leasing.aspx</DependentUpon>
