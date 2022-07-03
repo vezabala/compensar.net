@@ -224,12 +224,22 @@ as
 Select id_hora, horas_viajadas, Viajero.id_viajero, Viajero.nombre_apellidos, Viajero.telefono from Horas_viajadas
 INNER JOIN Viajero ON Horas_viajadas.id_viajero = Viajero.id_viajero
 
+INSERT INTO Media
+(media_viajeros_ruta,media_viajeros_dia,id_ruta_turistica)
+VALUES (2,1,1),(1,1,2),(1,1,3),(1,1,4),(1,1,5),(1,1,6),(1,1,7)
+
+CREATE VIEW Media_view
+as
+SELECT id_media, media_viajeros_ruta, media_viajeros_dia, Rutas_turisticas.nombre_ruta FROM Media
+INNER JOIN Rutas_turisticas ON Media.id_ruta_turistica = Rutas_turisticas.id_ruta_turistica
+
 select * from folletos_view;
 select * from Billete_view;
 select * from Viajero;
 select * from Bus_view;
 select * from Conductor_view;
 select * from Revision_efectuada;
+select * from Media_view;
 select * from kilometros_diarios_view;
 select * from Horas_viajadas_view;
 
