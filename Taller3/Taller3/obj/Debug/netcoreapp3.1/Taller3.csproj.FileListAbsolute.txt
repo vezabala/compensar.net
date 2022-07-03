@@ -12,3 +12,17 @@ C:\Users\Esneyder\Desktop\punto Net compensar\Taller3\Taller3\obj\Debug\netcorea
 C:\Users\Esneyder\Desktop\punto Net compensar\Taller3\Taller3\obj\Debug\netcoreapp3.1\Taller3.dll
 C:\Users\Esneyder\Desktop\punto Net compensar\Taller3\Taller3\obj\Debug\netcoreapp3.1\Taller3.pdb
 C:\Users\Esneyder\Desktop\punto Net compensar\Taller3\Taller3\obj\Debug\netcoreapp3.1\Taller3.genruntimeconfig.cache
+C:\Users\Esneyder\Desktop\compensar\compensar.net\Taller3\Taller3\bin\Debug\netcoreapp3.1\Taller3.exe
+C:\Users\Esneyder\Desktop\compensar\compensar.net\Taller3\Taller3\bin\Debug\netcoreapp3.1\Taller3.deps.json
+C:\Users\Esneyder\Desktop\compensar\compensar.net\Taller3\Taller3\bin\Debug\netcoreapp3.1\Taller3.runtimeconfig.json
+C:\Users\Esneyder\Desktop\compensar\compensar.net\Taller3\Taller3\bin\Debug\netcoreapp3.1\Taller3.runtimeconfig.dev.json
+C:\Users\Esneyder\Desktop\compensar\compensar.net\Taller3\Taller3\bin\Debug\netcoreapp3.1\Taller3.dll
+C:\Users\Esneyder\Desktop\compensar\compensar.net\Taller3\Taller3\bin\Debug\netcoreapp3.1\Taller3.pdb
+C:\Users\Esneyder\Desktop\compensar\compensar.net\Taller3\Taller3\obj\Debug\netcoreapp3.1\Taller3.csproj.AssemblyReference.cache
+C:\Users\Esneyder\Desktop\compensar\compensar.net\Taller3\Taller3\obj\Debug\netcoreapp3.1\Taller3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Esneyder\Desktop\compensar\compensar.net\Taller3\Taller3\obj\Debug\netcoreapp3.1\Taller3.AssemblyInfoInputs.cache
+C:\Users\Esneyder\Desktop\compensar\compensar.net\Taller3\Taller3\obj\Debug\netcoreapp3.1\Taller3.AssemblyInfo.cs
+C:\Users\Esneyder\Desktop\compensar\compensar.net\Taller3\Taller3\obj\Debug\netcoreapp3.1\Taller3.csproj.CoreCompileInputs.cache
+C:\Users\Esneyder\Desktop\compensar\compensar.net\Taller3\Taller3\obj\Debug\netcoreapp3.1\Taller3.dll
+C:\Users\Esneyder\Desktop\compensar\compensar.net\Taller3\Taller3\obj\Debug\netcoreapp3.1\Taller3.pdb
+C:\Users\Esneyder\Desktop\compensar\compensar.net\Taller3\Taller3\obj\Debug\netcoreapp3.1\Taller3.genruntimeconfig.cache
