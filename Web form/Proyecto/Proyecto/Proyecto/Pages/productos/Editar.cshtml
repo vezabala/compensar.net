@@ -1,0 +1,92 @@
+﻿@page
+@model Proyecto.Pages.productos.EditarModel
+@{
+}
+<div class="card">
+    <div class="card-header">
+        <h2 class="text-info">Editar Producto</h2>
+    </div>
+
+    <div class="card-body">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="productos.id" />
+
+            <div class="container" style="padding:30px">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="productos.nombreComercialMedicamento"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="productos.nombreComercialMedicamento" class="form-control" />
+                        </div>
+                        <span asp-validation-for="productos.nombreComercialMedicamento" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="productos.presentacion"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="productos.presentacion" class="form-control" />
+                        </div>
+                        <span asp-validation-for="productos.presentacion" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="productos.precio"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="productos.precio" class="form-control" />
+                        </div>
+                        <span asp-validation-for="productos.precio" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="productos.fechaVencimiento"></label>
+                        </div> 
+                        <div class="col-sm-6">
+                            <input type="date" asp-for="productos.fechaVencimiento" class="form-control" />
+                        </div>
+                        <span asp-validation-for="productos.fechaVencimiento" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="productos.imagen"></label>
+                        </div> 
+                        <div class="col-sm-6">
+                            <input type="file" asp-for="subirArchivoEditar.imagen" class="form-control" accept="image/png"/>
+                            <input asp-for="productos.imagen" class="valordefecto" />
+                        </div>
+                        <span asp-validation-for="subirArchivoEditar.imagen" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2 offset-sm-2">
+                            <input type="submit" value="Editar" class="btn btn-primary form-control" />
+                        </div>
+                        <div class="col-sm-4">
+                            <a asp-page="Index" class="btn btn-success form-control">Regresar</a>
+                        </div>
+                     
+                    </div>
+                </div>
+            </div>       
+        </form>
+    </div>
+</div>

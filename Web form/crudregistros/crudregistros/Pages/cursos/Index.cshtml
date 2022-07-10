@@ -1,0 +1,67 @@
+﻿@page
+@model crudregistros.Pages.cursos.IndexModel
+@{
+    ViewData["Tiltle"] = "Lista de cursos";
+}
+@if (Model.mensaje!=null)
+{
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+   @Model.mensaje
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+}
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="text-info">Listado de cursos</h2>
+            </div>
+            <div class="col-sm-6">
+                <a asp-page="Crear" class="btn btn-primary">Crear nuevo curso</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form method="post">
+        @if(Model.cursos.Count()>0)
+        {
+            <br />
+            <br />
+            <table class="table table-striped border" >
+                <tr class="table table-secondary" >
+                    <th>@Html.DisplayNameFor(m=> m.cursos.First().id)</th>
+                    <th>@Html.DisplayNameFor(m=> m.cursos.First().nombreCurso)</th>
+                    <th>@Html.DisplayNameFor(m=> m.cursos.First().cantidadDeClases)</th>
+                    <th>@Html.DisplayNameFor(m=> m.cursos.First().precio)</th>
+                    <th>@Html.DisplayNameFor(m=> m.cursos.First().fechaInicio)</th>
+                    <th>Controles</th>
+                </tr>
+                @foreach(var item in Model.cursos)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(m=> item.id)</td>
+                        <td>@Html.DisplayFor(m=> item.nombreCurso)</td>
+                        <td>@Html.DisplayFor(m=> item.cantidadDeClases)</td>
+                        <td>@Html.DisplayFor(m=> item.precio)</td>
+                        <td>@Html.DisplayFor(m=> item.fechaInicio)</td>
+                        <td>
+                            <a asp-route-id= "@item.id" asp-page="Editar" 
+                            class="btn btn-success btnsm">Editar</a>
+
+                            <button asp-page-handler="Borrar" 
+                            asp-route-id="@item.id" 
+                            onclick="return confirm('Esta seguro de borrar el curso?')" 
+                            class ="btn btn-danger btn-sm">Borrar</button>
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <p>No hay cursos registrados</p>
+        }
+
+        </form>
+    </div>
+</div>

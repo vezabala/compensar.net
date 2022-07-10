@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Proyecto</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Proyecto.styles.css" asp-append-version="true" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/lumen/bootstrap.min.css" rel="stylesheet" >
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" >
+</head>
+<body>
+    <header>
+            <!--:::::::Portada-001:::::::-->
+        <div class="wrp">
+            <div class="portada"></div>
+            <div class="contenido">
+                <div class="info">
+                    <h1>Farmacia</h1>
+                    <a href="#miModal">Contactar</a>
+                </div>
+                <div class="logo">
+                    <img src="img/logo.png">
+                </div>
+            </div>
+            <div class="curveado">
+                <img src="img/img2.png">
+            </div>
+        </div>
+            <!--:::::::FIN-Portada-001:::::::-->
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light navcolor box-shadow mb-3">
+            <div class="container divPadre">
+                <a class="navbar-brand" >Farmacia</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between divHijo">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="itemsnav" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="itemsnav" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="itemsnav" asp-area="" asp-page="/productos/index">Productos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer">
+        &copy; Proyecto Farmacia de Vanyhony Esneyder Zabala Baez
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/pinterest_grid.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

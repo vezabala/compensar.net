@@ -1,0 +1,122 @@
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\appsettings.json
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\crudregistros.staticwebassets.runtime.json
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\crudregistros.exe
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\crudregistros.deps.json
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\crudregistros.runtimeconfig.json
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\crudregistros.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\crudregistros.pdb
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\Humanizer.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.AssemblyInfo.cs
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.RazorAssemblyInfo.cache
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.RazorAssemblyInfo.cs
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\scopedcss\bundle\crudregistros.styles.css
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\scopedcss\projectbundle\crudregistros.bundle.scp.css
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.csproj.CopyComplete
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\refint\crudregistros.dll
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.pdb
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.genruntimeconfig.cache
+C:\Users\User\source\repos\crudregistros\crudregistros\obj\Debug\net6.0\ref\crudregistros.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\appsettings.Development.json
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\appsettings.json
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\crudregistros.staticwebassets.runtime.json
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\crudregistros.exe
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\crudregistros.deps.json
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\crudregistros.runtimeconfig.json
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\crudregistros.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\crudregistros.pdb
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\Humanizer.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.csproj.AssemblyReference.cache
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.GeneratedMSBuildEditorConfig.editorconfig
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.AssemblyInfoInputs.cache
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.AssemblyInfo.cs
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.csproj.CoreCompileInputs.cache
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.MvcApplicationPartsAssemblyInfo.cache
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.RazorAssemblyInfo.cache
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.RazorAssemblyInfo.cs
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\staticwebassets.build.json
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\staticwebassets.development.json
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\scopedcss\bundle\crudregistros.styles.css
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\scopedcss\projectbundle\crudregistros.bundle.scp.css
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.csproj.CopyComplete
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\refint\crudregistros.dll
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.pdb
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\crudregistros.genruntimeconfig.cache
+D:\estudio\compensar.net\Web form\crudregistros\crudregistros\obj\Debug\net6.0\ref\crudregistros.dll

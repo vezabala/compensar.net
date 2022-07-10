@@ -1,0 +1,91 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Proyecto.datos;
+using Proyecto.modelos;
+using System.Text.RegularExpressions;
+
+namespace Proyecto.Pages.productos
+{
+    public class CrearModel : PageModel
+    {
+        private readonly ApplicationDbContext _contexto;
+
+        [BindProperty]
+        public SubirArchivoModel subirArchivo { get; set; }
+
+        [TempData]
+        public string mensaje { get; set; }
+        public CrearModel(ApplicationDbContext contexto)
+        {
+            _contexto = contexto;
+        }
+
+        [BindProperty]
+        public producto productos { get; set; }
+        public void OnGet()
+        {
+        }
+
+        public async Task<IActionResult> OnPost()
+        {
+            string directorio = Directory.GetCurrentDirectory() + "\\wwwroot\\img";
+            string validacionDirectorio = directorio + "\\"+ subirArchivo.imagen.FileName;
+            string nombreArchivo = "";
+
+            //Chequeo que la extensión sea efectivamente .png
+            if (System.IO.Path.GetExtension(validacionDirectorio).ToLower() == ".png")
+            {
+                bool condicion = true;
+                while (condicion == true)
+                {
+                    //Dado el caso, verifico que exista el archivo..
+                    if (System.IO.File.Exists(validacionDirectorio))
+                    {
+                        //Lo ejecuto.
+                        nombreArchivo = System.IO.Path.GetFileNameWithoutExtension(validacionDirectorio);
+                        string ultimaLetra = nombreArchivo.Substring(nombreArchivo.Length - 1, 1);
+                        if (Regex.IsMatch(ultimaLetra, @"^[0-9]+$"))
+                        {
+                            int numero = int.Parse(ultimaLetra);
+                            int numeroAgregar = numero + 1;
+                            nombreArchivo = nombreArchivo.Remove(nombreArchivo.Length - 1);
+                            nombreArchivo = nombreArchivo + numeroAgregar + ".png";
+                        }
+                        else
+                        {
+                            nombreArchivo = nombreArchivo + "2.png";
+                        }
+
+                        string path = Path.Combine(directorio, nombreArchivo);
+                        using var stream = new FileStream(path, FileMode.Create);
+                        await subirArchivo.imagen.CopyToAsync(stream);
+                        productos.imagen = nombreArchivo;
+                    }
+                    else
+                    {
+                        string path = Path.Combine(directorio, subirArchivo.imagen.FileName);
+                        using var stream = new FileStream(path, FileMode.Create);
+                        await subirArchivo.imagen.CopyToAsync(stream);
+                        productos.imagen = subirArchivo.imagen.FileName;
+                        condicion = false;
+                    }
+                }
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return Page();
+
+            }
+
+            _contexto.Add(productos);
+            await _contexto.SaveChangesAsync();
+            mensaje = "Registro se ha guardado correctamente";
+            return RedirectToPage("Index");
+        }
+    }
+    public class SubirArchivoModel
+    {
+        public IFormFile imagen { get; set; }
+    }
+}

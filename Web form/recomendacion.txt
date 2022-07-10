@@ -1,0 +1,2 @@
+1: usar herramientas nuget instalar sql server
+2: 1: usar herramientas nuget instalar tools dentro microsoft entity

@@ -1,0 +1,65 @@
+﻿@page
+@model crudregistros.Pages.cursos.CrearModel
+@{
+}
+
+<div class="card">
+    <div class="card-header">
+        <h2 class="text-info">Crear un curso nuevo</h2>
+    </div>
+
+    <div class="card-body">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="container" style="padding:30px">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="cursos.nombreCurso"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="cursos.nombreCurso" class="form-control" />
+                        </div>
+                        <span asp-validation-for="cursos.nombreCurso" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="cursos.cantidadDeClases"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="cursos.cantidadDeClases" class="form-control" />
+                        </div>
+                        <span asp-validation-for="cursos.cantidadDeClases" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label asp-for="cursos.precio"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="cursos.precio" class="form-control" />
+                        </div>
+                        <span asp-validation-for="cursos.precio" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2 offset-sm-2">
+                            <input type="submit" value="Crear" class="btn btn-primary form-control" />
+                        </div>
+                        <div class="col-sm-4">
+                            <a asp-page="Index" class="btn btn-success form-control">Regresar</a>
+                        </div>
+                     
+                    </div>
+                </div>
+            </div>       
+        </form>
+    </div>
+</div>
