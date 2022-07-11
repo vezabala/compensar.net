@@ -3,40 +3,47 @@
 @{
     ViewData["Title"] = "Home page";
 }
-@section Scripts{
+
+@if(Model.productos.Count()>0){
+    @section Scripts{
       
-      <script src="~/js/pinterest_grid.js"></script>
-}
+          <script src="~/js/pinterest_grid.js"></script>
+    }
 
-<div class="tituloIndex">
-   <h1>Nuestros Productos</h1>
- </div>
+    <div class="tituloIndex">
+       <h1>Nuestros Productos</h1>
+     </div>
 
-<div class="container text-center">
-    <div id="products">
-        @foreach (var item in Model.productos)
-        {
-            <div class="product white-panel miPanel">
-                <div class="product-info panel">
-                    <h3 class="tituloArticle">@Html.DisplayFor(m=> item.nombreComercialMedicamento)</h3>
-                </div>
-                <img class="imgprodcut" src= "~/img/@Html.DisplayFor(m=> item.imagen)" />
-                <div class="product-info panel">
-                    <p class="miParrafo"><b>presentacion:</b> @Html.DisplayFor(m=> item.presentacion)</p>
-                    <h3><span class="btn btn-primary">precio: $@Html.DisplayFor(m=> item.precio)</span></h3>
-                    <p class="miParrafo"><b>vence el:</b> @Html.DisplayFor(m=> item.fechaVencimiento)</p>
-                     <div class="row">
-                        <div class="col-sm-2 offset-sm-2">
-                            <h3><span class="btn btn-dark ">La quiero</span></h3>
-                        </div>
-                        <div class="col-sm-2 offset-sm-2">
-                            <h3><span class="btn btn-success">Leer mas</span></h3>
-                        </div>
+    <div class="container text-center">
+        <div id="products">
+            @foreach (var item in Model.productos)
+            {
+                <div class="product white-panel miPanel">
+                    <div class="product-info panel">
+                        <h3 class="tituloArticle">@Html.DisplayFor(m=> item.nombreComercialMedicamento)</h3>
+                    </div>
+                    <img class="imgprodcut" src= "~/img/@Html.DisplayFor(m=> item.imagen)" />
+                    <div class="product-info panel">
+                        <p class="miParrafo"><b>presentacion:</b> @Html.DisplayFor(m=> item.presentacion)</p>
+                        <h3><span class="btn btn-primary">precio: $@Html.DisplayFor(m=> item.precio)</span></h3>
+                        <p class="miParrafo"><b>vence el:</b> @Html.DisplayFor(m=> item.fechaVencimiento)</p>
+                         <div class="row">
+                            <div class="col-sm-2 offset-sm-2">
+                                <h3><span class="btn btn-dark ">La quiero</span></h3>
+                            </div>
+                            <div class="col-sm-2 offset-sm-2">
+                                <h3><span class="btn btn-success">Leer mas</span></h3>
+                            </div>
                      
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
-</div>
+}else{
+    <div class="tituloIndex">
+       <h1>Valla a la pestaña de productos para registrarlos</h1>
+     </div>
+}
 

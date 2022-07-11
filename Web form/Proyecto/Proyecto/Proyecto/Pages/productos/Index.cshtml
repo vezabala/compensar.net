@@ -5,46 +5,46 @@ ViewData["Tiltle"] = "Lista de productos";
 }
 @if (Model.mensaje!=null)
 {
-  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <div class="alert alert-warning alert-dismissible show" role="alert">
    @Model.mensaje
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 }
-<div class="card">
-    <div class="card-header">
+<div class="card miCardCrear">
+    <div class="card-header ">
         <div class="row">
             <div class="col-sm-6">
-                <h2 class="text-info">Listado de productos</h2>
+                <h2 class="text-black-50">Listado de productos</h2>
             </div>
             <div class="col-sm-6">
                 <a asp-page="Crear" class="btn btn-primary">Crear nuevo producto</a>
             </div>
         </div>
     </div>
-    <div class="card-body">
+    <div class="card-body miCard">
         <form method="post">
         @if(Model.productos.Count()>0)
         {
             <br />
             <br />
-            <table class="table table-striped border" >
-                <tr class="table table-secondary" >
-                    <th>@Html.DisplayNameFor(m=> m.productos.First().id)</th>
-                    <th>@Html.DisplayNameFor(m=> m.productos.First().nombreComercialMedicamento)</th>
-                    <th>@Html.DisplayNameFor(m=> m.productos.First().presentacion)</th>
-                    <th>@Html.DisplayNameFor(m=> m.productos.First().precio)</th>
-                    <th>@Html.DisplayNameFor(m=> m.productos.First().fechaVencimiento)</th>
-                    <th>Controles</th>
+            <table class="table table-striped tablePrncipal" >
+                <tr class="table cabecera" >
+                    <th class="textHeader">@Html.DisplayNameFor(m=> m.productos.First().id)</th>
+                    <th class="textHeader">@Html.DisplayNameFor(m=> m.productos.First().nombreComercialMedicamento)</th>
+                    <th class="textHeader">@Html.DisplayNameFor(m=> m.productos.First().presentacion)</th>
+                    <th class="textHeader">@Html.DisplayNameFor(m=> m.productos.First().precio)</th>
+                    <th class="textHeader">@Html.DisplayNameFor(m=> m.productos.First().fechaVencimiento)</th>
+                    <th class="textHeader">Controles</th>
                 </tr>
                 @foreach(var item in Model.productos)
                 {
                    <div class="imgg">@Html.DisplayFor(m=> item.imagen)</div>
-                    <tr>
-                        <td>@Html.DisplayFor(m=> item.id)</td>
-                        <td>@Html.DisplayFor(m=> item.nombreComercialMedicamento)</td>
-                        <td>@Html.DisplayFor(m=> item.presentacion)</td>
-                        <td>@Html.DisplayFor(m=> item.precio)</td>
-                        <td>@Html.DisplayFor(m=> item.fechaVencimiento)</td>
+                    <tr class="miTable">
+                        <td class="miSubcolumnstext">@Html.DisplayFor(m=> item.id)</td>
+                        <td class="miSubcolumnstext">@Html.DisplayFor(m=> item.nombreComercialMedicamento)</td>
+                        <td class="miSubcolumnstext">@Html.DisplayFor(m=> item.presentacion)</td>
+                        <td class="miSubcolumnstext">@Html.DisplayFor(m=> item.precio)</td>
+                        <td class="miSubcolumnstext">@Html.DisplayFor(m=> item.fechaVencimiento)</td>
                         <td>
                             <a asp-route-id= "@item.id" asp-page="Editar" 
                             class="btn btn-success btnsm">Editar</a>
@@ -60,7 +60,7 @@ ViewData["Tiltle"] = "Lista de productos";
         }
         else
         {
-            <p>No hay cursos registrados</p>
+            <p class="miSubcolumnstext">No hay productos registrados</p>
         }
 
         </form>

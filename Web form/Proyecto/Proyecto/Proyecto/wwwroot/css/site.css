@@ -241,3 +241,99 @@ img {
     margin-bottom: 25px;
     letter-spacing: 1px;
 }
+
+articleecolor{
+    background: linear-gradient(90deg, rgb(19, 124, 209), rgb(94, 186, 240) 92%, rgb(131, 213, 238) 100%);
+}
+/*index Crear*/
+.miCard {
+    background: linear-gradient(90deg, rgb(19, 124, 209), rgb(94, 186, 240) 92%, rgb(131, 213, 238) 100%);
+    padding: 1px 7px 30px 4px;
+}
+.miTable {
+    background: linear-gradient(90deg, rgb(19, 124, 209), rgb(94, 186, 240) 92%, rgb(131, 213, 238) 100%);
+}
+
+.tablePrncipal {
+    border: 0.2px dotted rgba(96, 87, 182, 0.808);
+}
+.cabecera {
+    background: linear-gradient(90deg, rgb(19, 124, 209), rgb(94, 186, 240) 92%, rgb(131, 213, 238) 100%);
+}
+.miCardCrear {
+    background: linear-gradient(90deg, rgb(19, 124, 209), rgb(94, 186, 240) 92%, rgb(131, 213, 238) 100%);
+    border: 0px solid rgba(96, 87, 182, 0.808);
+    padding: 0px 7px 0px 4px;
+}
+
+.miSubcolumnstext {
+    line-height: 100%;
+    font-family: cursive;
+    font-weight: 600;
+    font-size: 14px
+}
+
+.textHeader {
+    line-height: 100%;
+    font-family: cursive;
+    font-weight: 900;
+    font-size: 16px;
+    color: rgb(58, 10, 1);
+}
+
+/*crear*/
+.miLavel {
+    line-height: 100%;
+    font-family: cursive;
+    font-weight: 900;
+    font-size: 16px ;
+    color: rgb(58, 10, 1);
+}
+
+.miInputCrear {
+    display: block;
+    width: 100%;
+    height: 38px;
+    padding: 7px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #1f0303;
+    background: linear-gradient(90deg, rgb(19, 117, 209), rgb(94, 174, 240) 92%, rgb(131, 177, 238) 100%);
+    border: 1px solid #10719e;
+    border-radius: 4px;
+}
+
+/*input imagen*/
+.file-select {
+    position: relative;
+    display: inline-block;
+}
+
+    .file-select::before {
+        background: linear-gradient(90deg, rgb(19, 117, 209), rgb(94, 174, 240) 92%, rgb(131, 177, 238) 100%);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        content: 'Seleccionar'; /* testo por defecto */
+        position: absolute;
+        width: 35.5%;
+        height: 30px;
+    }
+
+    .file-select input[type="file"] {
+        opacity: 0;
+        width: 200px;
+        height: 32px;
+        display: inline-block;
+    }
+
+#src-file1::before {
+    content: 'Seleccionar imagen';
+}
+
+#imgContacto img {
+    width: 200px;
+    height: 32px;
+}

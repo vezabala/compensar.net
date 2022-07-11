@@ -4,14 +4,14 @@
 }
 @if (Model.mensaje!=null)
 {
-  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <div class="alert alert-warning alert-dismissible show" role="alert" id="mensaje">
    @Model.mensaje
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 }
-<div class="card">
+<div class="card miCardCrear">
     <div class="card-header">
-        <h2 class="text-info">Crear un producto nuevo</h2>
+        <h2 class="text-black-50">Crear un producto nuevo</h2>
     </div>
 
     <div class="card-body">
@@ -20,11 +20,11 @@
             <div class="container" style="padding:30px">
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2 miLavel">
                             <label asp-for="productos.nombreComercialMedicamento"></label>
                         </div>
                         <div class="col-sm-6">
-                            <input asp-for="productos.nombreComercialMedicamento" class="form-control" />
+                            <input asp-for="productos.nombreComercialMedicamento" class="miInputCrear" />
                         </div>
                         <span asp-validation-for="productos.nombreComercialMedicamento" class="text-danger"></span>
                     </div>
@@ -32,35 +32,35 @@
 
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2 miLavel">
                             <label asp-for="productos.presentacion"></label>
                         </div>
                         <div class="col-sm-6">
-                            <input asp-for="productos.presentacion" class="form-control" />
+                            <input asp-for="productos.presentacion" class="miInputCrear" />
                         </div>
                         <span asp-validation-for="productos.presentacion" class="text-danger"></span>
                     </div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group miLavel">
                     <div class="row">
                         <div class="col-sm-2">
                             <label asp-for="productos.precio"></label>
                         </div>
                         <div class="col-sm-6">
-                            <input asp-for="productos.precio" class="form-control" />
+                            <input asp-for="productos.precio" class="miInputCrear" />
                         </div>
                         <span asp-validation-for="productos.precio" class="text-danger"></span>
                     </div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group miLavel">
                     <div class="row">
                         <div class="col-sm-2">
                             <label asp-for="productos.fechaVencimiento"></label>
                         </div> 
                         <div class="col-sm-6">
-                            <input type="date" asp-for="productos.fechaVencimiento" class="form-control" />
+                            <input type="date" asp-for="productos.fechaVencimiento" class="miInputCrear" />
                         </div>
                         <span asp-validation-for="productos.fechaVencimiento" class="text-danger"></span>
                     </div>
@@ -68,11 +68,25 @@
 
                  <div class="form-group">
                     <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2 miLavel">
                             <label asp-for="productos.imagen"></label>
                         </div> 
-                        <div class="col-sm-6">
-                            <input type="file" asp-for="subirArchivo.imagen" class="form-control" accept="image/png"/>
+                        <div class="col-sm-6 file-select" id="src-file1">
+                            <input type="file"  id="imgProducto"  asp-for="subirArchivo.imagen" class="miInputCrear" accept="image/png"/>
+                            <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                              <script>
+                                 $(document).ready(function() {
+                                    $("#imgProducto").change(function(){
+                                        let input = $(this);
+                                        let nombre = input.val().split("\\").pop().toLowerCase();
+                                        if( input.val() != "" ){
+                                            alert("Se cargo la imagen " + nombre + " correctamente");
+                                        }else{
+                                            alert("favor de cargar una imagen");
+                                        }
+                                    });
+                                 });
+                             </script>
                             <input asp-for="productos.imagen" value="vaor defecto" class="valordefecto" />
                         </div>
                         <span asp-validation-for="subirArchivo.imagen" class="text-danger"></span>
