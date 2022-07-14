@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MJXZXbarMPpllRiY9sxQzyQ8Kzq52xp25lSZL6iVrm0=",
+  "Hash": "fslEZblYfR0C0qkyBrSD76KtYKYXeEWEvsb3azE76ws=",
   "Source": "Proyecto",
   "BasePath": "_content/Proyecto",
   "Mode": "Default",
@@ -100,23 +100,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
-      "Identity": "D:\\estudio\\compensar.net\\Web form\\Proyecto\\Proyecto\\Proyecto\\wwwroot\\img\\farmacia.png",
-      "SourceId": "Proyecto",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\estudio\\compensar.net\\Web form\\Proyecto\\Proyecto\\Proyecto\\wwwroot\\",
-      "BasePath": "_content/Proyecto",
-      "RelativePath": "img/farmacia.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\farmacia.png"
     },
     {
       "Identity": "D:\\estudio\\compensar.net\\Web form\\Proyecto\\Proyecto\\Proyecto\\wwwroot\\img\\img2.png",
