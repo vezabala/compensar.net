@@ -252,6 +252,7 @@
     <Content Include="dist\js\pages\dashboard.js" />
     <Content Include="dist\js\pages\dashboard2.js" />
     <Content Include="Docinicio.aspx" />
+    <Content Include="DocinicioConsulta.aspx" />
     <Content Include="documentation\index.html" />
     <Content Include="Gruntfile.js" />
     <Content Include="imagenes\dos.png" />
@@ -844,6 +845,13 @@
     </Compile>
     <Compile Include="Docinicio.aspx.designer.cs">
       <DependentUpon>Docinicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocinicioConsulta.aspx.cs">
+      <DependentUpon>DocinicioConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocinicioConsulta.aspx.designer.cs">
+      <DependentUpon>DocinicioConsulta.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPageAd.Master.cs">
       <DependentUpon>MasterPageAd.Master</DependentUpon>

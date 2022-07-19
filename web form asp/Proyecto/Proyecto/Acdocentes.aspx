@@ -122,18 +122,66 @@
         .auto-style59 {
             width: 198px;
         }
+        .auto-style60 {
+            height: 71px;
+        }
+        .auto-style61 {
+            width: 100%;
+        }
+        .auto-style63 {
+            width: 211px;
+        }
+        .auto-style64 {
+            width: 182px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="border-radius: 20px; border: solid 2px #999999; box-shadow: 2px 2px 5px #999999; height: 785px; width: 1526px">
+        <div style="border-radius: 20px; border: solid 2px #999999; margin-left: 17px; margin-top: 17px" class="auto-style60">
+            <table class="auto-style61">
+                <tr>
+                    <td class="auto-style64">&nbsp;</td>
+                    <td class="auto-style63">&nbsp;</td>
+                    <td class="auto-style58">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style64">Buscar Docente por Codigo:</td>
+                    <td class="auto-style63">
+                        <asp:TextBox ID="TextBox4" runat="server" Width="174px"></asp:TextBox>
+                    </td>
+                    <td class="auto-style58">
+                        <asp:Button ID="Button2" runat="server" BackColor="#00CC00" BorderColor="Lime" BorderStyle="Outset" Font-Bold="True" OnClick="Button2_Click" Text="Buscar" Width="91px" />
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style64">&nbsp;</td>
+                    <td class="auto-style63">&nbsp;</td>
+                    <td class="auto-style58">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </div>
         <div style="height: 756px; width: 1481px; margin-left: 17px; margin-top: 17px">
             <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="doccodigo" DataSourceID="SqlDataSource1" Height="181px" Width="960px">
                 <EditItemTemplate>
                     <table class="nav-justified">
                         <tr>
-                            <td class="auto-style10" colspan="4">Actualizacion de Docentes</td>
-                            <td class="auto-style33">&nbsp;</td>
-                            <td class="auto-style10">&nbsp;</td>
+                            <td class="auto-style10" colspan="6">Actualizacion de Docentes</td>
                         </tr>
                         <tr>
                             <td class="auto-style32">Codigo Usuario:</td>
@@ -189,8 +237,8 @@
                         </tr>
                     </table>
                     <br />
-                    <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Actualizar" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" ForeColor="Black" />
-                    &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" ForeColor="Black" />
+                    <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Actualizar" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" ForeColor="Black" Font-Bold="True" Font-Overline="False" />
+                    &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" ForeColor="Black" Font-Bold="True" Font-Italic="False" Font-Overline="False" />
                 </EditItemTemplate>
                 <InsertItemTemplate>
                     <table class="nav-justified">
@@ -287,7 +335,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="auto-style28">Telefono</td>
+                            <td class="auto-style28">Telefono:</td>
                             <td class="auto-style24">
                                 <asp:Label ID="dotelefonoLabel" runat="server" Text='<%# Bind("dotelefono") %>' />
                             </td>
@@ -299,7 +347,7 @@
                             <td class="auto-style3">&nbsp;</td>
                         </tr>
                         <tr>
-                            <td class="auto-style28">Ingreso</td>
+                            <td class="auto-style28">Ingreso:</td>
                             <td class="auto-style24">
                                 <asp:Label ID="docingresoLabel" runat="server" Text='<%# Bind("docingreso") %>' />
                             </td>
