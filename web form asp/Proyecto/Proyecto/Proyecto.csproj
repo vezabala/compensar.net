@@ -71,6 +71,7 @@
     <Content Include=".gitignore" />
     <Content Include="Accursos.aspx" />
     <Content Include="Acdocentes.aspx" />
+    <Content Include="AcGaleriaDocente.aspx" />
     <Content Include="AdCursosdictados.aspx" />
     <Content Include="Adinicio.aspx" />
     <Content Include="assets\css\style.css" />
@@ -253,6 +254,9 @@
     <Content Include="Docinicio.aspx" />
     <Content Include="documentation\index.html" />
     <Content Include="Gruntfile.js" />
+    <Content Include="imagenes\dos.png" />
+    <Content Include="imagenes\tres.png" />
+    <Content Include="imagenes\uno.png" />
     <Content Include="pages\calendar.html" />
     <Content Include="pages\charts\chartjs.html" />
     <Content Include="pages\charts\flot.html" />
@@ -792,6 +796,13 @@
     <Compile Include="Acdocentes.aspx.designer.cs">
       <DependentUpon>Acdocentes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AcGaleriaDocente.aspx.cs">
+      <DependentUpon>AcGaleriaDocente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcGaleriaDocente.aspx.designer.cs">
+      <DependentUpon>AcGaleriaDocente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdCursosdictados.aspx.cs">
       <DependentUpon>AdCursosdictados.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1016,6 +1027,9 @@
     <Content Include="assets\vendor\remixicon\remixicon.woff" />
     <Content Include="assets\vendor\remixicon\remixicon.woff2" />
     <Content Include="MasterPageDoc.Master" />
+    <Content Include="archivos\informe1.pdf" />
+    <Content Include="archivos\informe2.pdf" />
+    <Content Include="archivos\informe3.pdf" />
     <None Include="packages.config" />
     <Content Include="README.md" />
     <Content Include="plugins\ckeditor\CHANGES.md" />
@@ -1038,6 +1052,7 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

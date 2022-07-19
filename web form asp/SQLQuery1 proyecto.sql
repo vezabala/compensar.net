@@ -13,6 +13,8 @@ docnombre1 VARCHAR(30) NOT NULL,
 docnombre2 VARCHAR(30),
 docingreso VARCHAR(30) NOT NULL,
 dotelefono VARCHAR(30) NOT NULL,
+imagen VARCHAR(100),
+archivo VARCHAR(100),
 CONSTRAINT fk_Usuarios FOREIGN KEY (usucodigo) REFERENCES tbltipousuario (usucodigo)
 );
 
@@ -43,6 +45,28 @@ doccodigo INT,
 primary key(curcodigo, doccodigo),
 CONSTRAINT fk_cursos_doc FOREIGN KEY (curcodigo) REFERENCES tblcursos (curcodigo),
 CONSTRAINT fk_docente_cur FOREIGN KEY (doccodigo) REFERENCES tbldocentes (doccodigo)
+);
+
+CREATE TABLE tblestudiantes(
+usucodigo INT NOT NULL,
+estcodigo INT PRIMARY KEY NOT NULL,
+estapellido1 VARCHAR(30) NOT NULL,
+estapellido2 VARCHAR(30) NOT NULL,
+estnombre1 VARCHAR(30) NOT NULL,
+estnombre2 VARCHAR(30),
+estingreso VARCHAR(30) NOT NULL,
+estelefono VARCHAR(30) NOT NULL,
+CONSTRAINT fk_Usuarios_alumno FOREIGN KEY (usucodigo) REFERENCES tbltipousuario (usucodigo),
+);
+
+CREATE TABLE tblcursoestudiante(
+doccodigo INT,
+curcodigo INT,
+estcodigo INT,
+primary key(curcodigo, estcodigo),
+CONSTRAINT fk_cursos_doc_est FOREIGN KEY (curcodigo) REFERENCES tblcursos (curcodigo),
+CONSTRAINT fk_estudiante_cur FOREIGN KEY (estcodigo) REFERENCES tblestudiantes (estcodigo),
+CONSTRAINT fk_docente_cur_est FOREIGN KEY (doccodigo) REFERENCES tbldocentes (doccodigo)
 );
 
 INSERT INTO tbltipousuario
@@ -107,6 +131,8 @@ VALUES
 (1, 830400,'Becerra', 'Becerra', 'Martha', 'Lucia','21','',null,'Director'),
 (1, 845671,'Becerra', 'Chaparro', 'Dilcia', 'Concepcion','22','',null,'Director');
 
+drop table tblcursoestudiante;
+drop table tblestudiantes;
 drop table tblcursodocente;
 drop table tblcursos;
 drop table tbldirectivo;

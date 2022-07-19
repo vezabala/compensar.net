@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace Proyecto
 {
-    public partial class Acdocentes : System.Web.UI.Page
+    public partial class AcGaleriaDocente : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
         {
 
         }
