@@ -18,6 +18,7 @@ namespace Proyecto
         String nombre2;
         String us;
         String usNA;
+        String imagen;
         bool condicion = false;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -38,7 +39,7 @@ namespace Proyecto
             }
             if (DropDownList1.SelectedValue.Equals("3"))
             {
-                string cadena = "select usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso from tbldocentes";
+                string cadena = "select usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, imagen from tbldocentes";
                 SqlCommand comando = new SqlCommand(cadena, conexion);
                 SqlDataReader registros = comando.ExecuteReader();
                 while (registros.Read())
@@ -49,6 +50,7 @@ namespace Proyecto
                         apellido2 = (registros["docapellido2"].ToString());
                         nombre1 = (registros["docnombre1"].ToString());
                         nombre2 = (registros["docnombre2"].ToString());
+                        imagen = (registros["imagen"].ToString());
                         us = ($"{nombre1} {nombre2} {apellido1} {apellido2}");
                         usNA = ($"{nombre1} {apellido1}");
                         condicion = true;
@@ -67,6 +69,7 @@ namespace Proyecto
                     //Almacenamos las dos variables de sesion
                     Session["usuario"] = us;
                     Session["usuarioNA"] = usNA;
+                    Session["imagen"] = imagen;
                     Session["clave"] = TextBox1.Text;
                     //Redireccionamos a la siguiente pagina
 

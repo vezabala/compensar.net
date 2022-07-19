@@ -256,6 +256,7 @@
     <Content Include="documentation\index.html" />
     <Content Include="Gruntfile.js" />
     <Content Include="imagenes\dos.png" />
+    <Content Include="imagenes\imagenUsuario.png" />
     <Content Include="imagenes\tres.png" />
     <Content Include="imagenes\uno.png" />
     <Content Include="pages\calendar.html" />

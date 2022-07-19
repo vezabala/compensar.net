@@ -65,7 +65,7 @@
           </a>
         </li><!-- End Search Icon-->
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" style="left: 1px; top: -15px">
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-bell"></i>
@@ -171,7 +171,7 @@
             </li>
 
             <li class="message-item">
-              <a href="#">
+              <a href="#">             
                 <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
                 <div>
                   <h4>Anna Nelson</h4>
@@ -209,7 +209,7 @@
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+              <asp:Image ID="Image2" runat="server" ImageUrl='<%# Eval("imagen", "~/imagenes/{0}") %>' Width="40px" class="rounded-circle" style="width: 38px;" />
             <span class="d-none d-md-block dropdown-toggle ps-2"><asp:Label ID="MiLabel" runat="server" Text="MiLabel"></asp:Label></span>
           </a><!-- End Profile Iamge Icon -->
 
@@ -273,7 +273,7 @@
         <li class="nav-item">
         <a class="nav-link ">
           <i class="fa fa-circle text-success" style="font-size:40px; position:relative; top: -9px;">.</i>
-          <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle" style="width: 50px;">
+          <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("imagen", "~/imagenes/{0}") %>' Width="40px" class="rounded-circle" style="width: 50px;" />
           <span class=""><asp:Label ID="MiLabel2" runat="server" Text="MiLabel"></asp:Label></span>
           <b>
             <label class="fa fa-circle text-success" style=" position:relative; left: 6px;">Online</label>
