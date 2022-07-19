@@ -24,8 +24,8 @@ dirapellido2 VARCHAR(30) NOT NULL,
 dirnombre1 VARCHAR(30) NOT NULL,
 dirnombre2 VARCHAR(30),
 diringreso VARCHAR(30) NOT NULL,
-direlefono VARCHAR(30) NOT NULL,
-dirsalario numeric(18, 0) NOT NULL,
+direlefono VARCHAR(30),
+dirsalario numeric(18, 0),
 cargo VARCHAR(10) NOT NULL,
 CONSTRAINT fk_Usuarios_DIRECTIVO FOREIGN KEY (usucodigo) REFERENCES tbltipousuario (usucodigo)
 );
@@ -97,6 +97,15 @@ VALUES
 (6, 61119153),
 (7, 49389877),
 (8, 66983791);
+
+INSERT INTO tbldirectivo
+(usucodigo, dircodigo,dirapellido1, dirapellido2,dirnombre1, dirnombre2, diringreso, direlefono, dirsalario, cargo )
+VALUES 
+(1, 784587,'Albarracin', 'Oviedo', 'Nelsy', '','85','',null,'Director'),
+(1, 799858,'Araque', 'Parra', 'Lendy', '.','99','',null,'Director'),
+(1, 815129,'Archila', 'Barragan', 'Monica', 'Paola','23','',null,'Director'),
+(1, 830400,'Becerra', 'Becerra', 'Martha', 'Lucia','21','',null,'Director'),
+(1, 845671,'Becerra', 'Chaparro', 'Dilcia', 'Concepcion','22','',null,'Director');
 
 drop table tblcursodocente;
 drop table tblcursos;

@@ -70,6 +70,8 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="Accursos.aspx" />
+    <Content Include="Acdocentes.aspx" />
+    <Content Include="AdCursosdictados.aspx" />
     <Content Include="Adinicio.aspx" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
@@ -198,6 +200,7 @@
     <Content Include="bootstrap\js\npm.js" />
     <Content Include="Default.aspx" />
     <Content Include="Default2.aspx" />
+    <Content Include="Default3.aspx" />
     <Content Include="dist\css\AdminLTE.css" />
     <Content Include="dist\css\AdminLTE.min.css" />
     <Content Include="dist\css\skins\skin-black.css" />
@@ -782,6 +785,20 @@
     <Compile Include="Accursos.aspx.designer.cs">
       <DependentUpon>Accursos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Acdocentes.aspx.cs">
+      <DependentUpon>Acdocentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Acdocentes.aspx.designer.cs">
+      <DependentUpon>Acdocentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdCursosdictados.aspx.cs">
+      <DependentUpon>AdCursosdictados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdCursosdictados.aspx.designer.cs">
+      <DependentUpon>AdCursosdictados.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Adinicio.aspx.cs">
       <DependentUpon>Adinicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -802,6 +819,13 @@
     </Compile>
     <Compile Include="Default2.aspx.designer.cs">
       <DependentUpon>Default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default3.aspx.cs">
+      <DependentUpon>Default3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default3.aspx.designer.cs">
+      <DependentUpon>Default3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Docinicio.aspx.cs">
       <DependentUpon>Docinicio.aspx</DependentUpon>

@@ -243,7 +243,8 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="../../Accursos.aspx"><i class="fa fa-circle-o"></i>Actualizar cursos</a></li>
-                <li><a href="../../adequipos1.aspx"><i class="fa fa-circle-o"></i>Equipos1</a></li> 
+                <li><a href="../../Acdocentes.aspx"><i class="fa fa-circle-o"></i>Actualizar docentes</a></li>
+                <li><a href="../../AdCursosdictados.aspx"><i class="fa fa-circle-o"></i>Consulta Cursos</a></li>
               </ul>
 
             <li class="treeview">
