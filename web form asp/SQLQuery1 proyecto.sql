@@ -16,6 +16,35 @@ dotelefono VARCHAR(30) NOT NULL,
 CONSTRAINT fk_Usuarios FOREIGN KEY (usucodigo) REFERENCES tbltipousuario (usucodigo)
 );
 
+CREATE TABLE tbldirectivo(
+usucodigo INT NOT NULL,
+dircodigo INT PRIMARY KEY NOT NULL,
+dirapellido1 VARCHAR(30) NOT NULL,
+dirapellido2 VARCHAR(30) NOT NULL,
+dirnombre1 VARCHAR(30) NOT NULL,
+dirnombre2 VARCHAR(30),
+diringreso VARCHAR(30) NOT NULL,
+direlefono VARCHAR(30) NOT NULL,
+dirsalario numeric(18, 0) NOT NULL,
+cargo VARCHAR(10) NOT NULL,
+CONSTRAINT fk_Usuarios_DIRECTIVO FOREIGN KEY (usucodigo) REFERENCES tbltipousuario (usucodigo)
+);
+
+CREATE TABLE tblcursos(
+curcodigo INT PRIMARY KEY IDENTITY NOT NULL,
+curnombre1 VARCHAR(30) NOT NULL,
+curintensidadh int NOT NULL,
+curdescripcion VARCHAR(60) NOT NULL,
+);
+
+CREATE TABLE tblcursodocente(
+curcodigo INT,
+doccodigo INT,
+primary key(curcodigo, doccodigo),
+CONSTRAINT fk_cursos_doc FOREIGN KEY (curcodigo) REFERENCES tblcursos (curcodigo),
+CONSTRAINT fk_docente_cur FOREIGN KEY (doccodigo) REFERENCES tbldocentes (doccodigo)
+);
+
 INSERT INTO tbltipousuario
 (usunombre,usudescripcion)
 VALUES
@@ -41,6 +70,36 @@ VALUES
 (3, 81645386,'Becerra', 'Becerra', 'LLda', 'Francisca','2911661536','6'),
 (3, 84577705,'Bohorquez', 'Rodriguez', 'Jeffer', '','312455100','5');
 
+INSERT INTO tblcursos
+(curnombre1, curintensidadh, curdescripcion)
+VALUES
+('Ingles.', 5, 'Curso de formacion corto 30 semanas'),
+('Ingles 2', 2, 'Curso de formacion corto 40 semanas'),
+('C++', 3, 'Curso de formacion corto 60 semanas'),
+('Java', 4, 'Curso de formacion corto 40 semanas'),
+('Cobol', 6, 'Curso de formacion corto 40 semanas'),
+('Español.', 4, 'Curso de formacion corto 20 semanas'),
+('Finanzas.', 7, 'Curso de formacion corto 50 semanas'),
+('Liderazgo.', 9, 'Curso de formacion corto 40 semanas');
 
+INSERT INTO tblcursodocente
+(curcodigo, doccodigo)
+VALUES
+(1, 49389877),
+(1, 64051472),
+(1, 66983791),
+(1, 72848429),
+(1, 75780748),
+(2, 49389877),
+(2, 58186834),
+(2, 78713067),
+(5, 84577705),
+(6, 61119153),
+(7, 49389877),
+(8, 66983791);
+
+drop table tblcursodocente;
+drop table tblcursos;
+drop table tbldirectivo;
 drop table tbldocentes;
 drop table tbltipousuario;

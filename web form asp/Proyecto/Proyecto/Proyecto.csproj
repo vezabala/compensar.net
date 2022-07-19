@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="Accursos.aspx" />
     <Content Include="Adinicio.aspx" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
@@ -196,6 +197,7 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\npm.js" />
     <Content Include="Default.aspx" />
+    <Content Include="Default2.aspx" />
     <Content Include="dist\css\AdminLTE.css" />
     <Content Include="dist\css\AdminLTE.min.css" />
     <Content Include="dist\css\skins\skin-black.css" />
@@ -773,6 +775,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accursos.aspx.cs">
+      <DependentUpon>Accursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accursos.aspx.designer.cs">
+      <DependentUpon>Accursos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Adinicio.aspx.cs">
       <DependentUpon>Adinicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -786,6 +795,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default2.aspx.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default2.aspx.designer.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Docinicio.aspx.cs">
       <DependentUpon>Docinicio.aspx</DependentUpon>

@@ -11,7 +11,14 @@ namespace Proyecto
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (this.Session.Count == 0)
+            {
+                Response.Redirect("Default.aspx");
+            }
+            else
+            {
+                Label1.Text = $"Pagina de inicio Docente ({this.Session["usuario"].ToString()})";
+            }
         }
     }
 }

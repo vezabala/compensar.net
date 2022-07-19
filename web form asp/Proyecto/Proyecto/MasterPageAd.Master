@@ -239,10 +239,10 @@
                <li class="header">Equipos</li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-pie-chart"></i> <span>Equipos</span> <i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-pie-chart"></i> <span>Actualizacion</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="../../adequipos.aspx"><i class="fa fa-circle-o"></i>Equipos</a></li>
+                <li><a href="../../Accursos.aspx"><i class="fa fa-circle-o"></i>Actualizar cursos</a></li>
                 <li><a href="../../adequipos1.aspx"><i class="fa fa-circle-o"></i>Equipos1</a></li> 
               </ul>
 

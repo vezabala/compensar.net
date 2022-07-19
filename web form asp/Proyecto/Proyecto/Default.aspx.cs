@@ -12,7 +12,12 @@ namespace Proyecto
     {
         SqlConnection conexion = new SqlConnection("server=DESKTOP-D4K75HQ\\SQLEXPRESS ; database=proyectoasp ; integrated security = true");
 
+        String apellido1;
+        String apellido2;
+        String nombre1;
+        String nombre2;
         String us;
+        String usNA;
         bool condicion = false;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,33 +36,48 @@ namespace Proyecto
             {
                 Response.Redirect("Default.aspx");
             }
-
-            string cadena = "select usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso from tbldocentes";
-            SqlCommand comando = new SqlCommand(cadena, conexion);
-            SqlDataReader registros = comando.ExecuteReader();
-            while (registros.Read())
+            if (DropDownList1.SelectedValue.Equals("3"))
             {
-                if (registros["docingreso"].ToString().Equals(TextBox1.Text))
+                string cadena = "select usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso from tbldocentes";
+                SqlCommand comando = new SqlCommand(cadena, conexion);
+                SqlDataReader registros = comando.ExecuteReader();
+                while (registros.Read())
                 {
-                    us = (registros["usucodigo"].ToString());
-                    condicion = true;
+                    if (registros["docingreso"].ToString().Equals(TextBox1.Text))
+                    {
+                        apellido1 = (registros["docapellido1"].ToString());
+                        apellido2 = (registros["docapellido2"].ToString());
+                        nombre1 = (registros["docnombre1"].ToString());
+                        nombre2 = (registros["docnombre2"].ToString());
+                        us = ($"{nombre1} {nombre2} {apellido1} {apellido2}");
+                        usNA = ($"{nombre1} {apellido1}");
+                        condicion = true;
+                    }
+                }
+                if (condicion == false)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(),
+                        "alert",
+                        "alert('La contraseña es incorrecta, no existe');", true);
+                    conexion.Close();
+                    TextBox1.Text = "";
+                }
+                else
+                {
+                    //Almacenamos las dos variables de sesion
+                    Session["usuario"] = us;
+                    Session["usuarioNA"] = usNA;
+                    Session["clave"] = TextBox1.Text;
+                    //Redireccionamos a la siguiente pagina
+
+                    Response.Redirect("Docinicio.aspx");
+
+                    conexion.Close();
                 }
             }
-            if (condicion == false)
+            if (DropDownList1.SelectedValue.Equals("1"))
             {
-                ScriptManager.RegisterStartupScript(this, this.GetType(),
-                    "alert",
-                    "alert('La contraseña es incorrecta, no existe');", true);
-                conexion.Close();
-            }
-            else
-            {
-                //Almacenamos las dos variables de sesion
-                Session["usuario"] = us;
-                Session["clave"] = TextBox1.Text;
-                //Redireccionamos a la siguiente pagina
-
-                Response.Redirect("AdInicio.aspx");
+                Response.Redirect("Adinicio.aspx");
 
                 conexion.Close();
             }
