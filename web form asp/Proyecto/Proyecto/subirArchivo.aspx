@@ -73,7 +73,7 @@
             <asp:Label ID="Label7" runat="server" CssClass="auto-style7"></asp:Label>
             <strong>
             <br />
-            <asp:Label ID="Label8" runat="server" CssClass="auto-style7" Text="Nombre del archivo:"></asp:Label>
+            <asp:Label ID="Label8" runat="server" CssClass="auto-style7" Text="Nombre del archivo con el que se subio:"></asp:Label>
 &nbsp; </strong>
             <asp:Label ID="Label9" runat="server" CssClass="auto-style7"></asp:Label>
             <br />
