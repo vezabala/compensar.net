@@ -59,6 +59,8 @@ namespace Proyecto
                     Label11.Text = ext;
                     Label12.Text = "Imagen subida:";
                     Image1.ImageUrl = $"~/imagenes/{nombreArchivo}";
+                    HyperLink1.Text = "";
+                    HyperLink1.NavigateUrl = "";
                 }
                 else if (ext.Equals(".pdf"))
                 {  

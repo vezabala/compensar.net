@@ -25,7 +25,7 @@
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="PDF">
                         <ItemTemplate>
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# Eval("archivo") %>' Text="Abrir Archivo"></asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# Eval("archivo", "~/archivos/{0}") %>' Text="Abrir Archivo"></asp:HyperLink>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

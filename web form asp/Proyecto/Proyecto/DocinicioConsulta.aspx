@@ -255,7 +255,7 @@
                      </table>
                      <br />
                      <asp:LinkButton ID="EditButton" runat="server" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" CausesValidation="False" CommandName="Edit" Font-Bold="True" Font-Overline="False" ForeColor="Black" Text="Editar" />
-                     &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" BackColor="Red" BorderColor="#FF3300" BorderStyle="Outset" CausesValidation="False" CommandName="Delete" Font-Bold="True" Font-Overline="False" ForeColor="Black" Text="Eliminar" />
+                     &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" BackColor="Red" BorderColor="#FF3300" BorderStyle="Outset" CausesValidation="False" CommandName="Delete" Font-Bold="True" Font-Overline="False" ForeColor="Black" Text="Eliminar" OnClick="DeleteButton_Click" />
                      &nbsp;
                  </ItemTemplate>
              </asp:FormView>

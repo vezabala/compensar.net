@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -60,6 +61,33 @@ namespace Proyecto
                     Response.Redirect("DocinicioConsulta.aspx");
 
                     conexion.Close();
+                }
+            }
+        }
+
+        protected void DeleteButton_Click(object sender, EventArgs e)
+        {
+            Label docImagen = FormView1.FindControl("docimagenLabel") as Label;
+            Label docArchivo = FormView1.FindControl("docarchivoLabel") as Label;
+            if (!docImagen.Text.Equals("")){
+                //borrar imagen del directorio
+
+                //Dado el caso, verifico que exista el archivo..
+                
+                if (System.IO.File.Exists(Server.MapPath(".") + "/imagenes/" + docImagen.Text))
+                {
+                    System.IO.File.Delete(Server.MapPath(".") + "/imagenes/" + docImagen.Text);
+                }
+            }
+            if (!docArchivo.Text.Equals(""))
+            {
+                //borrar archivo del directorio
+
+                //Dado el caso, verifico que exista el archivo..
+
+                if (System.IO.File.Exists(Server.MapPath(".") + "/archivos/" + docArchivo.Text))
+                {
+                    System.IO.File.Delete(Server.MapPath(".") + "/archivos/" + docArchivo.Text);
                 }
             }
         }

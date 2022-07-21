@@ -32,5 +32,33 @@ namespace Proyecto
         {
             Response.Redirect("DocinicioConsulta.aspx");
         }
+
+        protected void DeleteButton_Click(object sender, EventArgs e)
+        {
+            Label docImagen = FormView1.FindControl("imagenLabel") as Label;
+            Label docArchivo = FormView1.FindControl("archivoLabel") as Label;
+            if (!docImagen.Text.Equals(""))
+            {
+                //borrar imagen del directorio
+
+                //Dado el caso, verifico que exista el archivo..
+
+                if (System.IO.File.Exists(Server.MapPath(".") + "/imagenes/" + docImagen.Text))
+                {
+                    System.IO.File.Delete(Server.MapPath(".") + "/imagenes/" + docImagen.Text);
+                }
+            }
+            if (!docArchivo.Text.Equals(""))
+            {
+                //borrar archivo del directorio
+
+                //Dado el caso, verifico que exista el archivo..
+
+                if (System.IO.File.Exists(Server.MapPath(".") + "/archivos/" + docArchivo.Text))
+                {
+                    System.IO.File.Delete(Server.MapPath(".") + "/archivos/" + docArchivo.Text);
+                }
+            }
+        }
     }
 }
