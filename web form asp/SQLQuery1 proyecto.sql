@@ -131,6 +131,24 @@ VALUES
 (1, 830400,'Becerra', 'Becerra', 'Martha', 'Lucia','21','',null,'Director'),
 (1, 845671,'Becerra', 'Chaparro', 'Dilcia', 'Concepcion','22','',null,'Director');
 
+INSERT INTO tblestudiantes
+(usucodigo, estcodigo,estapellido1, estapellido2,estnombre1, estnombre2, estingreso, estelefono )
+VALUES 
+(4, 45123548,'Gonzalez', 'Carmelo', 'Rodrigo', 'Benito','54236552','5'),
+(4, 15427855, 'garcia', 'cadena', 'santiago', 'jhoan','47582469','6'),
+(4, 14868215, 'alfonzo', 'castillo', 'juan', 'esteban','10229360','8'),
+(4, 15483525,'jaramillo', 'alvarado', 'julian', 'esteban','14528596','9'),
+(4, 75396325,'torres', 'sanchez', 'dayana', 'nicol','12348579','7'),
+(4, 75398526,'saenz', 'paez', 'claudia', 'Rocio','12587496','1'),
+(4, 35489628,'avellaneda', 'torrres', 'david', 'julian','34928615','2'),
+(4, 69916110,'gutierrez', 'zabala', 'maria', 'jose','49527618','4'),
+(4, 79286145,'Barrera', 'Castellaños', 'Maiocol', 'esteban','78492517','6'),
+(4, 75986335,'Barreto', 'esteban', 'julian', '','28496375','5'),
+(4, 98364581,'garcia', 'Avella', 'Cyndy', 'Jasbleidy','26987720','9'),
+(4, 34927681,'castillo', 'garcia', 'linda', '','65842277','8'),
+(4, 96522746,'Bohorquez', 'sanchez', 'yeferzon', 'maicol','15874526','7');
+
+
 drop table tblcursoestudiante;
 drop table tblestudiantes;
 drop table tblcursodocente;

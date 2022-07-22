@@ -71,6 +71,7 @@
     <Content Include=".gitignore" />
     <Content Include="Accursos.aspx" />
     <Content Include="Acdocentes.aspx" />
+    <Content Include="AcDocentesCursos.aspx" />
     <Content Include="AcGaleriaDocente.aspx" />
     <Content Include="AdCursosdictados.aspx" />
     <Content Include="Adinicio.aspx" />
@@ -798,6 +799,13 @@
     </Compile>
     <Compile Include="Acdocentes.aspx.designer.cs">
       <DependentUpon>Acdocentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AcDocentesCursos.aspx.cs">
+      <DependentUpon>AcDocentesCursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcDocentesCursos.aspx.designer.cs">
+      <DependentUpon>AcDocentesCursos.aspx</DependentUpon>
     </Compile>
     <Compile Include="AcGaleriaDocente.aspx.cs">
       <DependentUpon>AcGaleriaDocente.aspx</DependentUpon>

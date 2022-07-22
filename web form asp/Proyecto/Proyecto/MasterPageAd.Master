@@ -247,6 +247,7 @@
                 <li><a href="../../AcGaleriaDocente.aspx"><i class="fa fa-circle-o"></i>Consulta galeria de docentes</a></li>
                 <li><a href="../../subirArchivo.aspx"><i class="fa fa-circle-o"></i>Importar archivos o imagenes</a></li>
                 <li><a href="../../AdCursosdictados.aspx"><i class="fa fa-circle-o"></i>Consulta Cursos</a></li>
+                <li><a href="../../AcDocentesCursos.aspx"><i class="fa fa-circle-o"></i>Agregar docentes a cursos</a></li>
               </ul>
 
             <li class="treeview">
