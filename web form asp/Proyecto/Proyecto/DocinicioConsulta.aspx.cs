@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,6 +10,7 @@ namespace Proyecto
 {
     public partial class DocinicioConsulta : System.Web.UI.Page
     {
+        SqlConnection conexion = new SqlConnection("server=DESKTOP-D4K75HQ\\SQLEXPRESS ; database=proyectoasp ; integrated security = true");
         protected void Page_Load(object sender, EventArgs e)
         {
             if (this.Session.Count == 0)
@@ -35,6 +37,7 @@ namespace Proyecto
 
         protected void DeleteButton_Click(object sender, EventArgs e)
         {
+            conexion.Open();
             Label docImagen = FormView1.FindControl("imagenLabel") as Label;
             Label docArchivo = FormView1.FindControl("archivoLabel") as Label;
             if (!docImagen.Text.Equals(""))
@@ -59,6 +62,13 @@ namespace Proyecto
                     System.IO.File.Delete(Server.MapPath(".") + "/archivos/" + docArchivo.Text);
                 }
             }
+            Label docCodigo = FormView1.FindControl("doccodigoLabel") as Label;
+            string cadena = $"DELETE FROM tbldocentes  WHERE doccodigo  = {docCodigo.Text}";
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            comando.ExecuteReader();
+            Session["guardadoDoc"] = "eliminado";
+            conexion.Close();
+            Response.Redirect("Acdocentes.aspx");
         }
     }
 }

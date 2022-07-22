@@ -110,6 +110,7 @@
         }
         .auto-style60 {
             height: 71px;
+            width: 1476px;
         }
         .auto-style61 {
             width: 100%;
@@ -152,10 +153,28 @@
             height: 26px;
         }
         .auto-style73 {
-            font-size: x-large;
-            color: #FF3300;
+            height: 74px;
+            text-align: left;
+            width: 1469px;
+            margin-top: 27px;
         }
-    </style>
+        .auto-style74 {
+            background-color: #FF9900;
+            font-size: large;
+            color: #FFFFFF;
+        }
+        .auto-style75 {
+            margin-left: 1437px;
+        }
+        .auto-style76 {
+            height: 74px;
+            text-align: left;
+            width: 1469px;
+            margin-top: 27px;
+            color: #FF0000;
+            font-size: large;
+        }
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="border-radius: 20px; border: solid 2px #999999; box-shadow: 2px 2px 5px #999999; height: 785px; width: 1526px">
@@ -277,7 +296,7 @@
                             </td>
                             <td class="auto-style53">Imagen:</td>
                             <td class="auto-style65">
-                                <asp:FileUpload ID="docimagenFileUpload1" runat="server" Width="164px" Enabled='<%# Bind("imagen") %>' Height="21px" />
+                                <asp:FileUpload ID="docimagenFileUpload1" runat="server" Width="241px" Enabled='<%# Bind("imagen") %>' Height="35px" />
                             </td>
                         </tr>
                         <tr>
@@ -324,7 +343,10 @@
 &nbsp;<br />&nbsp;<asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insertar" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" Font-Bold="True" ForeColor="Black" />
                     &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" Font-Bold="True" ForeColor="Black" />
                     <strong>
-                    <asp:Label ID="Label5" runat="server" CssClass="auto-style73"></asp:Label>
+                    <asp:Label ID="Label5" runat="server" CssClass="auto-style76"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label6" runat="server" CssClass="auto-style76"></asp:Label>
                     </strong>
                 </InsertItemTemplate>
                 <ItemTemplate>
@@ -421,7 +443,15 @@
                     <asp:Parameter Name="doccodigo" Type="Int32" />
                 </UpdateParameters>
             </asp:SqlDataSource>
-    
+                <div class="auto-style73">
+                    <strong>
+                    <asp:Button ID="Button4" runat="server" Height="22px" Text="X" Width="16px" BackColor="#FF9900" BorderStyle="None" CssClass="auto-style75" Font-Bold="True" OnClick="Button4_Click" Visible="False" />
+
+                    <asp:Label ID="Label7" runat="server" CssClass="auto-style74" Height="45px" Width="1463px" style="border-radius: 10px" EnableTheming="True" Visible="False"></asp:Label>
+
+                    </strong>
+
+                </div>
         </div>
      </div>
 </asp:Content>

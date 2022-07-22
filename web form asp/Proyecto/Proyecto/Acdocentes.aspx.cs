@@ -17,9 +17,26 @@ namespace Proyecto
         public String extImg;
         public String extArc;
         public double tamanioMb;
+        public int contador = 0;
+        public bool condicion2 = true;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["guardadoDoc"]!=null)
+            {
+                if (Session["guardadoDoc"].ToString().Equals("guardado")){
+                    Label7.Text = "Se a guardado con exito el registro";
+                    Label7.Visible = true;
+                    Button4.Visible = true;
+                    Session["guardadoDoc"] = "";
+                }
+                else if (Session["guardadoDoc"].ToString().Equals("eliminado"))
+                {   
+                    Label7.Text = "Se a eliminado con exito el registro";
+                    Label7.Visible = true;
+                    Button4.Visible = true;
+                    Session["guardadoDoc"] = "";
+                }
+            }
         }
 
         protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
@@ -70,6 +87,7 @@ namespace Proyecto
 
         protected void DeleteButton_Click(object sender, EventArgs e)
         {
+            conexion.Open();
             Label docImagen = FormView1.FindControl("docimagenLabel") as Label;
             Label docArchivo = FormView1.FindControl("docarchivoLabel") as Label;
             if (!docImagen.Text.Equals("")){
@@ -93,8 +111,14 @@ namespace Proyecto
                     System.IO.File.Delete(Server.MapPath(".") + "/archivos/" + docArchivo.Text);
                 }
             }
-        }
-
+            Label docCodigo = FormView1.FindControl("doccodigoLabel") as Label;
+            string cadena = $"DELETE FROM tbldocentes  WHERE doccodigo  = {docCodigo.Text}";
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            comando.ExecuteReader();
+            Session["guardadoDoc"] = "eliminado";
+            conexion.Close();
+            Response.Redirect("Acdocentes.aspx");
+        }  
         protected void Button3_Click(object sender, EventArgs e)
         {
             conexion.Open();
@@ -109,90 +133,142 @@ namespace Proyecto
             FileUpload docImagen = FormView1.FindControl("docimagenFileUpload1") as FileUpload;
             FileUpload docArchivo = FormView1.FindControl("docarchivoFileUpload1") as FileUpload;
             Label label5 = FormView1.FindControl("Label5") as Label;
+            Label label6 = FormView1.FindControl("Label6") as Label;
 
             String imagenVar = "";
             String archivoVar = "";
-            int contador = 0;
-            bool condicion = true;
-
-            if (!docImagen.FileName.Equals(""))
+            if (docImagen.FileName.Equals("") && docArchivo.FileName.Equals(""))
+            {
+                string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}');";
+                SqlCommand comando = new SqlCommand(cadena, conexion);
+                comando.ExecuteReader();   
+                conexion.Close();
+                Session["guardadoDoc"] = "guardado";
+                Response.Redirect("Acdocentes.aspx");
+            }
+            else  if (!docImagen.FileName.Equals("") && docArchivo.FileName.Equals(""))
             {
                 imagenVar = docImagen.FileName;
-                extImg = System.IO.Path.GetExtension(imagenVar);
-                if (extImg.Equals(".bmp") || extImg.Equals(".gif") || extImg.Equals(".tif") || extImg.Equals(".png"))
-                {
-                    while (condicion == true)
-                    {
-                        if (System.IO.File.Exists(Server.MapPath(".") + "/imagenes/" + imagenVar))
-                        {
-                            string variableNombreSinExt = System.IO.Path.GetFileNameWithoutExtension(docImagen.FileName);
-                            contador++;
-                            imagenVar = $"{variableNombreSinExt}-{contador}{extImg}";
-                        }
-                        else
-                        {
-                            condicion = false;
-                        }                      
-                    }
-                    if (docImagen.PostedFile.ContentLength > 200000)
-                    {
-                        tamanioMb = ((double)docImagen.PostedFile.ContentLength / (double)1000) / 1000;
-                        label5.Text = $"Se supero el peso de subida para la imagen, el peso debe ser menor de 0.2mb (200kb), se subio con {tamanioMb.ToString()} MB";
-                    }
-                    else
-                    {
-                        docImagen.SaveAs(Server.MapPath(".") + "/imagenes/" + imagenVar);//guarda el archivo contenido en FileUpload1
-                    }
+                label5.Text = subirImagen(imagenVar, docImagen);
+                if (label5.Text.Equals("")){
+                    string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, imagen) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{imagenVar}');";
+                    SqlCommand comando = new SqlCommand(cadena, conexion);
+                    comando.ExecuteReader();
+                    conexion.Close();
+                    Session["guardadoDoc"] = "guardado";
+                    Response.Redirect("Acdocentes.aspx");
                 }
-                else
-                {
-                    label5.Text = "La extencion del archivo no es Valida, debe ser de imagen";
-                }
+
             }
-            condicion = true;
-            if (!docArchivo.FileName.Equals(""))
+            else if (docImagen.FileName.Equals("") && !docArchivo.FileName.Equals(""))
             {
                 archivoVar = docArchivo.FileName;
-                extArc = System.IO.Path.GetExtension(archivoVar);
-                if (extArc.Equals(".pdf"))
+                label6.Text = subirArchivo(archivoVar, docArchivo);
+                if (label6.Text.Equals(""))
                 {
-                    while (condicion == true)
+                    string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, archivo) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{archivoVar}');";
+                    SqlCommand comando = new SqlCommand(cadena, conexion);
+                    comando.ExecuteReader();
+                    conexion.Close();
+                    Session["guardadoDoc"] = "guardado";
+                    Response.Redirect("Acdocentes.aspx");
+                }
+            }
+            else if (!docImagen.FileName.Equals("") && !docArchivo.FileName.Equals(""))
+            {
+                imagenVar = docImagen.FileName;
+                archivoVar = docArchivo.FileName;
+                label5.Text = subirImagen(imagenVar, docImagen);
+                label6.Text = subirArchivo(archivoVar, docArchivo);
+                if(label5.Text.Equals("") && label6.Text.Equals(""))
+                {
+                    string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, imagen, archivo) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{imagenVar}', '{archivoVar}');";
+                    SqlCommand comando = new SqlCommand(cadena, conexion);
+                    comando.ExecuteReader();
+                    conexion.Close();
+                    Session["guardadoDoc"] = "guardado";
+                    Response.Redirect("Acdocentes.aspx");
+                }
+            }
+        }
+
+        public string subirImagen(string imagenVar, FileUpload docImagen)
+        {
+            String label5="";
+            extImg = System.IO.Path.GetExtension(imagenVar);
+            if (extImg.Equals(".bmp") || extImg.Equals(".gif") || extImg.Equals(".tif") || extImg.Equals(".png"))
+            {
+                while (condicion2 == true)
+                {
+                    if (System.IO.File.Exists(Server.MapPath(".") + "/imagenes/" + imagenVar))
                     {
-                        if (System.IO.File.Exists(Server.MapPath(".") + "/archivos/" + archivoVar))
-                        {
-                            string variableNombreSinExt = System.IO.Path.GetFileNameWithoutExtension(docArchivo.FileName);
-                            contador++;
-                            archivoVar = $"{variableNombreSinExt}-{contador}{extArc}";
-                        }
-                        else
-                        {
-                            condicion = false;
-                        }
-                    }
-                    if (docArchivo.PostedFile.ContentLength > 200000)
-                    {
-                        tamanioMb = ((double)docImagen.PostedFile.ContentLength / (double)1000) / 1000;
-                        label5.Text = $"Se supero el peso de subida para el archivo, el peso debe ser menor de 0.2mb (200kb), se subio con {tamanioMb.ToString()} MB";
+                        string variableNombreSinExt = System.IO.Path.GetFileNameWithoutExtension(docImagen.FileName);
+                        contador++;
+                        imagenVar = $"{variableNombreSinExt}-{contador}{extImg}";
                     }
                     else
                     {
-                        docArchivo.SaveAs(Server.MapPath(".") + "/archivos/" + archivoVar);//guarda el archivo contenido en FileUpload1
+                        condicion2 = false;
                     }
-
+                }
+                if (docImagen.PostedFile.ContentLength > 200000)
+                {
+                    tamanioMb = ((double)docImagen.PostedFile.ContentLength / (double)1000) / 1000;
+                    label5 = $"Se supero el peso de subida para la imagen, el peso debe ser menor de 0.2mb (200kb), se subio con {tamanioMb.ToString()} MB";
                 }
                 else
                 {
-                    label5.Text = "La extencion del archivo no es Valida, debe ser un archivo .pdf";
+                    docImagen.SaveAs(Server.MapPath(".") + "/imagenes/" + imagenVar);//guarda el archivo contenido en FileUpload1
                 }
             }
-            string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, imagen, archivo) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{imagenVar}', '{archivoVar}');";
-            SqlCommand comando = new SqlCommand(cadena, conexion);
-            comando.ExecuteReader();
+            else
+            {
+                label5 = "La extencion de la imagen no es Valida";
+            }
+            return label5;
         }
 
-        public void subirImagen()
+        public string subirArchivo(string archivoVar, FileUpload docArchivo)
         {
+            string label6 = ""; 
+            extArc = System.IO.Path.GetExtension(archivoVar);
+            if (extArc.Equals(".pdf"))
+            {
+                while (condicion2 == true)
+                {
+                    if (System.IO.File.Exists(Server.MapPath(".") + "/archivos/" + archivoVar))
+                    {
+                        string variableNombreSinExt = System.IO.Path.GetFileNameWithoutExtension(docArchivo.FileName);
+                        contador++;
+                        archivoVar = $"{variableNombreSinExt}-{contador}{extArc}";
+                    }
+                    else
+                    {
+                        condicion2 = false;
+                    }
+                }
+                if (docArchivo.PostedFile.ContentLength > 200000)
+                {
+                    tamanioMb = ((double)docArchivo.PostedFile.ContentLength / (double)1000) / 1000;
+                    label6 = $"Se supero el peso de subida para el archivo, el peso debe ser menor de 0.2mb (200kb), se subio con {tamanioMb.ToString()} MB";
+                }
+                else
+                {
+                    docArchivo.SaveAs(Server.MapPath(".") + "/archivos/" + archivoVar);//guarda el archivo contenido en FileUpload1
+                }
 
+            }
+            else
+            {
+                label6 = "La extencion del archivo no es Valida, debe ser un archivo .pdf";
+            }
+            return label6;
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Label7.Visible = false;
+            Button4.Visible = false;
         }
     }
 }
