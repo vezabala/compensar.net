@@ -121,7 +121,7 @@ namespace Proyecto
         }  
         protected void Button3_Click(object sender, EventArgs e)
         {
-            conexion.Open();
+            string excepcion;
             TextBox usuCodigo = FormView1.FindControl("usucodigoTextBox") as TextBox;
             TextBox docCodigo = FormView1.FindControl("doccodigoTextBox") as TextBox;
             TextBox doTelefono = FormView1.FindControl("dotelefonoTextBox") as TextBox; 
@@ -134,62 +134,90 @@ namespace Proyecto
             FileUpload docArchivo = FormView1.FindControl("docarchivoFileUpload1") as FileUpload;
             Label label5 = FormView1.FindControl("Label5") as Label;
             Label label6 = FormView1.FindControl("Label6") as Label;
+            Label label8 = FormView1.FindControl("Label8") as Label;
 
             String imagenVar = "";
             String archivoVar = "";
-            if (docImagen.FileName.Equals("") && docArchivo.FileName.Equals(""))
+            excepcion = vallidarLLavesRepetidas(docCodigo);
+            if (excepcion.Equals("repetidas"))
             {
-                string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}');";
-                SqlCommand comando = new SqlCommand(cadena, conexion);
-                comando.ExecuteReader();   
-                conexion.Close();
-                Session["guardadoDoc"] = "guardado";
-                Response.Redirect("Acdocentes.aspx");
+                label8.Text = "Error, el codigo de este docente ya existe";
             }
-            else  if (!docImagen.FileName.Equals("") && docArchivo.FileName.Equals(""))
+            else
             {
-                imagenVar = docImagen.FileName;
-                label5.Text = subirImagen(imagenVar, docImagen);
-                if (label5.Text.Equals("")){
-                    string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, imagen) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{imagenVar}');";
+                if (docImagen.FileName.Equals("") && docArchivo.FileName.Equals(""))
+                {
+                    label5.Text = "";
+                    label6.Text = "";
+                    label8.Text = "";
+                    conexion.Open();
+                    string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}');";
                     SqlCommand comando = new SqlCommand(cadena, conexion);
                     comando.ExecuteReader();
                     conexion.Close();
                     Session["guardadoDoc"] = "guardado";
                     Response.Redirect("Acdocentes.aspx");
-                }
 
-            }
-            else if (docImagen.FileName.Equals("") && !docArchivo.FileName.Equals(""))
-            {
-                archivoVar = docArchivo.FileName;
-                label6.Text = subirArchivo(archivoVar, docArchivo);
-                if (label6.Text.Equals(""))
+                }
+                else if (!docImagen.FileName.Equals("") && docArchivo.FileName.Equals(""))
                 {
-                    string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, archivo) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{archivoVar}');";
-                    SqlCommand comando = new SqlCommand(cadena, conexion);
-                    comando.ExecuteReader();
-                    conexion.Close();
-                    Session["guardadoDoc"] = "guardado";
-                    Response.Redirect("Acdocentes.aspx");
+                    label5.Text = "";
+                    label6.Text = "";
+                    label8.Text = "";
+                    imagenVar = docImagen.FileName;
+                    label5.Text = subirImagen(imagenVar, docImagen);
+                    if (label5.Text.Equals(""))
+                    {
+                        conexion.Open();
+                        string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, imagen) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{imagenVar}');";
+                        SqlCommand comando = new SqlCommand(cadena, conexion);
+                        comando.ExecuteReader();
+                        conexion.Close();
+                        Session["guardadoDoc"] = "guardado";
+                        Response.Redirect("Acdocentes.aspx");
+                    }
+
+                }
+                else if (docImagen.FileName.Equals("") && !docArchivo.FileName.Equals(""))
+                {
+                    label5.Text = "";
+                    label6.Text = "";
+                    label8.Text = "";
+                    archivoVar = docArchivo.FileName;
+                    label6.Text = subirArchivo(archivoVar, docArchivo);
+                    if (label6.Text.Equals(""))
+                    {
+                        conexion.Open();
+                        string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, archivo) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{archivoVar}');";
+                        SqlCommand comando = new SqlCommand(cadena, conexion);
+                        comando.ExecuteReader();
+                        conexion.Close();
+                        Session["guardadoDoc"] = "guardado";
+                        Response.Redirect("Acdocentes.aspx");
+                    }
+                }
+                else if (!docImagen.FileName.Equals("") && !docArchivo.FileName.Equals(""))
+                {
+                    label5.Text = "";
+                    label6.Text = "";
+                    label8.Text = "";
+                    imagenVar = docImagen.FileName;
+                    archivoVar = docArchivo.FileName;
+                    label5.Text = subirImagen(imagenVar, docImagen);
+                    label6.Text = subirArchivo(archivoVar, docArchivo);
+                    if (label5.Text.Equals("") && label6.Text.Equals(""))
+                    {
+                        conexion.Open();
+                        string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, imagen, archivo) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{imagenVar}', '{archivoVar}');";
+                        SqlCommand comando = new SqlCommand(cadena, conexion);
+                        comando.ExecuteReader();
+                        conexion.Close();
+                        Session["guardadoDoc"] = "guardado";
+                        Response.Redirect("Acdocentes.aspx");
+                    }
                 }
             }
-            else if (!docImagen.FileName.Equals("") && !docArchivo.FileName.Equals(""))
-            {
-                imagenVar = docImagen.FileName;
-                archivoVar = docArchivo.FileName;
-                label5.Text = subirImagen(imagenVar, docImagen);
-                label6.Text = subirArchivo(archivoVar, docArchivo);
-                if(label5.Text.Equals("") && label6.Text.Equals(""))
-                {
-                    string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, imagen, archivo) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{imagenVar}', '{archivoVar}');";
-                    SqlCommand comando = new SqlCommand(cadena, conexion);
-                    comando.ExecuteReader();
-                    conexion.Close();
-                    Session["guardadoDoc"] = "guardado";
-                    Response.Redirect("Acdocentes.aspx");
-                }
-            }
+           
         }
 
         public string subirImagen(string imagenVar, FileUpload docImagen)
@@ -269,6 +297,24 @@ namespace Proyecto
         {
             Label7.Visible = false;
             Button4.Visible = false;
+        }
+
+        public string vallidarLLavesRepetidas(TextBox docCodigo)
+        {
+            conexion.Open();
+            string cadena = "select doccodigo from tbldocentes";
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            SqlDataReader registros = comando.ExecuteReader();
+            string error = "";
+            while (registros.Read())
+            {
+                if (registros["doccodigo"].ToString().Equals(docCodigo.Text))
+                {
+                    error = "repetidas";
+                }
+            }
+            conexion.Close();
+            return error;
         }
     }
 }

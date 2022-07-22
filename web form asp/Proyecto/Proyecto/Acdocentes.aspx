@@ -174,6 +174,10 @@
             color: #FF0000;
             font-size: large;
         }
+        .auto-style77 {
+            color: #FF0000;
+            font-size: large;
+        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -336,17 +340,21 @@
                             </td>
                             <td class="auto-style54">&nbsp;</td>
                             <td class="auto-style66">
-                                <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Button" Width="105px" />
+                                <asp:LinkButton ID="InsertButton" runat="server" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" CausesValidation="True" CommandName="Insert" Font-Bold="True" ForeColor="Black" Text="Insertar" Visible="False" />
                             </td>
                         </tr>
                     </table>
-&nbsp;<br />&nbsp;<asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insertar" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" Font-Bold="True" ForeColor="Black" />
-                    &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" Font-Bold="True" ForeColor="Black" />
+&nbsp;<br />
+                    <asp:Button ID="Button3" runat="server" BackColor="#0099FF" BorderColor="#66FFFF" BorderStyle="Outset" Font-Bold="True" Height="29px" OnClick="Button3_Click" Text="Insertar" Width="62px" />
+                    &nbsp;&nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" Font-Bold="True" ForeColor="Black" Font-Overline="False" Height="29px" />
                     <strong>
                     <asp:Label ID="Label5" runat="server" CssClass="auto-style76"></asp:Label>
                     <br />
                     <br />
                     <asp:Label ID="Label6" runat="server" CssClass="auto-style76"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label8" runat="server" CssClass="auto-style77"></asp:Label>
                     </strong>
                 </InsertItemTemplate>
                 <ItemTemplate>
