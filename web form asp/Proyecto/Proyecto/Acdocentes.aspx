@@ -60,6 +60,7 @@
         }
         .auto-style31 {
             width: 181px;
+            height: 31px;
         }
         .auto-style32 {
             width: 136px;
@@ -74,6 +75,7 @@
         }
         .auto-style48 {
             width: 163px;
+            height: 31px;
         }
         .auto-style49 {
             height: 20px;
@@ -81,6 +83,7 @@
         }
         .auto-style50 {
             width: 141px;
+            height: 31px;
         }
         .auto-style51 {
             height: 20px;
@@ -88,6 +91,7 @@
         }
         .auto-style52 {
             width: 216px;
+            height: 31px;
         }
         .auto-style53 {
             height: 20px;
@@ -95,6 +99,7 @@
         }
         .auto-style54 {
             width: 101px;
+            height: 31px;
         }
         .auto-style56 {
             width: 197px;
@@ -127,6 +132,7 @@
         }
         .auto-style66 {
             width: 298px;
+            height: 31px;
         }
         .auto-style67 {
             width: 141px;
@@ -292,7 +298,9 @@
                         <tr>
                             <td class="auto-style49">Codigo Usuario:</td>
                             <td class="auto-style46">
-                                <asp:TextBox ID="usucodigoTextBox" runat="server" Text='<%# Bind("usucodigo") %>' />
+                                <asp:DropDownList ID="usucodigoDropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="usunombre" DataValueField="usucodigo" SelectedValue='<%# Bind("usucodigo") %>'>
+                                </asp:DropDownList>
+                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:proyectoaspConnectionString %>" SelectCommand="SELECT [usucodigo], [usunombre] FROM [tbltipousuario] ORDER BY [usucodigo]"></asp:SqlDataSource>
                             </td>
                             <td class="auto-style47">Apellido 1:</td>
                             <td class="auto-style51">
@@ -327,7 +335,8 @@
                                 <asp:TextBox ID="docnombre1TextBox" runat="server" Text='<%# Bind("docnombre1") %>' />
                             </td>
                             <td class="auto-style53">&nbsp;</td>
-                            <td class="auto-style65">&nbsp;</td>
+                            <td class="auto-style65">    
+                            </td>
                         </tr>
                         <tr>
                             <td class="auto-style50">Ingreso:</td>
@@ -338,7 +347,7 @@
                             <td class="auto-style52">
                                 <asp:TextBox ID="docnombre2TextBox" runat="server" Text='<%# Bind("docnombre2") %>' />
                             </td>
-                            <td class="auto-style54">&nbsp;</td>
+                            <td class="auto-style54"></td>
                             <td class="auto-style66">
                                 <asp:LinkButton ID="InsertButton" runat="server" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" CausesValidation="True" CommandName="Insert" Font-Bold="True" ForeColor="Black" Text="Insertar" Visible="False" />
                             </td>

@@ -19,6 +19,8 @@ namespace Proyecto
         public double tamanioMb;
         public int contador = 0;
         public bool condicion2 = true;
+        public string nombreImagen = "";
+        public string nombreArchivo = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["guardadoDoc"]!=null)
@@ -122,7 +124,7 @@ namespace Proyecto
         protected void Button3_Click(object sender, EventArgs e)
         {
             string excepcion;
-            TextBox usuCodigo = FormView1.FindControl("usucodigoTextBox") as TextBox;
+            DropDownList usuCodigo = FormView1.FindControl("usucodigoDropDownList1") as DropDownList;
             TextBox docCodigo = FormView1.FindControl("doccodigoTextBox") as TextBox;
             TextBox doTelefono = FormView1.FindControl("dotelefonoTextBox") as TextBox; 
             TextBox docTngreso = FormView1.FindControl("docingresoTextBox") as TextBox;
@@ -166,10 +168,10 @@ namespace Proyecto
                     label8.Text = "";
                     imagenVar = docImagen.FileName;
                     label5.Text = subirImagen(imagenVar, docImagen);
-                    if (label5.Text.Equals(""))
+                    if (label5.Text.Equals(nombreImagen))
                     {
                         conexion.Open();
-                        string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, imagen) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{imagenVar}');";
+                        string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, imagen) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{nombreImagen}');";
                         SqlCommand comando = new SqlCommand(cadena, conexion);
                         comando.ExecuteReader();
                         conexion.Close();
@@ -185,10 +187,10 @@ namespace Proyecto
                     label8.Text = "";
                     archivoVar = docArchivo.FileName;
                     label6.Text = subirArchivo(archivoVar, docArchivo);
-                    if (label6.Text.Equals(""))
+                    if (label6.Text.Equals(nombreArchivo))
                     {
                         conexion.Open();
-                        string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, archivo) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{archivoVar}');";
+                        string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, archivo) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{nombreArchivo}');";
                         SqlCommand comando = new SqlCommand(cadena, conexion);
                         comando.ExecuteReader();
                         conexion.Close();
@@ -204,16 +206,33 @@ namespace Proyecto
                     imagenVar = docImagen.FileName;
                     archivoVar = docArchivo.FileName;
                     label5.Text = subirImagen(imagenVar, docImagen);
+                    condicion2 = true;
                     label6.Text = subirArchivo(archivoVar, docArchivo);
-                    if (label5.Text.Equals("") && label6.Text.Equals(""))
+                    if (label5.Text.Equals(nombreImagen) && label6.Text.Equals(nombreArchivo))
                     {
                         conexion.Open();
-                        string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, imagen, archivo) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{imagenVar}', '{archivoVar}');";
+                        string cadena = $"INSERT INTO tbldocentes (usucodigo, doccodigo, docapellido1, docapellido2, docnombre1, docnombre2, docingreso, dotelefono, imagen, archivo) VALUES({Int32.Parse(usuCodigo.Text)}, {Int32.Parse(docCodigo.Text)}, '{docApellido1.Text}', '{docApellido2.Text}', '{docNombre1.Text}', '{docNombre2.Text}', '{docTngreso.Text}', '{doTelefono.Text}', '{nombreImagen}', '{nombreArchivo}');";
                         SqlCommand comando = new SqlCommand(cadena, conexion);
                         comando.ExecuteReader();
                         conexion.Close();
                         Session["guardadoDoc"] = "guardado";
                         Response.Redirect("Acdocentes.aspx");
+                    }
+                    if(label5.Text.Equals(nombreImagen) && !label6.Text.Equals(nombreArchivo))
+                    {
+                        label5.Text = "";
+                        if (System.IO.File.Exists(Server.MapPath(".") + "/imagenes/" + nombreImagen))
+                        {
+                            System.IO.File.Delete(Server.MapPath(".") + "/imagenes/" + nombreImagen);
+                        }
+                    }
+                    if (!label5.Text.Equals(nombreImagen) && label6.Text.Equals(nombreArchivo))
+                    {
+                        label6.Text = "";
+                        if (System.IO.File.Exists(Server.MapPath(".") + "/archivos/" + nombreArchivo))
+                        {
+                            System.IO.File.Delete(Server.MapPath(".") + "/archivos/" + nombreArchivo);
+                        }
                     }
                 }
             }
@@ -243,17 +262,20 @@ namespace Proyecto
                 {
                     tamanioMb = ((double)docImagen.PostedFile.ContentLength / (double)1000) / 1000;
                     label5 = $"Se supero el peso de subida para la imagen, el peso debe ser menor de 0.2mb (200kb), se subio con {tamanioMb.ToString()} MB";
+                    return label5;
                 }
                 else
                 {
                     docImagen.SaveAs(Server.MapPath(".") + "/imagenes/" + imagenVar);//guarda el archivo contenido en FileUpload1
+                    nombreImagen = imagenVar;
+                    return imagenVar;
                 }
             }
             else
             {
                 label5 = "La extencion de la imagen no es Valida";
-            }
-            return label5;
+                return label5;
+            }          
         }
 
         public string subirArchivo(string archivoVar, FileUpload docArchivo)
@@ -279,18 +301,21 @@ namespace Proyecto
                 {
                     tamanioMb = ((double)docArchivo.PostedFile.ContentLength / (double)1000) / 1000;
                     label6 = $"Se supero el peso de subida para el archivo, el peso debe ser menor de 0.2mb (200kb), se subio con {tamanioMb.ToString()} MB";
+                    return label6;
                 }
                 else
                 {
                     docArchivo.SaveAs(Server.MapPath(".") + "/archivos/" + archivoVar);//guarda el archivo contenido en FileUpload1
+                    nombreArchivo = archivoVar;
+                    return archivoVar;
                 }
 
             }
             else
             {
                 label6 = "La extencion del archivo no es Valida, debe ser un archivo .pdf";
-            }
-            return label6;
+                return label6;
+            }       
         }
 
         protected void Button4_Click(object sender, EventArgs e)
