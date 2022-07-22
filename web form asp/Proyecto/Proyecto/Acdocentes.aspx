@@ -64,20 +64,6 @@
         .auto-style32 {
             width: 136px;
         }
-        .auto-style33 {
-            text-align: center;
-            color: #0066CC;
-            font-size: medium;
-            height: 23px;
-            width: 81px;
-        }
-        .auto-style43 {
-            height: 20px;
-            width: 169px;
-        }
-        .auto-style44 {
-            width: 169px;
-        }
         .auto-style46 {
             height: 20px;
             width: 181px;
@@ -133,6 +119,41 @@
         }
         .auto-style64 {
             width: 182px;
+        }
+        .auto-style65 {
+            width: 298px;
+            height: 20px;
+        }
+        .auto-style66 {
+            width: 298px;
+        }
+        .auto-style67 {
+            width: 141px;
+            height: 26px;
+        }
+        .auto-style68 {
+            width: 181px;
+            height: 26px;
+        }
+        .auto-style69 {
+            width: 163px;
+            height: 26px;
+        }
+        .auto-style70 {
+            width: 216px;
+            height: 26px;
+        }
+        .auto-style71 {
+            width: 101px;
+            height: 26px;
+        }
+        .auto-style72 {
+            width: 298px;
+            height: 26px;
+        }
+        .auto-style73 {
+            font-size: x-large;
+            color: #FF3300;
         }
     </style>
 </asp:Content>
@@ -255,22 +276,22 @@
                                 <asp:TextBox ID="docapellido1TextBox" runat="server" Text='<%# Bind("docapellido1") %>' />
                             </td>
                             <td class="auto-style53">Imagen:</td>
-                            <td class="auto-style43">
-                                <asp:TextBox ID="docimagenTextBox" runat="server" Text='<%# Bind("imagen") %>' />
+                            <td class="auto-style65">
+                                <asp:FileUpload ID="docimagenFileUpload1" runat="server" Width="164px" Enabled='<%# Bind("imagen") %>' Height="21px" />
                             </td>
                         </tr>
                         <tr>
-                            <td class="auto-style50">Codigo Docente:</td>
-                            <td class="auto-style31">
+                            <td class="auto-style67">Codigo Docente:</td>
+                            <td class="auto-style68">
                                 <asp:TextBox ID="doccodigoTextBox" runat="server" Text='<%# Bind("doccodigo") %>' />
                             </td>
-                            <td class="auto-style48">Apellido 2:</td>
-                            <td class="auto-style52">
+                            <td class="auto-style69">Apellido 2:</td>
+                            <td class="auto-style70">
                                 <asp:TextBox ID="docapellido2TextBox" runat="server" Text='<%# Bind("docapellido2") %>' />
                             </td>
-                            <td class="auto-style54">Archivo:</td>
-                            <td class="auto-style44">
-                                <asp:TextBox ID="docarchivoTextBox" runat="server" Text='<%# Bind("archivo") %>' />
+                            <td class="auto-style71">Archivo:</td>
+                            <td class="auto-style72">
+                                <asp:FileUpload ID="docarchivoFileUpload1" runat="server" Height="26px" Width="242px" Enabled='<%# Bind("archivo") %>' />
                             </td>
                         </tr>
                         <tr>
@@ -283,7 +304,7 @@
                                 <asp:TextBox ID="docnombre1TextBox" runat="server" Text='<%# Bind("docnombre1") %>' />
                             </td>
                             <td class="auto-style53">&nbsp;</td>
-                            <td class="auto-style43">&nbsp;</td>
+                            <td class="auto-style65">&nbsp;</td>
                         </tr>
                         <tr>
                             <td class="auto-style50">Ingreso:</td>
@@ -295,11 +316,16 @@
                                 <asp:TextBox ID="docnombre2TextBox" runat="server" Text='<%# Bind("docnombre2") %>' />
                             </td>
                             <td class="auto-style54">&nbsp;</td>
-                            <td class="auto-style44">&nbsp;</td>
+                            <td class="auto-style66">
+                                <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Button" Width="105px" />
+                            </td>
                         </tr>
                     </table>
 &nbsp;<br />&nbsp;<asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insertar" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" Font-Bold="True" ForeColor="Black" />
                     &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" Font-Bold="True" ForeColor="Black" />
+                    <strong>
+                    <asp:Label ID="Label5" runat="server" CssClass="auto-style73"></asp:Label>
+                    </strong>
                 </InsertItemTemplate>
                 <ItemTemplate>
                     <table class="nav-justified">
