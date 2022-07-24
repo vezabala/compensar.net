@@ -381,7 +381,17 @@ namespace Proyecto
             Label label9 = FormView1.FindControl("Label9") as Label;
             Label label10 = FormView1.FindControl("Label10") as Label;
             Label label11 = FormView1.FindControl("Label11") as Label;
+            bool redirigir = false;
+            redirigir = actualizar(usuCodigo, docCodigo, doTelefono, docIngreso, docApellido1, docApellido2, docNombre1, docNombre2, docImagen, docArchivo, label9, label10, label11);
+            if (redirigir == true)
+            {
+                Response.Redirect("Acdocentes.aspx");
+            }  
+        }
 
+        public bool actualizar(DropDownList usuCodigo, Label docCodigo, TextBox doTelefono, TextBox docIngreso, TextBox docApellido1, TextBox docApellido2, TextBox docNombre1, TextBox docNombre2, FileUpload docImagen, FileUpload docArchivo, Label label9, Label label10, Label label11)
+        {
+            bool retorno= false;
             String imagenVar = "";
             String archivoVar = "";
             if (docImagen.FileName.Equals("") && docArchivo.FileName.Equals(""))
@@ -394,8 +404,8 @@ namespace Proyecto
                 SqlCommand comando = new SqlCommand(cadena, conexion);
                 comando.ExecuteReader();
                 conexion.Close();
-                Session["guardadoDoc"] = "actualizado";
-                Response.Redirect("Acdocentes.aspx");
+                Session["guardadoDoc"] = "actualizado"; 
+                retorno= true;
             }
             else if (!docImagen.FileName.Equals("") && docArchivo.FileName.Equals(""))
             {
@@ -427,7 +437,7 @@ namespace Proyecto
                         comando2.ExecuteReader();
                         conexion.Close();
                         Session["guardadoDoc"] = "actualizado";
-                        Response.Redirect("Acdocentes.aspx");
+                        retorno = true;
                     }
                     else
                     {
@@ -443,9 +453,9 @@ namespace Proyecto
                         comando2.ExecuteReader();
                         conexion.Close();
                         Session["guardadoDoc"] = "actualizado";
-                        Response.Redirect("Acdocentes.aspx");
+                        retorno = true;
                     }
-                } 
+                }
             }
             else if (docImagen.FileName.Equals("") && !docArchivo.FileName.Equals(""))
             {
@@ -477,7 +487,7 @@ namespace Proyecto
                         comando2.ExecuteReader();
                         conexion.Close();
                         Session["guardadoDoc"] = "actualizado";
-                        Response.Redirect("Acdocentes.aspx");
+                        retorno = true;
                     }
                     else
                     {
@@ -493,7 +503,7 @@ namespace Proyecto
                         comando2.ExecuteReader();
                         conexion.Close();
                         Session["guardadoDoc"] = "actualizado";
-                        Response.Redirect("Acdocentes.aspx");
+                        retorno = true;
                     }
                 }
             }
@@ -535,7 +545,7 @@ namespace Proyecto
                         comando2.ExecuteReader();
                         conexion.Close();
                         Session["guardadoDoc"] = "actualizado";
-                        Response.Redirect("Acdocentes.aspx");
+                        retorno = true;
                     }
                     else if (!varImagen.Equals("") && varArchivo.Equals(""))
                     {
@@ -549,7 +559,7 @@ namespace Proyecto
                         comando2.ExecuteReader();
                         conexion.Close();
                         Session["guardadoDoc"] = "actualizado";
-                        Response.Redirect("Acdocentes.aspx");
+                        retorno = true;
                     }
                     else if (varImagen.Equals("") && !varArchivo.Equals(""))
                     {
@@ -563,9 +573,9 @@ namespace Proyecto
                         comando2.ExecuteReader();
                         conexion.Close();
                         Session["guardadoDoc"] = "actualizado";
-                        Response.Redirect("Acdocentes.aspx");
+                        retorno = true;
                     }
-                    else if(!varImagen.Equals("") && !varArchivo.Equals(""))
+                    else if (!varImagen.Equals("") && !varArchivo.Equals(""))
                     {
                         if (System.IO.File.Exists(Server.MapPath(".") + "/imagenes/" + varImagen))
                         {
@@ -582,7 +592,7 @@ namespace Proyecto
                         comando2.ExecuteReader();
                         conexion.Close();
                         Session["guardadoDoc"] = "actualizado";
-                        Response.Redirect("Acdocentes.aspx");
+                        retorno = true;
                     }
                 }
                 if (label9.Text.Equals(nombreImagen) && !label10.Text.Equals(nombreArchivo))
@@ -602,6 +612,7 @@ namespace Proyecto
                     }
                 }
             }
+            return retorno;
         }
 
         //Eliminar foto del registro
@@ -609,7 +620,23 @@ namespace Proyecto
         {
             Label docCodigo = FormView1.FindControl("doccodigoLabel1") as Label;
             Label label9 = FormView1.FindControl("Label9") as Label;
+            Label label10 = FormView1.FindControl("Label10") as Label;
+            Label label11 = FormView1.FindControl("Label11") as Label;
+            bool redirigir;
+            redirigir = eliminarImgRegi(docCodigo, label9, label10, label11);
+            if (redirigir == true)
+            {
+                Response.Redirect("Acdocentes.aspx");
+            }
+        }
+
+        public bool eliminarImgRegi(Label docCodigo, Label label9, Label label10, Label label11)
+        {
+            bool retorno = false;
             String nombreImagen2 = "";
+            label9.Text = "";
+            label10.Text = "";
+            label11.Text = "";
             conexion.Open();
             string cadena = $"select imagen, archivo from tbldocentes WHERE doccodigo = {docCodigo.Text}";
             SqlCommand comando = new SqlCommand(cadena, conexion);
@@ -634,12 +661,13 @@ namespace Proyecto
                 comando2.ExecuteReader();
                 conexion.Close();
                 Session["guardadoDoc"] = "actualizadoImgBorrado";
-                Response.Redirect("Acdocentes.aspx");
+                retorno = true;
             }
             else
             {
                 label9.Text = "No existe ninguna foto insertada en este registro";
             }
+            return retorno;
         }
 
         //Eliminar archivo del registro
@@ -647,7 +675,23 @@ namespace Proyecto
         {
             Label docCodigo = FormView1.FindControl("doccodigoLabel1") as Label;
             Label label9 = FormView1.FindControl("Label9") as Label;
+            Label label10 = FormView1.FindControl("Label10") as Label;
+            Label label11 = FormView1.FindControl("Label11") as Label;
+            bool redirigir;
+            redirigir = eliminarArcRegi(docCodigo, label9, label10, label11);
+            if (redirigir == true)
+            {
+                Response.Redirect("Acdocentes.aspx");
+            }
+        }
+
+        public bool eliminarArcRegi(Label docCodigo, Label label9, Label label10, Label label11)
+        {
+            bool retorno = false;
             String nombreArchivo2 = "";
+            label9.Text = "";
+            label10.Text = "";
+            label11.Text = "";
             conexion.Open();
             string cadena = $"select imagen, archivo from tbldocentes WHERE doccodigo = {docCodigo.Text}";
             SqlCommand comando = new SqlCommand(cadena, conexion);
@@ -672,12 +716,13 @@ namespace Proyecto
                 comando2.ExecuteReader();
                 conexion.Close();
                 Session["guardadoDoc"] = "actualizadoArcBorrado";
-                Response.Redirect("Acdocentes.aspx");
+                retorno = true;
             }
             else
             {
                 label9.Text = "No existe ningun archivo insertado en este registro";
             }
+            return retorno;
         }
     }
 }

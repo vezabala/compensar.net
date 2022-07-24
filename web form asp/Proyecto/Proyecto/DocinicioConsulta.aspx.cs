@@ -70,5 +70,59 @@ namespace Proyecto
             conexion.Close();
             Response.Redirect("Acdocentes.aspx");
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            DropDownList usuCodigo = FormView1.FindControl("usucodigoDropDownList1") as DropDownList;
+            Label docCodigo = FormView1.FindControl("doccodigoLabel1") as Label;
+            TextBox doTelefono = FormView1.FindControl("dotelefonoTextBox") as TextBox;
+            TextBox docIngreso = FormView1.FindControl("docingresoTextBox") as TextBox;
+            TextBox docApellido1 = FormView1.FindControl("docapellido1TextBox") as TextBox;
+            TextBox docApellido2 = FormView1.FindControl("docapellido2TextBox") as TextBox;
+            TextBox docNombre1 = FormView1.FindControl("docnombre1TextBox") as TextBox;
+            TextBox docNombre2 = FormView1.FindControl("docnombre2TextBox") as TextBox;
+            FileUpload docImagen = FormView1.FindControl("docimagenFileUpload1") as FileUpload;
+            FileUpload docArchivo = FormView1.FindControl("docarchivoFileUpload1") as FileUpload;
+            Label label9 = FormView1.FindControl("Label9") as Label;
+            Label label10 = FormView1.FindControl("Label10") as Label;
+            Label label11 = FormView1.FindControl("Label11") as Label;
+            Acdocentes actualizar = new Acdocentes();
+            bool redirigir = false;
+            redirigir = actualizar.actualizar(usuCodigo, docCodigo, doTelefono, docIngreso, docApellido1, docApellido2, docNombre1, docNombre2, docImagen, docArchivo, label9, label10, label11);
+            if (redirigir == true)
+            {
+                Response.Redirect("Acdocentes.aspx");
+            }
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            Label docCodigo = FormView1.FindControl("doccodigoLabel1") as Label;
+            Label label9 = FormView1.FindControl("Label9") as Label;
+            Label label10 = FormView1.FindControl("Label10") as Label;
+            Label label11 = FormView1.FindControl("Label11") as Label;
+            Acdocentes eliminarImg = new Acdocentes();
+            bool redirigir;
+            redirigir = eliminarImg.eliminarImgRegi(docCodigo, label9, label10, label11);
+            if (redirigir == true)
+            {
+                Response.Redirect("Acdocentes.aspx");
+            }
+        }
+
+        protected void LinkButton3_Click(object sender, EventArgs e)
+        {
+            Label docCodigo = FormView1.FindControl("doccodigoLabel1") as Label;
+            Label label9 = FormView1.FindControl("Label9") as Label;
+            Label label10 = FormView1.FindControl("Label10") as Label;
+            Label label11 = FormView1.FindControl("Label11") as Label;
+            Acdocentes eliminarArc = new Acdocentes();
+            bool redirigir;
+            redirigir = eliminarArc.eliminarArcRegi(docCodigo, label9, label10, label11);
+            if (redirigir == true)
+            {
+                Response.Redirect("Acdocentes.aspx");
+            }
+        }
     }
 }

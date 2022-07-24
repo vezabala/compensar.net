@@ -38,22 +38,7 @@
         .auto-style13 {
             width: 158px;
         }
-        .auto-style15 {
-            width: 149px;
-        }
-        .auto-style16 {
-            width: 150px;
-        }
-        .auto-style17 {
-            width: 120px;
-        }
-        .auto-style18 {
-            width: 113px;
-        }
-        .auto-style19 {
-            width: 73px;
-        }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div style="border-radius: 20px; border: solid 2px #999999; box-shadow: 2px 2px 5px #999999; height: 785px; width: 1526px">
@@ -100,67 +85,86 @@
          <div style="height: 756px; width: 1481px; margin-left: 17px; margin-top: 17px">
              <asp:FormView ID="FormView1" runat="server" DataKeyNames="doccodigo" DataSourceID="SqlDataSource1" Width="960px">
                  <EditItemTemplate>
-                     <table class="auto-style2">
-                         <tr>
-                             <td class="auto-style7" colspan="6"><strong>Actualizacion de Docentes</strong></td>
-                         </tr>
-                         <tr>
-                             <td class="auto-style17">Codigo Usuario:</td>
-                             <td class="auto-style15">
-                                 <asp:TextBox ID="usucodigoTextBox" runat="server" Text='<%# Bind("usucodigo") %>' />
-                             </td>
-                             <td class="auto-style18">Apellido 1:</td>
-                             <td class="auto-style16">
-                                 <asp:TextBox ID="docapellido1TextBox" runat="server" Text='<%# Bind("docapellido1") %>' />
-                             </td>
-                             <td class="auto-style19">Imagen:</td>
-                             <td class="auto-style16">
-                                 <asp:TextBox ID="imagenTextBox" runat="server" Text='<%# Bind("imagen") %>' />
-                             </td>
-                         </tr>
-                         <tr>
-                             <td class="auto-style17">Codigo Docente:</td>
-                             <td class="auto-style15">
-                                 <asp:Label ID="doccodigoLabel1" runat="server" Text='<%# Eval("doccodigo") %>' />
-                             </td>
-                             <td class="auto-style18">Apellido 2:</td>
-                             <td class="auto-style16">
-                                 <asp:TextBox ID="docapellido2TextBox" runat="server" Text='<%# Bind("docapellido2") %>' />
-                             </td>
-                             <td class="auto-style19">Archivo:</td>
-                             <td class="auto-style16">
-                                 <asp:TextBox ID="archivoTextBox" runat="server" Text='<%# Bind("archivo") %>' />
-                             </td>
-                         </tr>
-                         <tr>
-                             <td class="auto-style17">Telefono:</td>
-                             <td class="auto-style15">
-                                 <asp:TextBox ID="dotelefonoTextBox" runat="server" Text='<%# Bind("dotelefono") %>' />
-                             </td>
-                             <td class="auto-style18">Nombre 1:</td>
-                             <td class="auto-style16">
-                                 <asp:TextBox ID="docnombre1TextBox" runat="server" Text='<%# Bind("docnombre1") %>' />
-                             </td>
-                             <td class="auto-style19">&nbsp;</td>
-                             <td class="auto-style16">&nbsp;</td>
-                         </tr>
-                         <tr>
-                             <td class="auto-style17">Ingreso:</td>
-                             <td class="auto-style15">
-                                 <asp:TextBox ID="docingresoTextBox" runat="server" Text='<%# Bind("docingreso") %>' />
-                             </td>
-                             <td class="auto-style18">Nombre 2:</td>
-                             <td class="auto-style16">
-                                 <asp:TextBox ID="docnombre2TextBox" runat="server" Text='<%# Bind("docnombre2") %>' />
-                             </td>
-                             <td class="auto-style19">&nbsp;</td>
-                             <td class="auto-style16">&nbsp;</td>
-                         </tr>
-                     </table>
-                     <br />
-                     <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Actualizar" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" Font-Bold="True" Font-Overline="False" ForeColor="Black" />
-                     &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" Font-Bold="True" Font-Overline="False" ForeColor="Black" />
-                 </EditItemTemplate>
+                    <table class="nav-justified">
+                        <tr>
+                            <td class="auto-style10" colspan="6">Actualizacion de Docentes</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style32">Codigo Usuario:</td>
+                            <td class="auto-style59">
+                                <asp:DropDownList ID="usucodigoDropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="usunombre" DataValueField="usucodigo" SelectedValue='<%# Bind("usucodigo") %>' Width="129px">
+                                </asp:DropDownList>
+                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:proyectoaspConnectionString %>" SelectCommand="SELECT [usucodigo], [usunombre] FROM [tbltipousuario] ORDER BY [usucodigo]"></asp:SqlDataSource>
+                            </td>
+                            <td class="auto-style58">Apellido 1:</td>
+                            <td class="auto-style56">
+                                <asp:TextBox ID="docapellido1TextBox" runat="server" Text='<%# Bind("docapellido1") %>' />
+                            </td>
+                            <td class="auto-style57">Imagen:</td>
+                            <td class="auto-style76">
+                                <asp:FileUpload ID="docimagenFileUpload1" runat="server" Width="244px" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style32">Codigo Docente:</td>
+                            <td class="auto-style59">
+                                <asp:Label ID="doccodigoLabel1" runat="server" Text='<%# Eval("doccodigo") %>' />
+                            </td>
+                            <td class="auto-style58">Apellido 2:</td>
+                            <td class="auto-style56">
+                                <asp:TextBox ID="docapellido2TextBox" runat="server" Text='<%# Bind("docapellido2") %>' />
+                            </td>
+                            <td class="auto-style57">Archivo:</td>
+                            <td class="auto-style76">
+                                <asp:FileUpload ID="docarchivoFileUpload1" runat="server" Height="25px" Width="248px" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style32">Telefono:</td>
+                            <td class="auto-style59">
+                                <asp:TextBox ID="dotelefonoTextBox" runat="server" Text='<%# Bind("dotelefono") %>' />
+                            </td>
+                            <td class="auto-style58">Nombre 1:</td>
+                            <td class="auto-style56">
+                                <asp:TextBox ID="docnombre1TextBox" runat="server" Text='<%# Bind("docnombre1") %>' />
+                            </td>
+                            <td class="auto-style57">&nbsp;</td>
+                            <td class="auto-style76">
+                                <asp:LinkButton ID="LinkButton2" runat="server" BackColor="#99FF33" BorderColor="#CCFF66" BorderStyle="Outset" Font-Bold="True" Font-Overline="False" ForeColor="Black" OnClick="LinkButton2_Click">Eliminar imagen y actualizar</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style32">Ingreso:</td>
+                            <td class="auto-style59">
+                                <asp:TextBox ID="docingresoTextBox" runat="server" Text='<%# Bind("docingreso") %>' />
+                            </td>
+                            <td class="auto-style58">Nombre 2:</td>
+                            <td class="auto-style56">
+                                <asp:TextBox ID="docnombre2TextBox" runat="server" Text='<%# Bind("docnombre2") %>' />
+                            </td>
+                            <td class="auto-style57">&nbsp;</td>
+                            <td class="auto-style76">
+                                <asp:LinkButton ID="LinkButton3" runat="server" BackColor="Yellow" BorderColor="#FFFF66" BorderStyle="Outset" Font-Bold="True" Font-Overline="False" ForeColor="Black" OnClick="LinkButton3_Click">Eliminar archivo y actualizar</asp:LinkButton>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <asp:LinkButton ID="LinkButton1" runat="server" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" ForeColor="Black" Font-Bold="True" Font-Overline="False" OnClick="LinkButton1_Click" >Actualizar</asp:LinkButton>
+                    &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" ForeColor="Black" Font-Bold="True" Font-Italic="False" Font-Overline="False" />
+                    &nbsp; 
+                     <asp:Label ID="Label9" runat="server" CssClass="auto-style77" Font-Bold="True" Font-Italic="True" style="color: #990000; font-size: large"></asp:Label>
+                     <strong>
+                    <br />
+                    <br />
+                    </strong>
+                    <asp:Label ID="Label10" runat="server" CssClass="auto-style78" Font-Bold="True" Font-Italic="True" style="font-size: large; color: #990000"></asp:Label>
+                    <br />
+                    <br />
+                    <strong><em>
+                    <asp:Label ID="Label11" runat="server" CssClass="auto-style78" style="color: #990000; font-size: large"></asp:Label>
+                    <asp:LinkButton ID="UpdateButton" runat="server" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" CausesValidation="True" CommandName="Update" Font-Bold="True" Font-Overline="False" ForeColor="Black" Text="Actualizar" visible="false"/>
+                    </em></strong>
+                </EditItemTemplate>
                  <InsertItemTemplate>
                      usucodigo:
                      <asp:TextBox ID="usucodigoTextBox" runat="server" Text='<%# Bind("usucodigo") %>' />
