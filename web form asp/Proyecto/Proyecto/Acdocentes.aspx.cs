@@ -45,6 +45,20 @@ namespace Proyecto
                     Button4.Visible = true;
                     Session["guardadoDoc"] = "";
                 }
+                else if (Session["guardadoDoc"].ToString().Equals("actualizadoImgBorrado"))
+                {
+                    Label7.Text = "Se a eliminado la foto del registro con exito";
+                    Label7.Visible = true;
+                    Button4.Visible = true;
+                    Session["guardadoDoc"] = "";
+                }
+                else if (Session["guardadoDoc"].ToString().Equals("actualizadoArcBorrado"))
+                {
+                    Label7.Text = "Se a eliminado el archivo del registro con exito";
+                    Label7.Visible = true;
+                    Button4.Visible = true;
+                    Session["guardadoDoc"] = "";
+                }
             }
         }
 
@@ -587,6 +601,82 @@ namespace Proyecto
                         System.IO.File.Delete(Server.MapPath(".") + "/archivos/" + nombreArchivo);
                     }
                 }
+            }
+        }
+
+        //Eliminar foto del registro
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            Label docCodigo = FormView1.FindControl("doccodigoLabel1") as Label;
+            Label label9 = FormView1.FindControl("Label9") as Label;
+            String nombreImagen2 = "";
+            conexion.Open();
+            string cadena = $"select imagen, archivo from tbldocentes WHERE doccodigo = {docCodigo.Text}";
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            SqlDataReader registros = comando.ExecuteReader();
+            while (registros.Read())
+            {
+                if (!registros["imagen"].ToString().Equals(""))
+                {
+                    nombreImagen2 = (registros["imagen"].ToString());
+                }
+            }
+            conexion.Close();
+            if (!nombreImagen2.Equals(""))
+            {
+                if (System.IO.File.Exists(Server.MapPath(".") + "/imagenes/" + nombreImagen2))
+                {
+                    System.IO.File.Delete(Server.MapPath(".") + "/imagenes/" + nombreImagen2);
+                }
+                conexion.Open();
+                string cadena2 = $"UPDATE tbldocentes SET imagen = null WHERE doccodigo = {docCodigo.Text};";
+                SqlCommand comando2 = new SqlCommand(cadena2, conexion);
+                comando2.ExecuteReader();
+                conexion.Close();
+                Session["guardadoDoc"] = "actualizadoImgBorrado";
+                Response.Redirect("Acdocentes.aspx");
+            }
+            else
+            {
+                label9.Text = "No existe ninguna foto insertada en este registro";
+            }
+        }
+
+        //Eliminar archivo del registro
+        protected void LinkButton3_Click(object sender, EventArgs e)
+        {
+            Label docCodigo = FormView1.FindControl("doccodigoLabel1") as Label;
+            Label label9 = FormView1.FindControl("Label9") as Label;
+            String nombreArchivo2 = "";
+            conexion.Open();
+            string cadena = $"select imagen, archivo from tbldocentes WHERE doccodigo = {docCodigo.Text}";
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            SqlDataReader registros = comando.ExecuteReader();
+            while (registros.Read())
+            {
+                if (!registros["archivo"].ToString().Equals(""))
+                {
+                    nombreArchivo2 = (registros["archivo"].ToString());
+                }
+            }
+            conexion.Close();
+            if (!nombreArchivo2.Equals(""))
+            {
+                if (System.IO.File.Exists(Server.MapPath(".") + "/archivos/" + nombreArchivo2))
+                {
+                    System.IO.File.Delete(Server.MapPath(".") + "/archivos/" + nombreArchivo2);
+                }
+                conexion.Open();
+                string cadena2 = $"UPDATE tbldocentes SET archivo = null WHERE doccodigo = {docCodigo.Text};";
+                SqlCommand comando2 = new SqlCommand(cadena2, conexion);
+                comando2.ExecuteReader();
+                conexion.Close();
+                Session["guardadoDoc"] = "actualizadoArcBorrado";
+                Response.Redirect("Acdocentes.aspx");
+            }
+            else
+            {
+                label9.Text = "No existe ningun archivo insertado en este registro";
             }
         }
     }

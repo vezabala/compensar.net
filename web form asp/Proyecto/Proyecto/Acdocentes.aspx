@@ -269,7 +269,9 @@
                                 <asp:TextBox ID="docnombre1TextBox" runat="server" Text='<%# Bind("docnombre1") %>' />
                             </td>
                             <td class="auto-style57">&nbsp;</td>
-                            <td class="auto-style76">&nbsp;</td>
+                            <td class="auto-style76">
+                                <asp:LinkButton ID="LinkButton2" runat="server" BackColor="#99FF33" BorderColor="#CCFF66" BorderStyle="Outset" Font-Bold="True" Font-Overline="False" ForeColor="Black" OnClick="LinkButton2_Click">Eliminar imagen y actualizar</asp:LinkButton>
+                            </td>
                         </tr>
                         <tr>
                             <td class="auto-style32">Ingreso:</td>
@@ -282,12 +284,12 @@
                             </td>
                             <td class="auto-style57">&nbsp;</td>
                             <td class="auto-style76">
-                                <asp:LinkButton ID="LinkButton1" runat="server" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" Font-Bold="True" Font-Overline="False" ForeColor="Black" OnClick="LinkButton1_Click">Actualizar</asp:LinkButton>
+                                <asp:LinkButton ID="LinkButton3" runat="server" BackColor="Yellow" BorderColor="#FFFF66" BorderStyle="Outset" Font-Bold="True" Font-Overline="False" ForeColor="Black" OnClick="LinkButton3_Click">Eliminar archivo y actualizar</asp:LinkButton>
                             </td>
                         </tr>
                     </table>
                     <br />
-                    <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Actualizar" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" ForeColor="Black" Font-Bold="True" Font-Overline="False" />
+                    <asp:LinkButton ID="LinkButton1" runat="server" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" ForeColor="Black" Font-Bold="True" Font-Overline="False" OnClick="LinkButton1_Click" >Actualizar</asp:LinkButton>
                     &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" ForeColor="Black" Font-Bold="True" Font-Italic="False" Font-Overline="False" />
                     &nbsp; <strong>
                     <asp:Label ID="Label9" runat="server" CssClass="auto-style77" Font-Bold="True" Font-Italic="True"></asp:Label>
@@ -299,6 +301,7 @@
                     <br />
                     <strong><em>
                     <asp:Label ID="Label11" runat="server" CssClass="auto-style78"></asp:Label>
+                    <asp:LinkButton ID="UpdateButton" runat="server" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" CausesValidation="True" CommandName="Update" Font-Bold="True" Font-Overline="False" ForeColor="Black" Text="Actualizar" visible="false"/>
                     </em></strong>
                 </EditItemTemplate>
                 <InsertItemTemplate>
