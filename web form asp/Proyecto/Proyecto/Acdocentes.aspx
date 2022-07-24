@@ -55,9 +55,6 @@
         .auto-style28 {
             width: 376px;
         }
-        .auto-style29 {
-            width: 173px;
-        }
         .auto-style31 {
             width: 181px;
             height: 31px;
@@ -173,15 +170,14 @@
             margin-left: 1437px;
         }
         .auto-style76 {
-            height: 74px;
-            text-align: left;
-            width: 1469px;
-            margin-top: 27px;
-            color: #FF0000;
-            font-size: large;
+            width: 306px
         }
         .auto-style77 {
-            color: #FF0000;
+            font-size: large;
+            color: #800000;
+        }
+        .auto-style78 {
+            color: #990000;
             font-size: large;
         }
         </style>
@@ -236,15 +232,17 @@
                         <tr>
                             <td class="auto-style32">Codigo Usuario:</td>
                             <td class="auto-style59">
-                                <asp:TextBox ID="usucodigoTextBox" runat="server" Text='<%# Bind("usucodigo") %>' />
+                                <asp:DropDownList ID="usucodigoDropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="usunombre" DataValueField="usucodigo" SelectedValue='<%# Bind("usucodigo") %>' Width="129px">
+                                </asp:DropDownList>
+                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:proyectoaspConnectionString %>" SelectCommand="SELECT [usucodigo], [usunombre] FROM [tbltipousuario] ORDER BY [usucodigo]"></asp:SqlDataSource>
                             </td>
                             <td class="auto-style58">Apellido 1:</td>
                             <td class="auto-style56">
                                 <asp:TextBox ID="docapellido1TextBox" runat="server" Text='<%# Bind("docapellido1") %>' />
                             </td>
                             <td class="auto-style57">Imagen:</td>
-                            <td class="auto-style29">
-                                <asp:TextBox ID="docimagenTextBox" runat="server" Text='<%# Bind("imagen") %>' />
+                            <td class="auto-style76">
+                                <asp:FileUpload ID="docimagenFileUpload1" runat="server" Width="244px" />
                             </td>
                         </tr>
                         <tr>
@@ -257,8 +255,8 @@
                                 <asp:TextBox ID="docapellido2TextBox" runat="server" Text='<%# Bind("docapellido2") %>' />
                             </td>
                             <td class="auto-style57">Archivo:</td>
-                            <td class="auto-style29">
-                                <asp:TextBox ID="docarchivoTextBox" runat="server" Text='<%# Bind("archivo") %>' />
+                            <td class="auto-style76">
+                                <asp:FileUpload ID="docarchivoFileUpload1" runat="server" Height="25px" Width="248px" />
                             </td>
                         </tr>
                         <tr>
@@ -271,7 +269,7 @@
                                 <asp:TextBox ID="docnombre1TextBox" runat="server" Text='<%# Bind("docnombre1") %>' />
                             </td>
                             <td class="auto-style57">&nbsp;</td>
-                            <td class="auto-style29">&nbsp;</td>
+                            <td class="auto-style76">&nbsp;</td>
                         </tr>
                         <tr>
                             <td class="auto-style32">Ingreso:</td>
@@ -283,12 +281,25 @@
                                 <asp:TextBox ID="docnombre2TextBox" runat="server" Text='<%# Bind("docnombre2") %>' />
                             </td>
                             <td class="auto-style57">&nbsp;</td>
-                            <td class="auto-style29">&nbsp;</td>
+                            <td class="auto-style76">
+                                <asp:LinkButton ID="LinkButton1" runat="server" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" Font-Bold="True" Font-Overline="False" ForeColor="Black" OnClick="LinkButton1_Click">Actualizar</asp:LinkButton>
+                            </td>
                         </tr>
                     </table>
                     <br />
                     <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Actualizar" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" ForeColor="Black" Font-Bold="True" Font-Overline="False" />
                     &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" ForeColor="Black" Font-Bold="True" Font-Italic="False" Font-Overline="False" />
+                    &nbsp; <strong>
+                    <asp:Label ID="Label9" runat="server" CssClass="auto-style77" Font-Bold="True" Font-Italic="True"></asp:Label>
+                    <br />
+                    <br />
+                    </strong>
+                    <asp:Label ID="Label10" runat="server" CssClass="auto-style78" Font-Bold="True" Font-Italic="True"></asp:Label>
+                    <br />
+                    <br />
+                    <strong><em>
+                    <asp:Label ID="Label11" runat="server" CssClass="auto-style78"></asp:Label>
+                    </em></strong>
                 </EditItemTemplate>
                 <InsertItemTemplate>
                     <table class="nav-justified">

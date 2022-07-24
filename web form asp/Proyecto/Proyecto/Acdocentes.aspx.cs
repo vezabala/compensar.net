@@ -38,6 +38,13 @@ namespace Proyecto
                     Button4.Visible = true;
                     Session["guardadoDoc"] = "";
                 }
+                else if (Session["guardadoDoc"].ToString().Equals("actualizado"))
+                {
+                    Label7.Text = "Se a actualizado con exito el registro";
+                    Label7.Visible = true;
+                    Button4.Visible = true;
+                    Session["guardadoDoc"] = "";
+                }
             }
         }
 
@@ -121,6 +128,8 @@ namespace Proyecto
             conexion.Close();
             Response.Redirect("Acdocentes.aspx");
         }  
+
+        // Insertar
         protected void Button3_Click(object sender, EventArgs e)
         {
             string excepcion;
@@ -340,6 +349,245 @@ namespace Proyecto
             }
             conexion.Close();
             return error;
+        }
+
+        //Actualizar
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            DropDownList usuCodigo = FormView1.FindControl("usucodigoDropDownList1") as DropDownList;
+            Label docCodigo = FormView1.FindControl("doccodigoLabel1") as Label;
+            TextBox doTelefono = FormView1.FindControl("dotelefonoTextBox") as TextBox;
+            TextBox docIngreso = FormView1.FindControl("docingresoTextBox") as TextBox;
+            TextBox docApellido1 = FormView1.FindControl("docapellido1TextBox") as TextBox;
+            TextBox docApellido2 = FormView1.FindControl("docapellido2TextBox") as TextBox;
+            TextBox docNombre1 = FormView1.FindControl("docnombre1TextBox") as TextBox;
+            TextBox docNombre2 = FormView1.FindControl("docnombre2TextBox") as TextBox;
+            FileUpload docImagen = FormView1.FindControl("docimagenFileUpload1") as FileUpload;
+            FileUpload docArchivo = FormView1.FindControl("docarchivoFileUpload1") as FileUpload;
+            Label label9 = FormView1.FindControl("Label9") as Label;
+            Label label10 = FormView1.FindControl("Label10") as Label;
+            Label label11 = FormView1.FindControl("Label11") as Label;
+
+            String imagenVar = "";
+            String archivoVar = "";
+            if (docImagen.FileName.Equals("") && docArchivo.FileName.Equals(""))
+            {
+                label9.Text = "";
+                label10.Text = "";
+                label11.Text = "";
+                conexion.Open();
+                string cadena = $"UPDATE tbldocentes SET usucodigo = {usuCodigo.Text}, docapellido1 = '{docApellido1.Text}', docapellido2 = '{docApellido2.Text}', docnombre1 = '{docNombre1.Text}', docnombre2 = '{docNombre2.Text}', docingreso = '{docIngreso.Text}', dotelefono = '{doTelefono.Text}' WHERE doccodigo = {docCodigo.Text};";
+                SqlCommand comando = new SqlCommand(cadena, conexion);
+                comando.ExecuteReader();
+                conexion.Close();
+                Session["guardadoDoc"] = "actualizado";
+                Response.Redirect("Acdocentes.aspx");
+            }
+            else if (!docImagen.FileName.Equals("") && docArchivo.FileName.Equals(""))
+            {
+                label9.Text = "";
+                label10.Text = "";
+                label11.Text = "";
+                imagenVar = docImagen.FileName;
+                label9.Text = subirImagen(imagenVar, docImagen);
+                if (label9.Text.Equals(nombreImagen))
+                {
+                    string varImagen = "";
+                    conexion.Open();
+                    string cadena = $"select imagen from tbldocentes WHERE doccodigo = {docCodigo.Text};";
+                    SqlCommand comando = new SqlCommand(cadena, conexion);
+                    SqlDataReader registros = comando.ExecuteReader();
+                    while (registros.Read())
+                    {
+                        if (!registros["imagen"].ToString().Equals(""))
+                        {
+                            varImagen = (registros["imagen"].ToString());
+                        }
+                    }
+                    conexion.Close();
+                    if (varImagen.Equals(""))
+                    {
+                        conexion.Open();
+                        string cadena2 = $"UPDATE tbldocentes SET usucodigo = {usuCodigo.Text}, docapellido1 = '{docApellido1.Text}', docapellido2 = '{docApellido2.Text}', docnombre1 = '{docNombre1.Text}', docnombre2 = '{docNombre2.Text}', docingreso = '{docIngreso.Text}', dotelefono = '{doTelefono.Text}', imagen = '{nombreImagen}' WHERE doccodigo = {docCodigo.Text};";
+                        SqlCommand comando2 = new SqlCommand(cadena2, conexion);
+                        comando2.ExecuteReader();
+                        conexion.Close();
+                        Session["guardadoDoc"] = "actualizado";
+                        Response.Redirect("Acdocentes.aspx");
+                    }
+                    else
+                    {
+                        //borrar imagen anerior del directorio
+                        //Dado el caso, verifico que exista el archivo..
+                        if (System.IO.File.Exists(Server.MapPath(".") + "/imagenes/" + varImagen))
+                        {
+                            System.IO.File.Delete(Server.MapPath(".") + "/imagenes/" + varImagen);
+                        }
+                        conexion.Open();
+                        string cadena2 = $"UPDATE tbldocentes SET usucodigo = {usuCodigo.Text}, docapellido1 = '{docApellido1.Text}', docapellido2 = '{docApellido2.Text}', docnombre1 = '{docNombre1.Text}', docnombre2 = '{docNombre2.Text}', docingreso = '{docIngreso.Text}', dotelefono = '{doTelefono.Text}', imagen = '{nombreImagen}' WHERE doccodigo = {docCodigo.Text};";
+                        SqlCommand comando2 = new SqlCommand(cadena2, conexion);
+                        comando2.ExecuteReader();
+                        conexion.Close();
+                        Session["guardadoDoc"] = "actualizado";
+                        Response.Redirect("Acdocentes.aspx");
+                    }
+                } 
+            }
+            else if (docImagen.FileName.Equals("") && !docArchivo.FileName.Equals(""))
+            {
+                label9.Text = "";
+                label10.Text = "";
+                label11.Text = "";
+                archivoVar = docArchivo.FileName;
+                label9.Text = subirArchivo(archivoVar, docArchivo);
+                if (label9.Text.Equals(nombreArchivo))
+                {
+                    string varArchivo = "";
+                    conexion.Open();
+                    string cadena = $"select archivo from tbldocentes WHERE doccodigo = {docCodigo.Text};";
+                    SqlCommand comando = new SqlCommand(cadena, conexion);
+                    SqlDataReader registros = comando.ExecuteReader();
+                    while (registros.Read())
+                    {
+                        if (!registros["archivo"].ToString().Equals(""))
+                        {
+                            varArchivo = (registros["archivo"].ToString());
+                        }
+                    }
+                    conexion.Close();
+                    if (varArchivo.Equals(""))
+                    {
+                        conexion.Open();
+                        string cadena2 = $"UPDATE tbldocentes SET usucodigo = {usuCodigo.Text}, docapellido1 = '{docApellido1.Text}', docapellido2 = '{docApellido2.Text}', docnombre1 = '{docNombre1.Text}', docnombre2 = '{docNombre2.Text}', docingreso = '{docIngreso.Text}', dotelefono = '{doTelefono.Text}', archivo = '{nombreArchivo}' WHERE doccodigo = {docCodigo.Text};";
+                        SqlCommand comando2 = new SqlCommand(cadena2, conexion);
+                        comando2.ExecuteReader();
+                        conexion.Close();
+                        Session["guardadoDoc"] = "actualizado";
+                        Response.Redirect("Acdocentes.aspx");
+                    }
+                    else
+                    {
+                        //borrar archivo anerior del directorio
+                        //Dado el caso, verifico que exista el archivo..
+                        if (System.IO.File.Exists(Server.MapPath(".") + "/archivos/" + varArchivo))
+                        {
+                            System.IO.File.Delete(Server.MapPath(".") + "/archivos/" + varArchivo);
+                        }
+                        conexion.Open();
+                        string cadena2 = $"UPDATE tbldocentes SET usucodigo = {usuCodigo.Text}, docapellido1 = '{docApellido1.Text}', docapellido2 = '{docApellido2.Text}', docnombre1 = '{docNombre1.Text}', docnombre2 = '{docNombre2.Text}', docingreso = '{docIngreso.Text}', dotelefono = '{doTelefono.Text}', archivo = '{nombreArchivo}' WHERE doccodigo = {docCodigo.Text};";
+                        SqlCommand comando2 = new SqlCommand(cadena2, conexion);
+                        comando2.ExecuteReader();
+                        conexion.Close();
+                        Session["guardadoDoc"] = "actualizado";
+                        Response.Redirect("Acdocentes.aspx");
+                    }
+                }
+            }
+            else if (!docImagen.FileName.Equals("") && !docArchivo.FileName.Equals(""))
+            {
+                label9.Text = "";
+                label10.Text = "";
+                label11.Text = "";
+                imagenVar = docImagen.FileName;
+                archivoVar = docArchivo.FileName;
+                label9.Text = subirImagen(imagenVar, docImagen);
+                condicion2 = true;
+                label10.Text = subirArchivo(archivoVar, docArchivo);
+                if (label9.Text.Equals(nombreImagen) && label10.Text.Equals(nombreArchivo))
+                {
+                    string varArchivo = "";
+                    string varImagen = "";
+                    conexion.Open();
+                    string cadena = $"select imagen, archivo from tbldocentes WHERE doccodigo = {docCodigo.Text};";
+                    SqlCommand comando = new SqlCommand(cadena, conexion);
+                    SqlDataReader registros = comando.ExecuteReader();
+                    while (registros.Read())
+                    {
+                        if (!registros["archivo"].ToString().Equals(""))
+                        {
+                            varArchivo = (registros["archivo"].ToString());
+                        }
+                        if (!registros["imagen"].ToString().Equals(""))
+                        {
+                            varImagen = (registros["imagen"].ToString());
+                        }
+                    }
+                    conexion.Close();
+                    if (varImagen.Equals("") && varArchivo.Equals(""))
+                    {
+                        conexion.Open();
+                        string cadena2 = $"UPDATE tbldocentes SET usucodigo = {usuCodigo.Text}, docapellido1 = '{docApellido1.Text}', docapellido2 = '{docApellido2.Text}', docnombre1 = '{docNombre1.Text}', docnombre2 = '{docNombre2.Text}', docingreso = '{docIngreso.Text}', dotelefono = '{doTelefono.Text}', imagen = '{nombreImagen}', archivo = '{nombreArchivo}' WHERE doccodigo = {docCodigo.Text};";
+                        SqlCommand comando2 = new SqlCommand(cadena2, conexion);
+                        comando2.ExecuteReader();
+                        conexion.Close();
+                        Session["guardadoDoc"] = "actualizado";
+                        Response.Redirect("Acdocentes.aspx");
+                    }
+                    else if (!varImagen.Equals("") && varArchivo.Equals(""))
+                    {
+                        if (System.IO.File.Exists(Server.MapPath(".") + "/imagenes/" + varImagen))
+                        {
+                            System.IO.File.Delete(Server.MapPath(".") + "/imagenes/" + varImagen);
+                        }
+                        conexion.Open();
+                        string cadena2 = $"UPDATE tbldocentes SET usucodigo = {usuCodigo.Text}, docapellido1 = '{docApellido1.Text}', docapellido2 = '{docApellido2.Text}', docnombre1 = '{docNombre1.Text}', docnombre2 = '{docNombre2.Text}', docingreso = '{docIngreso.Text}', dotelefono = '{doTelefono.Text}', imagen = '{nombreImagen}', archivo = '{nombreArchivo}' WHERE doccodigo = {docCodigo.Text};";
+                        SqlCommand comando2 = new SqlCommand(cadena2, conexion);
+                        comando2.ExecuteReader();
+                        conexion.Close();
+                        Session["guardadoDoc"] = "actualizado";
+                        Response.Redirect("Acdocentes.aspx");
+                    }
+                    else if (varImagen.Equals("") && !varArchivo.Equals(""))
+                    {
+                        if (System.IO.File.Exists(Server.MapPath(".") + "/archivos/" + varArchivo))
+                        {
+                            System.IO.File.Delete(Server.MapPath(".") + "/archivos/" + varArchivo);
+                        }
+                        conexion.Open();
+                        string cadena2 = $"UPDATE tbldocentes SET usucodigo = {usuCodigo.Text}, docapellido1 = '{docApellido1.Text}', docapellido2 = '{docApellido2.Text}', docnombre1 = '{docNombre1.Text}', docnombre2 = '{docNombre2.Text}', docingreso = '{docIngreso.Text}', dotelefono = '{doTelefono.Text}', imagen = '{nombreImagen}', archivo = '{nombreArchivo}' WHERE doccodigo = {docCodigo.Text};";
+                        SqlCommand comando2 = new SqlCommand(cadena2, conexion);
+                        comando2.ExecuteReader();
+                        conexion.Close();
+                        Session["guardadoDoc"] = "actualizado";
+                        Response.Redirect("Acdocentes.aspx");
+                    }
+                    else if(!varImagen.Equals("") && !varArchivo.Equals(""))
+                    {
+                        if (System.IO.File.Exists(Server.MapPath(".") + "/imagenes/" + varImagen))
+                        {
+                            System.IO.File.Delete(Server.MapPath(".") + "/imagenes/" + varImagen);
+                        }
+
+                        if (System.IO.File.Exists(Server.MapPath(".") + "/archivos/" + varArchivo))
+                        {
+                            System.IO.File.Delete(Server.MapPath(".") + "/archivos/" + varArchivo);
+                        }
+                        conexion.Open();
+                        string cadena2 = $"UPDATE tbldocentes SET usucodigo = {usuCodigo.Text}, docapellido1 = '{docApellido1.Text}', docapellido2 = '{docApellido2.Text}', docnombre1 = '{docNombre1.Text}', docnombre2 = '{docNombre2.Text}', docingreso = '{docIngreso.Text}', dotelefono = '{doTelefono.Text}', imagen = '{nombreImagen}', archivo = '{nombreArchivo}' WHERE doccodigo = {docCodigo.Text};";
+                        SqlCommand comando2 = new SqlCommand(cadena2, conexion);
+                        comando2.ExecuteReader();
+                        conexion.Close();
+                        Session["guardadoDoc"] = "actualizado";
+                        Response.Redirect("Acdocentes.aspx");
+                    }
+                }
+                if (label9.Text.Equals(nombreImagen) && !label10.Text.Equals(nombreArchivo))
+                {
+                    label9.Text = "";
+                    if (System.IO.File.Exists(Server.MapPath(".") + "/imagenes/" + nombreImagen))
+                    {
+                        System.IO.File.Delete(Server.MapPath(".") + "/imagenes/" + nombreImagen);
+                    }
+                }
+                if (!label9.Text.Equals(nombreImagen) && label10.Text.Equals(nombreArchivo))
+                {
+                    label10.Text = "";
+                    if (System.IO.File.Exists(Server.MapPath(".") + "/archivos/" + nombreArchivo))
+                    {
+                        System.IO.File.Delete(Server.MapPath(".") + "/archivos/" + nombreArchivo);
+                    }
+                }
+            }
         }
     }
 }
