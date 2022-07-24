@@ -75,6 +75,38 @@
     <Content Include="AcGaleriaDocente.aspx" />
     <Content Include="AdCursosdictados.aspx" />
     <Content Include="Adinicio.aspx" />
+    <Content Include="assetsEst\css\main-style.css" />
+    <Content Include="assetsEst\css\style.css" />
+    <Content Include="assetsEst\font-awesome\css\font-awesome.css" />
+    <Content Include="assetsEst\font-awesome\css\font-awesome.min.css" />
+    <Content Include="assetsEst\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="assetsEst\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assetsEst\img\logo.png" />
+    <Content Include="assetsEst\img\user.jpg" />
+    <Content Include="assetsEst\plugins\bootstrap\bootstrap.css" />
+    <Content Include="assetsEst\plugins\bootstrap\bootstrap.js" />
+    <Content Include="assetsEst\plugins\bootstrap\bootstrap.min.js" />
+    <Content Include="assetsEst\plugins\dataTables\dataTables.bootstrap.css" />
+    <Content Include="assetsEst\plugins\dataTables\dataTables.bootstrap.js" />
+    <Content Include="assetsEst\plugins\dataTables\jquery.dataTables.js" />
+    <Content Include="assetsEst\plugins\flot\excanvas.min.js" />
+    <Content Include="assetsEst\plugins\flot\jquery.flot.js" />
+    <Content Include="assetsEst\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="assetsEst\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="assetsEst\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="assetsEst\plugins\jquery-1.10.2.js" />
+    <Content Include="assetsEst\plugins\metisMenu\jquery.metisMenu.js" />
+    <Content Include="assetsEst\plugins\morris\morris-0.4.3.min.css" />
+    <Content Include="assetsEst\plugins\morris\morris.js" />
+    <Content Include="assetsEst\plugins\morris\raphael-2.1.0.min.js" />
+    <Content Include="assetsEst\plugins\pace\pace-theme-big-counter.css" />
+    <Content Include="assetsEst\plugins\pace\pace.js" />
+    <Content Include="assetsEst\plugins\social-buttons\social-buttons.css" />
+    <Content Include="assetsEst\plugins\timeline\timeline.css" />
+    <Content Include="assetsEst\scripts\dashboard-demo.js" />
+    <Content Include="assetsEst\scripts\flot-demo.js" />
+    <Content Include="assetsEst\scripts\morris-demo.js" />
+    <Content Include="assetsEst\scripts\siminta.js" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
     <Content Include="assets\img\card.jpg" />
@@ -255,11 +287,13 @@
     <Content Include="Docinicio.aspx" />
     <Content Include="DocinicioConsulta.aspx" />
     <Content Include="documentation\index.html" />
+    <Content Include="EstInicio.aspx" />
     <Content Include="Gruntfile.js" />
     <Content Include="imagenes\dos.png" />
     <Content Include="imagenes\imagenUsuario.png" />
     <Content Include="imagenes\tres.png" />
     <Content Include="imagenes\uno.png" />
+    <Content Include="imagenes\user.jpg" />
     <Content Include="pages\calendar.html" />
     <Content Include="pages\charts\chartjs.html" />
     <Content Include="pages\charts\flot.html" />
@@ -863,6 +897,13 @@
     <Compile Include="DocinicioConsulta.aspx.designer.cs">
       <DependentUpon>DocinicioConsulta.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EstInicio.aspx.cs">
+      <DependentUpon>EstInicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EstInicio.aspx.designer.cs">
+      <DependentUpon>EstInicio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MasterPageAd.Master.cs">
       <DependentUpon>MasterPageAd.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -876,6 +917,13 @@
     </Compile>
     <Compile Include="MasterPageDoc.Master.designer.cs">
       <DependentUpon>MasterPageDoc.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPageEst.Master.cs">
+      <DependentUpon>MasterPageEst.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPageEst.Master.designer.cs">
+      <DependentUpon>MasterPageEst.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="subirArchivo.aspx.cs">
@@ -1055,6 +1103,14 @@
     <Content Include="archivos\informe1.pdf" />
     <Content Include="archivos\informe2.pdf" />
     <Content Include="archivos\informe3.pdf" />
+    <Content Include="assetsEst\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="assetsEst\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assetsEst\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="assetsEst\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="assetsEst\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assetsEst\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assetsEst\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="MasterPageEst.Master" />
     <None Include="packages.config" />
     <Content Include="README.md" />
     <Content Include="plugins\ckeditor\CHANGES.md" />

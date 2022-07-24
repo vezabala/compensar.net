@@ -11,7 +11,7 @@ namespace Proyecto
 {
 
 
-    public partial class MasterPageAd
+    public partial class MasterPageEst
     {
 
         /// <summary>

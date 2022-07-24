@@ -56,6 +56,7 @@ estnombre1 VARCHAR(30) NOT NULL,
 estnombre2 VARCHAR(30),
 estingreso VARCHAR(30) NOT NULL,
 estelefono VARCHAR(30) NOT NULL,
+imagen VARCHAR(100),
 CONSTRAINT fk_Usuarios_alumno FOREIGN KEY (usucodigo) REFERENCES tbltipousuario (usucodigo),
 );
 
