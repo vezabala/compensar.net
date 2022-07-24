@@ -60,7 +60,7 @@
     <div class="wrapper">
       
       <header class="main-header">
-        <a href="#" class="logo"><b>SI@RA</b></a>
+        <a href="#" class="logo"><b>ADMINISTRADOR</b></a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
@@ -181,7 +181,7 @@
                   <li class="user-footer">
                     
                     <div class="pull-center">
-                        <asp:Button ID="Button1" runat="server" Text="Cerrar Sesion" />
+                        <asp:Button ID="Button1" runat="server" Text="Cerrar Sesion" OnClick="Button1_Click" />
                     </div>
                   </li>
                     
@@ -236,7 +236,7 @@
                 
               </ul>
             </li>
-               <li class="header">Equipos</li>
+               <li class="header">Administrar</li>
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-pie-chart"></i> <span>Actualizacion</span> <i class="fa fa-angle-left pull-right"></i>
