@@ -1,5 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageAd.Master" AutoEventWireup="true" CodeBehind="Accursos.aspx.cs" Inherits="Proyecto.Accursos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style73 {
+            height: 74px;
+            text-align: left;
+            width: 1469px;
+            margin-top: 27px;
+        }
+        .auto-style74 {
+            background-color: #FF9900;
+            font-size: large;
+            color: #FFFFFF;
+        }
+        .auto-style75 {
+            margin-left: 1437px;
+        }
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="border-radius: 20px; border: solid 2px #999999; box-shadow: 2px 2px 5px #999999; height: 785px; width: 1526px">
@@ -61,6 +77,7 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#000065" />
             </asp:GridView>
+            <br />
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:proyectoaspConnectionString %>" DeleteCommand="DELETE FROM [tblcursos] WHERE [curcodigo] = @curcodigo" InsertCommand="INSERT INTO [tblcursos] ([curnombre1], [curintensidadh], [curdescripcion]) VALUES (@curnombre1, @curintensidadh, @curdescripcion)" SelectCommand="SELECT [curcodigo], [curnombre1], [curintensidadh], [curdescripcion] FROM [tblcursos] ORDER BY [curcodigo], [curnombre1]" UpdateCommand="UPDATE [tblcursos] SET [curnombre1] = @curnombre1, [curintensidadh] = @curintensidadh, [curdescripcion] = @curdescripcion WHERE [curcodigo] = @curcodigo">
                 <DeleteParameters>
                     <asp:Parameter Name="curcodigo" Type="Int32" />
@@ -77,6 +94,19 @@
                     <asp:Parameter Name="curcodigo" Type="Int32" />
                 </UpdateParameters>
             </asp:SqlDataSource>
+            <asp:LinkButton ID="LinkButton4" runat="server" BackColor="#FF9900" BorderColor="#FFCC00" BorderStyle="Outset" Font-Bold="True" Font-Overline="False" ForeColor="Black" PostBackUrl="~/AgregarCurso.aspx">Agregar Curso</asp:LinkButton>
+            
+            <br />
+            
+            <div class="auto-style73">
+                    <strong>
+                    <asp:Button ID="Button4" runat="server" Height="22px" Text="X" Width="16px" BackColor="#FF9900" BorderStyle="None" CssClass="auto-style75" Font-Bold="True" OnClick="Button4_Click" Visible="False" />
+
+                    <asp:Label ID="Label7" runat="server" CssClass="auto-style74" Height="45px" Width="1463px" style="border-radius: 10px" EnableTheming="True" Visible="False"></asp:Label>
+
+                    </strong>
+
+           </div>
         </div>
     </div>
 </asp:Content>

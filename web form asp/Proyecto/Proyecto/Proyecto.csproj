@@ -75,6 +75,7 @@
     <Content Include="AcGaleriaDocente.aspx" />
     <Content Include="AdCursosdictados.aspx" />
     <Content Include="Adinicio.aspx" />
+    <Content Include="AgregarCurso.aspx" />
     <Content Include="assetsEst\css\main-style.css" />
     <Content Include="assetsEst\css\style.css" />
     <Content Include="assetsEst\font-awesome\css\font-awesome.css" />
@@ -861,6 +862,13 @@
     </Compile>
     <Compile Include="Adinicio.aspx.designer.cs">
       <DependentUpon>Adinicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarCurso.aspx.cs">
+      <DependentUpon>AgregarCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarCurso.aspx.designer.cs">
+      <DependentUpon>AgregarCurso.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

@@ -239,24 +239,33 @@
                <li class="header">Administrar</li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-pie-chart"></i> <span>Actualizacion</span> <i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-pie-chart"></i> <span>Actualizacion de docentes</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                
+                <li><a href="../../Acdocentes.aspx"><i class="fa fa-circle-o"></i>Actualizar docentes</a></li>
+                <li><a href="../../AcGaleriaDocente.aspx"><i class="fa fa-circle-o"></i>Consulta galeria de docentes</a></li>                 
+                <li><a href="../../AcDocentesCursos.aspx"><i class="fa fa-circle-o"></i>Agregar docentes a cursos</a></li>
+              </ul>
+
+              <li class="treeview">
+              
+              <a href="#">
+                <i class="fa fa-dashboard"></i> <span>Cursos</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
                 <li><a href="../../Accursos.aspx"><i class="fa fa-circle-o"></i>Actualizar cursos</a></li>
-                <li><a href="../../Acdocentes.aspx"><i class="fa fa-circle-o"></i>Actualizar docentes</a></li>
-                <li><a href="../../AcGaleriaDocente.aspx"><i class="fa fa-circle-o"></i>Consulta galeria de docentes</a></li>
-                <li><a href="../../subirArchivo.aspx"><i class="fa fa-circle-o"></i>Importar archivos o imagenes</a></li>
-                <li><a href="../../AdCursosdictados.aspx"><i class="fa fa-circle-o"></i>Consulta Cursos</a></li>
-                <li><a href="../../AcDocentesCursos.aspx"><i class="fa fa-circle-o"></i>Agregar docentes a cursos</a></li>
+                <li><a href="../../AdCursosdictados.aspx"><i class="fa fa-circle-o"></i>Consulta Cursos</a></li>  
               </ul>
+            </li>
 
             <li class="treeview">
               
               <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Procesos</span> <i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-dashboard"></i> <span>Imagenes y archivos</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="../../Addatosdocentes.aspx"><i class="fa fa-circle-o"></i> Datos Docente</a></li>
+                <li><a href="../../subirArchivo.aspx"><i class="fa fa-circle-o"></i>Importar archivos o imagenes</a></li>
                 
               </ul>
             </li>
