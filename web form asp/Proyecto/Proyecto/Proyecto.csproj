@@ -72,6 +72,7 @@
     <Content Include="Accursos.aspx" />
     <Content Include="Acdocentes.aspx" />
     <Content Include="AcDocentesCursos.aspx" />
+    <Content Include="Acestudiantes.aspx" />
     <Content Include="AcGaleriaDocente.aspx" />
     <Content Include="AdCursosdictados.aspx" />
     <Content Include="Adinicio.aspx" />
@@ -289,6 +290,7 @@
     <Content Include="DocinicioConsulta.aspx" />
     <Content Include="documentation\index.html" />
     <Content Include="EstInicio.aspx" />
+    <Content Include="EstinicioConsulta.aspx" />
     <Content Include="Gruntfile.js" />
     <Content Include="imagenes\dos.png" />
     <Content Include="imagenes\imagenUsuario.png" />
@@ -842,6 +844,13 @@
     <Compile Include="AcDocentesCursos.aspx.designer.cs">
       <DependentUpon>AcDocentesCursos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Acestudiantes.aspx.cs">
+      <DependentUpon>Acestudiantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Acestudiantes.aspx.designer.cs">
+      <DependentUpon>Acestudiantes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AcGaleriaDocente.aspx.cs">
       <DependentUpon>AcGaleriaDocente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -911,6 +920,13 @@
     </Compile>
     <Compile Include="EstInicio.aspx.designer.cs">
       <DependentUpon>EstInicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EstinicioConsulta.aspx.cs">
+      <DependentUpon>EstinicioConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EstinicioConsulta.aspx.designer.cs">
+      <DependentUpon>EstinicioConsulta.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPageAd.Master.cs">
       <DependentUpon>MasterPageAd.Master</DependentUpon>

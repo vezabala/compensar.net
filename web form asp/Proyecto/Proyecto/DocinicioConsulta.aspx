@@ -83,7 +83,7 @@
             </table>
         </div>
          <div style="height: 756px; width: 1481px; margin-left: 17px; margin-top: 17px">
-             <asp:FormView ID="FormView1" runat="server" DataKeyNames="doccodigo" DataSourceID="SqlDataSource1" Width="960px">
+             <asp:FormView ID="FormView1" runat="server" DataKeyNames="doccodigo" DataSourceID="SqlDataSource1" Width="960px" CellPadding="4" ForeColor="#333333">
                  <EditItemTemplate>
                     <table class="nav-justified">
                         <tr>
@@ -165,6 +165,8 @@
                     <asp:LinkButton ID="UpdateButton" runat="server" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" CausesValidation="True" CommandName="Update" Font-Bold="True" Font-Overline="False" ForeColor="Black" Text="Actualizar" visible="false"/>
                     </em></strong>
                 </EditItemTemplate>
+                 <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                 <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
                  <InsertItemTemplate>
                      usucodigo:
                      <asp:TextBox ID="usucodigoTextBox" runat="server" Text='<%# Bind("usucodigo") %>' />
@@ -262,6 +264,8 @@
                      &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" BackColor="Red" BorderColor="#FF3300" BorderStyle="Outset" CausesValidation="False" CommandName="Delete" Font-Bold="True" Font-Overline="False" ForeColor="Black" Text="Eliminar" OnClick="DeleteButton_Click" />
                      &nbsp;
                  </ItemTemplate>
+                 <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                 <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
              </asp:FormView>
              <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:proyectoaspConnectionString %>" DeleteCommand="DELETE FROM [tbldocentes] WHERE [doccodigo] = @doccodigo" InsertCommand="INSERT INTO [tbldocentes] ([usucodigo], [doccodigo], [docapellido1], [docapellido2], [docnombre1], [docnombre2], [docingreso], [dotelefono], [imagen], [archivo]) VALUES (@usucodigo, @doccodigo, @docapellido1, @docapellido2, @docnombre1, @docnombre2, @docingreso, @dotelefono, @imagen, @archivo)" SelectCommand="SELECT * FROM [tbldocentes] WHERE ([doccodigo] = @doccodigo)" UpdateCommand="UPDATE [tbldocentes] SET [usucodigo] = @usucodigo, [docapellido1] = @docapellido1, [docapellido2] = @docapellido2, [docnombre1] = @docnombre1, [docnombre2] = @docnombre2, [docingreso] = @docingreso, [dotelefono] = @dotelefono, [imagen] = @imagen, [archivo] = @archivo WHERE [doccodigo] = @doccodigo">
                  <DeleteParameters>

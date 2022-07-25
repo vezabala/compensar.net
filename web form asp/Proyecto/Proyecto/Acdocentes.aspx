@@ -169,16 +169,9 @@
         .auto-style75 {
             margin-left: 1437px;
         }
-        .auto-style76 {
-            width: 306px
-        }
         .auto-style77 {
             font-size: large;
             color: #800000;
-        }
-        .auto-style78 {
-            color: #990000;
-            font-size: large;
         }
         </style>
 </asp:Content>
@@ -223,7 +216,7 @@
             </table>
         </div>
         <div style="height: 756px; width: 1481px; margin-left: 17px; margin-top: 17px">
-            <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="doccodigo" DataSourceID="SqlDataSource1" Height="181px" Width="960px">
+            <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="doccodigo" DataSourceID="SqlDataSource1" Height="181px" Width="960px" CellPadding="4" ForeColor="#333333">
                 <EditItemTemplate>
                     <table class="nav-justified">
                         <tr>
@@ -296,14 +289,16 @@
                     <br />
                     <br />
                     </strong>
-                    <asp:Label ID="Label10" runat="server" CssClass="auto-style78" Font-Bold="True" Font-Italic="True"></asp:Label>
+                    <asp:Label ID="Label10" runat="server" CssClass="auto-style78" Font-Bold="True" Font-Italic="True" style="color: #800000; font-size: large"></asp:Label>
                     <br />
                     <br />
                     <strong><em>
-                    <asp:Label ID="Label11" runat="server" CssClass="auto-style78"></asp:Label>
+                    <asp:Label ID="Label11" runat="server" CssClass="auto-style78" style="font-size: large; color: #800000"></asp:Label>
                     <asp:LinkButton ID="UpdateButton" runat="server" BackColor="#0099FF" BorderColor="#00CCFF" BorderStyle="Outset" CausesValidation="True" CommandName="Update" Font-Bold="True" Font-Overline="False" ForeColor="Black" Text="Actualizar" visible="false"/>
                     </em></strong>
                 </EditItemTemplate>
+                <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
                 <InsertItemTemplate>
                     <table class="nav-justified">
                         <tr>
@@ -371,10 +366,10 @@
                     <asp:Button ID="Button3" runat="server" BackColor="#0099FF" BorderColor="#66FFFF" BorderStyle="Outset" Font-Bold="True" Height="29px" OnClick="Button3_Click" Text="Insertar" Width="62px" />
                     &nbsp;&nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" BackColor="#FF6600" BorderColor="#FF9933" BorderStyle="Outset" Font-Bold="True" ForeColor="Black" Font-Overline="False" Height="29px" />
                     <strong>
-                    <asp:Label ID="Label5" runat="server" CssClass="auto-style76"></asp:Label>
+                    <asp:Label ID="Label5" runat="server" CssClass="auto-style80"></asp:Label>
                     <br />
                     <br />
-                    <asp:Label ID="Label6" runat="server" CssClass="auto-style76"></asp:Label>
+                    <asp:Label ID="Label6" runat="server" CssClass="auto-style80"></asp:Label>
                     <br />
                     <br />
                     <asp:Label ID="Label8" runat="server" CssClass="auto-style77"></asp:Label>
@@ -443,6 +438,8 @@
                     &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Eliminar" BackColor="Red" BorderColor="#FF3300" BorderStyle="Outset" Font-Bold="True" ForeColor="Black" OnClick="DeleteButton_Click" />
                     &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="Nuevo" BackColor="#00CC00" BorderColor="Lime" BorderStyle="Outset" Font-Bold="True" ForeColor="Black" />
                 </ItemTemplate>
+                <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
             </asp:FormView>
     
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:proyectoaspConnectionString %>" DeleteCommand="DELETE FROM [tbldocentes] WHERE [doccodigo] = @doccodigo" InsertCommand="INSERT INTO [tbldocentes] ([usucodigo], [doccodigo], [docapellido1], [docapellido2], [docnombre1], [docnombre2], [docingreso], [dotelefono], [imagen], [archivo]) VALUES (@usucodigo, @doccodigo, @docapellido1, @docapellido2, @docnombre1, @docnombre2, @docingreso, @dotelefono, @imagen, @archivo)" SelectCommand="SELECT * FROM [tbldocentes] ORDER BY [docapellido1], [docapellido2], [docnombre1]" UpdateCommand="UPDATE [tbldocentes] SET [usucodigo] = @usucodigo, [docapellido1] = @docapellido1, [docapellido2] = @docapellido2, [docnombre1] = @docnombre1, [docnombre2] = @docnombre2, [docingreso] = @docingreso, [dotelefono] = @dotelefono, [imagen] = @imagen, [archivo] = @archivo WHERE [doccodigo] = @doccodigo">
