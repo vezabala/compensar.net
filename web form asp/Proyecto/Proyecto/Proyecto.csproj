@@ -73,6 +73,7 @@
     <Content Include="Acdocentes.aspx" />
     <Content Include="AcDocentesCursos.aspx" />
     <Content Include="Acestudiantes.aspx" />
+    <Content Include="AcEstudiantesCursos.aspx" />
     <Content Include="AcGaleriaDocente.aspx" />
     <Content Include="AdCursosdictados.aspx" />
     <Content Include="Adinicio.aspx" />
@@ -850,6 +851,13 @@
     </Compile>
     <Compile Include="Acestudiantes.aspx.designer.cs">
       <DependentUpon>Acestudiantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AcEstudiantesCursos.aspx.cs">
+      <DependentUpon>AcEstudiantesCursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcEstudiantesCursos.aspx.designer.cs">
+      <DependentUpon>AcEstudiantesCursos.aspx</DependentUpon>
     </Compile>
     <Compile Include="AcGaleriaDocente.aspx.cs">
       <DependentUpon>AcGaleriaDocente.aspx</DependentUpon>

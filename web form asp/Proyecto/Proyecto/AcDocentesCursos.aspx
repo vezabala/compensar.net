@@ -110,7 +110,7 @@
                         <tr>
                             <td class="auto-style7">Docente:</td>
                             <td class="auto-style8">
-                                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Docente" DataValueField="doccodigo" Width="214px">
+                                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Docente" DataValueField="doccodigo" Width="214px" AutoPostBack="True">
                                 </asp:DropDownList>
                                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:proyectoaspConnectionString %>" SelectCommand="SELECT [doccodigo], [Docente] FROM [qrycombo] ORDER BY [Docente]"></asp:SqlDataSource>
                             </td>

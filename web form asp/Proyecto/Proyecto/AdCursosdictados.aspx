@@ -18,6 +18,9 @@
             margin-left: 8px;
             margin-top: 22px;
         }
+        .auto-style5 {
+            text-align: center;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -66,20 +69,18 @@
             </div>
             <div style="border-radius: 20px; border: solid 2px #999999; margin-left: 17px; margin-top: 17px" class="auto-style2">
                 <div margin-left: 17px; margin-top: 17px" class="auto-style4">
-                    <div>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="doccodigo,curcodigo,Expr1,Expr2" DataSourceID="SqlDataSource2" GridLines="Vertical" Height="198px" Width="1381px">
+                    <div class="auto-style5">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="curcodigo,doccodigo" DataSourceID="SqlDataSource2" GridLines="Vertical" Height="463px" Width="1394px" AllowPaging="True">
                         <AlternatingRowStyle BackColor="#DCDCDC" />
                         <Columns>
-                            <asp:BoundField DataField="doccodigo" HeaderText="Codigo docente" ReadOnly="True" SortExpression="doccodigo" />
-                            <asp:BoundField DataField="usucodigo" HeaderText="Codigo usuario" SortExpression="usucodigo" />
-                            <asp:BoundField DataField="docapellido1" HeaderText="Apellido 1 Docente" SortExpression="docapellido1" />
-                            <asp:BoundField DataField="docapellido2" HeaderText="Apellido 2 Docente" SortExpression="docapellido2" />
-                            <asp:BoundField DataField="docnombre1" HeaderText="Nombre 1 Docente" SortExpression="docnombre1" />
-                            <asp:BoundField DataField="docnombre2" HeaderText="Apellido 2 Docente" SortExpression="docnombre2" />
-                            <asp:BoundField DataField="curcodigo" HeaderText="Codigo curso" ReadOnly="True" SortExpression="curcodigo" />
-                            <asp:BoundField DataField="curnombre1" HeaderText="Nombre curso" SortExpression="curnombre1" />
-                            <asp:BoundField DataField="Expr1" HeaderText="Expr1" ReadOnly="True" SortExpression="Expr1" />
-                            <asp:BoundField DataField="Expr2" HeaderText="Expr2" ReadOnly="True" SortExpression="Expr2" />
+                            <asp:CommandField ShowSelectButton="True" />
+                            <asp:BoundField DataField="curcodigo" HeaderText="Codigo del curso:" ReadOnly="True" SortExpression="curcodigo" />
+                            <asp:BoundField DataField="curnombre1" HeaderText="Nombre del curso" SortExpression="curnombre1" />
+                            <asp:BoundField DataField="doccodigo" HeaderText="Codigo del docente" SortExpression="doccodigo" ReadOnly="True" />
+                            <asp:BoundField DataField="docapellido1" HeaderText="Apellido 1" SortExpression="docapellido1" />
+                            <asp:BoundField DataField="docapellido2" HeaderText="Apellido 2" SortExpression="docapellido2" />
+                            <asp:BoundField DataField="docnombre1" HeaderText="Nombre 1" SortExpression="docnombre1" />
+                            <asp:BoundField DataField="docnombre2" HeaderText="Nombre 2" SortExpression="docnombre2" />
                         </Columns>
                         <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
                         <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
@@ -92,9 +93,9 @@
                         <SortedDescendingHeaderStyle BackColor="#000065" />
                     </asp:GridView>
                     </div>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:proyectoaspConnectionString %>" SelectCommand="SELECT * FROM [qrycursosdocentes] WHERE ([Expr1] = @Expr1) ORDER BY [docapellido1], [docapellido2]">
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:proyectoaspConnectionString %>" SelectCommand="SELECT * FROM [qryDocenteEnCurso] WHERE ([curcodigo] = @curcodigo) ORDER BY [docapellido1], [docnombre1]">
                         <SelectParameters>
-                            <asp:ControlParameter ControlID="DropDownList1" Name="Expr1" PropertyName="SelectedValue" Type="Int32" />
+                            <asp:ControlParameter ControlID="DropDownList1" Name="curcodigo" PropertyName="SelectedValue" Type="Int32" />
                         </SelectParameters>
                     </asp:SqlDataSource>
                 </div>
