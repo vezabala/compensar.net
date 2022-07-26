@@ -149,6 +149,21 @@ VALUES
 (4, 34927681,'castillo', 'garcia', 'linda', '','65842277','8'),
 (4, 96522746,'Bohorquez', 'sanchez', 'yeferzon', 'maicol','15874526','7');
 
+INSERT INTO tblcursoestudiante
+(doccodigo,curcodigo, estcodigo)
+VALUES
+(49389877,1, 45123548),
+(64051472,1, 15427855),
+(66983791,1, 14868215),
+(72848429,1, 15483525),
+(75780748,1, 75396325),
+(49389877,2, 35489628),
+(58186834,2, 15427855),
+(78713067,2, 96522746),
+(84577705,5, 34927681),
+(61119153,6, 98364581),
+(49389877,7, 79286145),
+(66983791,8, 69916110);
 
 drop table tblcursoestudiante;
 drop table tblestudiantes;

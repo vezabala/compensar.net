@@ -110,6 +110,7 @@ namespace Proyecto
                             nombre1 = (registros["estnombre1"].ToString());
                             nombre2 = (registros["estnombre2"].ToString());
                             imagen = (registros["imagen"].ToString());
+                            codigo = (registros["estcodigo"].ToString());
                             us = ($"{nombre1} {nombre2} {apellido1} {apellido2}");
                             usNA = ($"{nombre1} {apellido1}");
                             condicion = true;
@@ -126,6 +127,7 @@ namespace Proyecto
                     else
                     {
                         //Almacenamos las dos variables de sesion
+                        Session["codigo"] = codigo;
                         Session["usuario"] = us;
                         Session["usuarioNA"] = usNA;
                         Session["imagen"] = imagen;

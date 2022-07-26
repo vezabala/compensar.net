@@ -316,6 +316,7 @@
     <Content Include="documentation\index.html" />
     <Content Include="EstInicio.aspx" />
     <Content Include="EstinicioConsulta.aspx" />
+    <Content Include="EstMisCursos.aspx" />
     <Content Include="Gruntfile.js" />
     <Content Include="imagenes\dos.png" />
     <Content Include="imagenes\imagenUsuario.png" />
@@ -999,6 +1000,13 @@
     </Compile>
     <Compile Include="EstinicioConsulta.aspx.designer.cs">
       <DependentUpon>EstinicioConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EstMisCursos.aspx.cs">
+      <DependentUpon>EstMisCursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EstMisCursos.aspx.designer.cs">
+      <DependentUpon>EstMisCursos.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPageAd.Master.cs">
       <DependentUpon>MasterPageAd.Master</DependentUpon>
