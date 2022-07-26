@@ -19,6 +19,7 @@ namespace Proyecto
         String us;
         String usNA;
         String imagen;
+        String codigo;
         bool condicion = false;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -53,6 +54,7 @@ namespace Proyecto
                             nombre1 = (registros["docnombre1"].ToString());
                             nombre2 = (registros["docnombre2"].ToString());
                             imagen = (registros["imagen"].ToString());
+                            codigo = (registros["doccodigo"].ToString());
                             us = ($"{nombre1} {nombre2} {apellido1} {apellido2}");
                             usNA = ($"{nombre1} {apellido1}");
                             condicion = true;
@@ -69,6 +71,7 @@ namespace Proyecto
                     else
                     {
                         //Almacenamos las dos variables de sesion
+                        Session["codigo"] = codigo;
                         Session["usuario"] = us;
                         Session["usuarioNA"] = usNA;
                         Session["imagen"] = imagen;

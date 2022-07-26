@@ -35,7 +35,7 @@
          <div style="border-radius: 20px; border: solid 2px #999999; box-shadow: 2px 2px 5px #999999; height: 785px; width: 1526px">
             <div style="height: 756px; width: 1481px; margin-left: 17px; margin-top: 17px">
                  <asp:Label ID="Label1" runat="server" Text="Label1"></asp:Label>
-                 <asp:FormView ID="FormView1" runat="server" DataKeyNames="doccodigo" DataSourceID="SqlDataSource1" Height="194px">
+                 <asp:FormView ID="FormView1" runat="server" DataKeyNames="doccodigo" DataSourceID="SqlDataSource1" Height="194px" CellPadding="4" ForeColor="#333333">
                      <EditItemTemplate>
                          usucodigo:
                          <asp:TextBox ID="usucodigoTextBox" runat="server" Text='<%# Bind("usucodigo") %>' />
@@ -64,6 +64,8 @@
                          <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Actualizar" />
                          &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" />
                      </EditItemTemplate>
+                     <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                     <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
                      <InsertItemTemplate>
                          usucodigo:
                          <asp:TextBox ID="usucodigoTextBox" runat="server" Text='<%# Bind("usucodigo") %>' />
@@ -141,6 +143,8 @@
                          <br />
 
                      </ItemTemplate>
+                     <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                     <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
              </asp:FormView>
              <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:proyectoaspConnectionString %>" SelectCommand="SELECT * FROM [tbldocentes] WHERE ([docingreso] = @docingreso)">
                  <SelectParameters>
