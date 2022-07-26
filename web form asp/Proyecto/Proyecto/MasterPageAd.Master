@@ -256,6 +256,7 @@
               <ul class="treeview-menu">
                 <li><a href="../../Accursos.aspx"><i class="fa fa-circle-o"></i>Actualizar cursos</a></li>
                 <li><a href="../../AdCursosdictados.aspx"><i class="fa fa-circle-o"></i>Consulta docentes de Cursos</a></li>  
+                <li><a href="../../AdCursosrecibidos.aspx"><i class="fa fa-circle-o"></i>Consulta estudiantes de Cursos</a></li>  
               </ul>
             </li>
 
