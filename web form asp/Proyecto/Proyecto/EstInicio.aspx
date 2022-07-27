@@ -163,6 +163,9 @@
                             </SelectParameters>
                         </asp:SqlDataSource>
 
+                        <br />
+                        <asp:Image ID="Image2" runat="server" Height="534px" ImageUrl="~/imagenes/ImagenEstudiante.png" Width="1282px" />
+
                     </div>
                 </div>
             </div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAA9hvaSDtMkqgKs5w1LxAugAAAAACAAAAAAAQZgAAAAEAACAAAAA71CQkWRaWj0pn0S8lReSkwsJBy66QFY1UEwYwrffr6AAAAAAOgAAAAAIAACAAAAB4c6p/iNMOL8m/AMplMtLti33UbmnqRJLAcYPJgYDxuSAAAAC4JGUE28ng3X/r7cWRw5g0iT9BIS+mfHwOA22/4yXRaEAAAACq2e0MDxp6lgwLr19DA/85O0MDKoNo8QSB20D0xrOI1Z+HbtbTdgCbvzEA+++zglBxN7DqupdqwBWXfeCVDTpk</EncryptedPassword>
+    <_PublishTargetUrl>ftp://198.37.116.26/www.ProyectoASPEZabala.somee.com</_PublishTargetUrl>
+    <History>False|2022-07-27T03:17:15.8717439Z;</History>
+  </PropertyGroup>
+</Project>

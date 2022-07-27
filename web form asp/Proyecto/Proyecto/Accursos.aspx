@@ -33,7 +33,7 @@
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Nombre del curso" SortExpression="curnombre1">
                         <EditItemTemplate>
-                            <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("curnombre1") %>' Width="70px"></asp:TextBox>
+                            <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("curnombre1") %>' Width="180px" Height="16px"></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="Label3" runat="server" Text='<%# Bind("curnombre1") %>'></asp:Label>

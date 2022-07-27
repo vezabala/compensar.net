@@ -319,9 +319,12 @@
     <Content Include="EstMisCursos.aspx" />
     <Content Include="Gruntfile.js" />
     <Content Include="imagenes\dos.png" />
+    <Content Include="imagenes\ImagenAdministrativa.png" />
+    <Content Include="imagenes\ImagenDocente.png" />
+    <Content Include="imagenes\ImagenEstudiante.png" />
     <Content Include="imagenes\imagenUsuario.png" />
+    <Content Include="imagenes\logo.png" />
     <Content Include="imagenes\tres.png" />
-    <Content Include="imagenes\uno.png" />
     <Content Include="imagenes\user.jpg" />
     <Content Include="pages\calendar.html" />
     <Content Include="pages\charts\chartjs.html" />
@@ -1246,6 +1249,11 @@
     <Content Include="plugins\ckeditor\skins\moono\readme.md" />
     <Content Include="plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="plugins\input-mask\phone-codes\phone-codes.json" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FTPProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

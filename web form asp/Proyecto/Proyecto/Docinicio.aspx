@@ -151,6 +151,7 @@
                      <asp:SessionParameter Name="docingreso" SessionField="clave" Type="String" />
                  </SelectParameters>
              </asp:SqlDataSource>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/imagenes/ImagenDocente.png" Height="450px" ImageAlign="AbsMiddle" Width="850px" />
           </div>
        </div>
   </main><!-- End #main -->
